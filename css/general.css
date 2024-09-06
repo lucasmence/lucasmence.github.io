@@ -1,0 +1,10 @@
+html {
+    font-size: 14px;
+    font-family: "Lucida Console", monospace;
+}
+
+.content {
+    margin: auto;
+    width: 50%;
+    width: 700px;
+}
