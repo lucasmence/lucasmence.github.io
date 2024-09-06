@@ -1,0 +1,33 @@
+.img-avatar {
+    display: block;
+    float:right;
+    width: 128px;
+    height: 128px;
+}
+
+.img-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.resume-content {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    display: block;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    padding-left: 10%;
+    padding-right: 10%;
+    min-height: 800px;
+} 
+
+.group-a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.field-a {
+    padding-right: 20px;
+    padding-left: 10px;
+}
