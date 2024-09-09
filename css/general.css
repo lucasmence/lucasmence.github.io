@@ -8,3 +8,13 @@ html {
     width: 50%;
     width: 700px;
 }
+
+.img-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.footer-bar {
+    padding-top: 10px;
+    text-align: right;
+}

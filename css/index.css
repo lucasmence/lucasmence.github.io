@@ -1,8 +1,15 @@
+body {
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 .img-avatar {
     display: block;
     float:right;
-    width: 128px;
-    height: 128px
+    width: 192px;
+    height: 192px
 }
 
 .tab {
@@ -30,6 +37,7 @@
 }
 
 .tabcontent {
+    background-color: white;
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
@@ -41,6 +49,19 @@
     min-height: 800px;
     padding-left: 10%;
     padding-right: 10%;
+}
+
+.table-line-header {
+    text-align: left;
+}
+
+.table-line-description {
+    width: 80%;
+}
+
+.table-line-divisor {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 @keyframes fadeEffect {
