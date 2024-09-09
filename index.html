@@ -6,21 +6,20 @@
     <link href="css/general.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
     <script src="js/index.js"></script>
-    <title>Mence's Homepage</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Mence</title>
 </head>
 <body>
     <div class="content">
         <div class="tab">
             <button class="tablinks" id="btn-default-tab" onclick="changeTab(event, 'summary')">Sumário</button>
             <button class="tablinks" onclick="changeTab(event, 'about-me')">Mais sobre mim</button>
-            <button class="tablinks" onclick="changeTab(event, 'gamedev')">Gamedev</button>
             <button class="tablinks" onclick="changeTab(event, 'projects')">Projetos</button>
             <button class="tablinks" onclick="changeTab(event, 'blog')">Blog</button>
             <button class="tab-divisor">|</button>
-            <a href="resume.html"><button class="tablinks">Curriculo</button></a> 
+            <a href="resume-pt.html"><button class="tablinks">Curriculo</button></a> 
             <a href="https://linktr.ee/lucasmence"><button class="tablinks">Contato</button></a>
-        </div>
-    
+        </div> 
         <div id="summary" class="tabcontent">  
             <h3>Meu nome é Mence, eu trabalho com desenvolvimento backend, devops e gamedev.</h3>
 
@@ -37,11 +36,11 @@
                 com a ideia ou arrumando os já existentes.
                 Eu sempre estou trabalhando em novos projetos no tempo livre (geralmente jogos),
                 gosto de automatizar tarefas manuais de servidores com bash no linux
-                e pensar em novos feitiços para RPG. As ideias nunca param.</span>
+                e pensar em novos feitiços para RPG. As ideias nunca de fluir.</span>
 
             <br/><br/>
 
-            <span>Você pode checar meus <a onclick="changeTab(event, 'projects')" href="#">Projetos</a> ou entrar em 
+            <span>Você pode checar meus <a onclick="changeTab(event, 'projects')" href="#">projetos</a> ou entrar em 
                 <a href="https://linktr.ee/lucasmence">contato</a> comigo se desejar!</span>
         </div> 
 
@@ -85,23 +84,114 @@
                 
                 Durante este periodo, já desenvolvi projetos freelancing em Python, automações para Raspberry PI e PHP.<br/><br/>
 
-                Atualmente eu direciono meu foco nos estudos principalmente para <a onclick="changeTab(event, 'gamedev')" href="#">Gamedev</a> e gerenciamento em servidor Linux.<br/><br/>
+                Atualmente eu direciono meu foco no tempo livre para os estudos principalmente em meus <a onclick="changeTab(event, 'projects')" href="#">projetos</a> e gerenciamento em servidor Linux.<br/><br/>
 
             </p>
         </div>
 
-        <div id="gamedev" class="tabcontent">  
-            <h3>Gamedev</h3>
-        </div>
-
         <div id="projects" class="tabcontent">  
             <h3>Projetos</h3>
+            <table>  
+                <tr>
+                    <th class="table-line-header">projectSYMBIOSIS (2024 - Presente)</th>
+                </tr> 
+                <tr>
+                    <td class="table-line-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas impedit ipsa adipisci eius, voluptas nam reprehenderit et consectetur facilis ea voluptate! Nesciunt et eum odit enim molestiae earum aspernatur harum.</td>
+                    <td>Imagem</td>
+                </tr>
+                <tr><td class="table-line-divisor"><hr/></td></tr>
+                <tr>
+                <tr>
+                    <th class="table-line-header">Boltcraft II (2022 - 2024)</th>
+                </tr> 
+                <tr>
+                    <td class="table-line-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas impedit ipsa adipisci eius, voluptas nam reprehenderit et consectetur facilis ea voluptate! Nesciunt et eum odit enim molestiae earum aspernatur harum.</td>
+                    <td>Imagem</td>
+                </tr>  
+                <tr><td class="table-line-divisor"><hr/></td></tr>
+                <th class="table-line-header">Helper (2024 - Presente)</th>
+                </tr> 
+                <tr>
+                    <td class="table-line-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas impedit ipsa adipisci eius, voluptas nam reprehenderit et consectetur facilis ea voluptate! Nesciunt et eum odit enim molestiae earum aspernatur harum.</td>
+                    <td>Imagem</td>
+                </tr>
+                <tr><td class="table-line-divisor"><hr/></td></tr>
+                <tr>
+                    <th class="table-line-header">Boltcraft (2021 - 2022)</th>
+                </tr> 
+                <tr>
+                    <td class="table-line-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas impedit ipsa adipisci eius, voluptas nam reprehenderit et consectetur facilis ea voluptate! Nesciunt et eum odit enim molestiae earum aspernatur harum.</td>
+                    <td>Imagem</td>
+                </tr>
+                <tr><td class="table-line-divisor"><hr/></td></tr>
+                <tr>
+                    <th class="table-line-header">Realm Editor (2021)</th>
+                </tr> 
+                <tr>
+                    <td class="table-line-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas impedit ipsa adipisci eius, voluptas nam reprehenderit et consectetur facilis ea voluptate! Nesciunt et eum odit enim molestiae earum aspernatur harum.</td>
+                    <td>Imagem</td>
+                </tr>
+                <tr><td class="table-line-divisor"><hr/></td></tr>
+                <tr>
+                    <th class="table-line-header">Monolith Game Engine (2019 - 2021)</th>
+                </tr> 
+                <tr>
+                    <td class="table-line-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas impedit ipsa adipisci eius, voluptas nam reprehenderit et consectetur facilis ea voluptate! Nesciunt et eum odit enim molestiae earum aspernatur harum.</td>
+                    <td>Imagem</td>
+                </tr> 
+                <tr><td class="table-line-divisor"><hr/></td></tr>
+                <tr>
+                    <th class="table-line-header">Python Game Engine Concept (2019)</th>
+                </tr> 
+                <tr>
+                    <td class="table-line-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas impedit ipsa adipisci eius, voluptas nam reprehenderit et consectetur facilis ea voluptate! Nesciunt et eum odit enim molestiae earum aspernatur harum.</td>
+                    <td>Imagem</td>
+                </tr>
+                <tr><td class="table-line-divisor"><hr/></td></tr>
+                <tr>
+                    <th class="table-line-header">Pitchula Photoreader (2017 - 2018)</th>
+                </tr> 
+                <tr>
+                    <td class="table-line-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas impedit ipsa adipisci eius, voluptas nam reprehenderit et consectetur facilis ea voluptate! Nesciunt et eum odit enim molestiae earum aspernatur harum.</td>
+                    <td>Imagem</td>
+                </tr>   
+            </table>
         </div>
 
-        <div id="projects" class="tabcontent">  
+        <div id="blog" class="tabcontent">  
             <h3>Blog</h3>
+            <div id="rss-feed"></div>
+            <script>
+                const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://mence-engine.blogspot.com/rss.xml';
+                const feedContainer = document.getElementById('rss-feed');
+
+                fetch(rssUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        const items = data.items;
+                        let output = '<ul>';
+                        items.forEach(item => {
+                            output += `<li>
+                                        <a href="${item.link}" target="_blank">${item.title}</a><br/>
+                                        <p>${item.description}</p>
+                                    </li>`;
+                        });
+                        output += '</ul>';
+                        feedContainer.innerHTML = output;
+                    })
+                    .catch(error => {
+                        feedContainer.innerHTML = 'Erro ao carregar o feed RSS.';
+                        console.error('Erro:', error);
+                    });
+            </script>
+        </div> 
+        <div class="footer-bar">
+            <a href="index.html"><button class="tablinks"><img class="img-icon" src="img/flag-uk.svg"></button></a>
+            <a href="index-pt.html"><button class="tablinks"><img class="img-icon" src="img/flag-br.svg"></button></a>
         </div>
-     
+        <footer class="footer-bar">
+            <span>2024, Feito com ❤️ por Mence.</span>
+        </footer>
     </div>
 </body>
 <script>openDefaultTab();</script>
