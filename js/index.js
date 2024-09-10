@@ -33,7 +33,7 @@ function convertPubDateToYMD(pubDate) {
     return `${year}/${month}/${day}`;
 }
 
-function buscarRSS()
+function getRssFeed()
 {
     const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://lucasmence.blogspot.com/rss.xml';
     const feedContainer = document.getElementById('rss-feed');
