@@ -243,7 +243,33 @@
             <h3>Blog</h3>
             <div id="rss-feed"></div>
             <script>
-                getRssFeed();
+                const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://lucasmence.blogspot.com/rss.xml';
+                const feedContainer = document.getElementById('rss-feed');
+                
+                fetch(rssUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        const items = data.items;
+                        let output = '<ul>';
+                        items.forEach(item => {
+                            output += `<div class="blog-content">
+                                            <div class="blog-box">
+                                                <span class="blog-date">${convertPubDateToYMD(item.pubDate)}<br/></span>
+                                                <div>
+                                                    <p class="blog-title"><strong>${item.title}</strong></p>
+                                                    <p>${item.description}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="table-line-divisor"><hr/></span>`;
+                        });
+                        output += '</ul>';
+                        feedContainer.innerHTML = output;
+                    })
+                    .catch(error => {
+                        feedContainer.innerHTML = 'Erro ao carregar o feed RSS.';
+                        console.error('Erro:', error);
+                    });
             </script>
         </div> 
         <div class="footer-bar">
