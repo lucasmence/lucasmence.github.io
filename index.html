@@ -249,27 +249,7 @@
             <h3>Blog</h3>
             <div id="rss-feed"></div>
             <script>
-                const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://mence-engine.blogspot.com/rss.xml';
-                const feedContainer = document.getElementById('rss-feed');
-
-                fetch(rssUrl)
-                    .then(response => response.json())
-                    .then(data => {
-                        const items = data.items;
-                        let output = '<ul>';
-                        items.forEach(item => {
-                            output += `<li>
-                                        <a href="${item.link}" target="_blank">${item.title}</a><br/>
-                                        <p>${item.description}</p>
-                                    </li>`;
-                        });
-                        output += '</ul>';
-                        feedContainer.innerHTML = output;
-                    })
-                    .catch(error => {
-                        feedContainer.innerHTML = 'Erro ao carregar o feed RSS.';
-                        console.error('Erro:', error);
-                    });
+                buscarRSS();
             </script>
         </div> 
         <div class="footer-bar">

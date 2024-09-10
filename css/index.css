@@ -75,6 +75,24 @@ body {
     padding-bottom: 10px;
 }
 
+.blog-content {
+    background-color: #faf7f7;
+    border-style: solid;
+    border-color: gray;
+}
+
+.blog-box {
+    padding: 20px;
+}
+
+.blog-date {
+    font-size: 12px;
+}
+
+.blog-title {
+    font-size: 18px;
+}
+
 @keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
