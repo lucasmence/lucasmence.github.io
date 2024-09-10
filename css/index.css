@@ -12,6 +12,11 @@ body {
     height: 192px
 }
 
+.img-project {
+    max-width: 256px;
+    max-height: 192px
+}
+
 .tab {
     overflow: hidden;
     border: 1px solid #ccc;
@@ -56,7 +61,13 @@ body {
 }
 
 .table-line-description {
-    width: 80%;
+    width: 100%;
+}
+
+.table-line-img {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .table-line-divisor {
