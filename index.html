@@ -243,7 +243,7 @@
             <h3>Blog</h3>
             <div id="rss-feed"></div>
             <script>
-                const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=hhttps://feeds.feedburner.com/lucasmence/blog?fmt=xml';
+                const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://feeds.feedburner.com/lucasmence/blog?fmt=xml';
                 const feedContainer = document.getElementById('rss-feed');
                 
                 fetch(rssUrl)
@@ -267,7 +267,7 @@
                         feedContainer.innerHTML = output;
                     })
                     .catch(error => {
-                        feedContainer.innerHTML = 'Erro ao carregar o feed RSS.';
+                        feedContainer.innerHTML = 'RSS feed error.';
                         console.error('Erro:', error);
                     });
             </script>
