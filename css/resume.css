@@ -15,6 +15,7 @@
     padding-left: 10%;
     padding-right: 10%;
     min-height: 800px;
+    box-shadow: 5px 5px 5px 5px gray;
 } 
 
 .group-a {
