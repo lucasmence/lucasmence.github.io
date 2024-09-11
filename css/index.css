@@ -6,8 +6,6 @@ body {
 }
 
 .img-avatar {
-    display: block;
-    float:right;
     width: 192px;
     height: 192px
 }
@@ -15,6 +13,10 @@ body {
 .img-project {
     max-width: 256px;
     max-height: 192px
+}
+
+.img-avatar-group {
+    text-align: center;
 }
 
 .tab {
@@ -47,6 +49,7 @@ body {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+    box-shadow: 5px 5px 5px 5px gray;
 } 
 
 .tabcontent {

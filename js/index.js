@@ -26,10 +26,10 @@ function openDefaultTab()
 }
 
 function convertPubDateToYMD(pubDate) {
-    const date = new Date(pubDate); // Converte a string pubDate para um objeto Date
+    const date = new Date(pubDate);
     const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0'); // Os meses começam em 0, então somamos 1
-    const day = String(date.getDate()).padStart(2, '0'); // Garantimos que o dia tenha dois dígitos
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
     return `${year}/${month}/${day}`;
 }
 
