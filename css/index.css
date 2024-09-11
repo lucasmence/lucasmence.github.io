@@ -82,6 +82,7 @@ body {
     background-color: #faf7f7;
     border-style: solid;
     border-color: gray;
+    border-width: thin;
 }
 
 .blog-box {
