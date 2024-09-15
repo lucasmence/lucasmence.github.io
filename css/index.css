@@ -10,6 +10,11 @@ body {
     height: 192px
 }
 
+.img-friends {
+    width: 128px;
+    height: 128px
+}
+
 .img-project {
     max-width: 256px;
     max-height: 192px
@@ -17,6 +22,19 @@ body {
 
 .img-avatar-group {
     text-align: center;
+}
+
+.img-float {
+	width: 150px;
+	height: 150px;
+	box-sizing: border-box;
+	border: 5px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 1s ease-in-out infinite;
+	img { width: 100%; height: auto; }
 }
 
 .tab {
@@ -97,7 +115,31 @@ body {
     font-size: 18px;
 }
 
+.friends-group {
+    background-color: rgb(243, 243, 243);
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-shadow: 5px 5px 5px 5px gray;
+} 
+
+
 @keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
 }
