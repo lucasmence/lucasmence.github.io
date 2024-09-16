@@ -6,7 +6,7 @@ html {
 .content {
     margin: auto;
     width: 50%;
-    width: 700px;
+    width: 80%;
 }
 
 .img-icon {
@@ -18,3 +18,7 @@ html {
     padding-top: 10px;
     text-align: right;
 }
+
+@media only screen and (min-width: 700px) {
+    .content {width: 700px;}
+  }

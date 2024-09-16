@@ -1,5 +1,7 @@
 function changeTab(evt, tabname) 
 {
+    document.getElementById("sidenav").style.width = "0";
+
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) 
@@ -25,12 +27,23 @@ function openDefaultTab()
     return true;
 }
 
-function convertPubDateToYMD(pubDate) {
+function convertPubDateToYMD(pubDate) 
+{
     const date = new Date(pubDate);
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const day = String(date.getDate()).padStart(2, '0');
     return `${year}/${month}/${day}`;
+}
+
+function toggleNav() 
+{
+    document.getElementById("sidenav").style.width < "250px" ? document.getElementById("sidenav").style.width = "250px" : document.getElementById("sidenav").style.width = "0";
+}
+
+function closeNav() 
+{
+    document.getElementById("sidenav").style.width = "0";
 }
 
 function getRssFeed()
