@@ -12,15 +12,28 @@
 <body>
     <div class="content">
         <div class="tab">
-            <button class="tablinks" id="btn-default-tab" onclick="changeTab(event, 'summary')">Sumário</button>
-            <button class="tablinks" onclick="changeTab(event, 'about-me')">Mais sobre mim</button>
-            <button class="tablinks" onclick="changeTab(event, 'projects')">Projetos</button>
-            <button class="tablinks" onclick="changeTab(event, 'blog')">Blog</button>
-            <button class="tablinks" onclick="changeTab(event, 'friends')">Amigos</button>
-            <button class="tab-divisor">|</button>
-            <a href="resume-pt.html"><button class="tablinks">Curriculo</button></a> 
-            <a href="https://linktr.ee/lucasmence"><button class="tablinks">Redes Sociais</button></a>
+            <span class="tablinks sidenav-btn" onclick="toggleNav()">&#9776;</span>
+            <div class="default-buttons">
+                <button class="tablinks" id="btn-default-tab" onclick="changeTab(event, 'summary')">Sumário</button>
+                <button class="tablinks" onclick="changeTab(event, 'about-me')">Mais sobre mim</button>
+                <button class="tablinks" onclick="changeTab(event, 'projects')">Projetos</button>
+                <button class="tablinks" onclick="changeTab(event, 'blog')">Blog</button>
+                <button class="tablinks" onclick="changeTab(event, 'friends')">Amigos</button>
+                <button class="tab-divisor">|</button>
+                <a href="resume-pt.html"><button class="tablinks">Currículo</button></a> 
+                <a href="https://linktr.ee/lucasmence"><button class="tablinks">Redes Sociais</button></a>
+            </div>
         </div> 
+        <div id="sidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a id="btn-default-tab" onclick="changeTab(event, 'summary')">Sumário</a>
+            <a onclick="changeTab(event, 'about-me')">Mais sobre mim</a>
+            <a onclick="changeTab(event, 'projects')">Projetos</a>
+            <a onclick="changeTab(event, 'blog')">Blog</a>
+            <a onclick="changeTab(event, 'friends')">Amigos</a>
+            <a href="resume.html">Currículo</a> 
+            <a href="https://linktr.ee/lucasmence">Redes Sociais</a>
+        </div>
         <div id="summary" class="tabcontent">  
             <h2>Bem-vindo(a)!</h2>
             <h4>Meu nome é Mence, eu trabalho com desenvolvimento backend, devops e gamedev.</h4>
