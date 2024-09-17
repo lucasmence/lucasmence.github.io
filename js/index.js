@@ -23,7 +23,11 @@ function changeTab(evt, tabname)
 
 function openDefaultTab()
 {
-    document.getElementById("btn-default-tab").click();
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const tab = urlParams.get('tab');
+    
+    document.getElementById(tab ? tab : "btn-default-tab").click();
     return true;
 }
 
