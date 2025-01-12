@@ -20,6 +20,12 @@ body {
     max-height: 192px
 }
 
+.img-project-greater {
+    max-width: 512px;
+    max-height: 384px
+}
+
+
 .img-avatar-group {
     text-align: center;
 }
