@@ -26,9 +26,34 @@ function openDefaultTab()
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const tab = urlParams.get('tab');
+    const lang = urlParams.get('lang') ?? "en";
+
+    if (lang) {
+        let script = document.createElement('script');
+        script.src = `lang/${lang}.js`;  
+        script.type = 'text/javascript';
+        script.onload = function() {  
+            translatePage();
+        };
+        script.onerror = function() {
+            console.error(`Erro ao carregar o script js.`);
+        };
+        document.head.appendChild(script); 
+    }
     
     document.getElementById(tab ? tab : "btn-default-tab").click();
+    
     return true;
+}
+
+function translatePage() {
+    try {
+        document.body.innerHTML = document.body.innerHTML.replace(/getText\((.*?)\)/g, (match, key) => {
+            return key.split('.').reduce((obj, prop) => obj?.[prop], language) || match;
+        });
+    } catch (error) {
+        console.error('Erro ao carregar JSON:', error);
+    }
 }
 
 function convertPubDateToYMD(pubDate) 
@@ -82,4 +107,3 @@ function getRssFeed()
     
     return true;
 }
-
