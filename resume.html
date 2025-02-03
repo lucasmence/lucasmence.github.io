@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/general.css" rel="stylesheet">
     <link href="css/resume.css" rel="stylesheet">
+    <script src="js/index.js"></script>
     <title>Lucas Mence - Public Resume</title>
 </head>
 <body>
@@ -12,76 +13,67 @@
         <div class="resume-content">  
             <p>
                 <h1>Lucas Mence</h1>
-                <h4>Backend Developer, Devops and Gamedev</h4>
+                <h4>getText(r.subtitle)</h4>
                 <hr/>
                 <div class="group-a">
-                    <img class="img-icon" src="img/whatsapp.svg"><span class="field-a"><a href="#private-info">Phone¹</a></span>
+                    <img class="img-icon" src="img/whatsapp.svg"><span class="field-a"><a href="#private-info">getText(r.phone)¹</a></span>
                     <img class="img-icon" src="img/email.svg"><span class="field-a">m.m.mence.e.e[at]gmail.com</span><br/>
                     <img class="img-icon" src="img/house.svg"><span class="field-a">São Paulo, BR</span><br/>
-                    <img class="img-icon" src="img/website.svg"><span class="field-a"><a href="https://lucasmence.github.io">https://lucasmence.github.io</a></span>
+                    <img class="img-icon" src="img/website.svg"><span class="field-a"><a href="https://lucasmence.github.io?lang=getText(misc.lang)">https://lucasmence.github.io</a></span>
                 </div>
                 <hr/>
                 <div>
-                    <h2>GOALS</h2>
+                    <h2>getText(r.goals-title)</h2>
                     <p>
-                        In the backend, participate in project infrastructure development, defining business models and 
-                        internal functioning in a modular way so that it is always open to quick maintenance 
-                        with scalability of the service in mind. <br/><br/>
-
-                        In DevOps, work and assist in configuring new servers and services and in maintaining 
-                        existing servers, defining automation routes for security updates and database backups.
+                        getText(r.goals-description)
                     </p>
-                    <h2>EDUCATION</h2>
+                    <h2>getText(r.education-title)</h2>
                     <p>
-                        <span><strong>2012 - 2013 | ETEC Centro Paula Souza</strong></span><br/>
-                        <span>Technical Degree in Computer Science</span><br/><br/>
-                        <span><strong>2014 - 2018 | UniSALESIANO Araçatuba - SP</strong></span><br/>
-                        <span>Bachelor's Degree in Computer Engineering</span><br/><br/>
-                        <span><strong>2021 - 2022 | PUC Minas</strong></span><br/>
-                        <span>Post-Graduate in Cybersecurity and Data Governance</span><br/><br/>
+                        <span><strong>getText(r.etec-title)</strong></span><br/>
+                        <span>getText(r.etec-description)</span><br/><br/>
+                        <span><strong>getText(r.university-title)</strong></span><br/>
+                        <span>getText(r.university-description)</span><br/><br/>
+                        <span><strong>getText(r.pos-title)</strong></span><br/>
+                        <span>getText(r.pos-description)</span><br/><br/>
                         
-                        <span>2017 | Residential and Commercial Security Course - Intelbras</span><br/>
-                        <span>2018 | Linux Server Management Course - InterSOLID</span><br/>                        
+                        <span>getText(r.intelbras)</span><br/>
+                        <span>getText(r.intersolid)</span><br/>                        
                     </p>
-                    <h2>EXPERIENCE</h2>
+                    <h2>getText(r.exp-title)</h2>
                     <p>
-                        <span><strong>2012 | Accounting Office</strong></span><br/>
-                        <span>• Tax Calculation</span><br/><br/>   
-                        <span><strong>2012 - Present | S.O.S. Manutenções</strong></span><br/>
-                        <span>• Configuration of Security Cameras and Residential Alarms</span><br/><br/> 
-                        <span><strong>2013 - Present | FX Sistemas</strong></span><br/>
-                        <span>• Previously Desktop Development using Delphi, Firebird SQL, and PHP</span><br/>
-                        <span>• Currently Fullstack Development (NodeJS, React, and MySQL), Linux Server Management for services (SSH, 
-                        Automation of backup updates in BASH, NGINX, Docker, and PM2)</span><br/><br/>   
-                        <span><strong>Present | Freelancing and Personal Projects</strong></span><br/>
-                        <span>• Python Development (Raspberry PI, OpenCV, Selenium, Django, TesseractOCR, and supervisorctl with RabbitMQ)<br/>
-                              • C++ Development (CMake, Boost, ENet, and SFML)<br/>
-                              • C Development (Arduino and Data Structures)</span><br/>  
+                        <span><strong>getText(r.exp-office-title)</strong></span><br/>
+                        <span>getText(r.exp-office-description)</span><br/><br/>   
+                        <span><strong>getText(r.exp-sos-title)</strong></span><br/>
+                        <span>getText(r.exp-sos-description)</span><br/><br/> 
+                        <span><strong>getText(r.exp-fx-title)</strong></span><br/>
+                        <span>getText(r.exp-fx-description)</span><br/><br/>   
+                        <span><strong>getText(r.exp-personal-title)</strong></span><br/>
+                        <span>getText(r.exp-personal-description)</span><br/>  
                     </p>
                     <hr/>
-                    <h2>LANGUAGES</h2>
+                    <h2>getText(r.languages-title)</h2>
                     <p>
-                        <span>• Portuguese (first language)</span><br/>
-                        <span>• English (second language)</span><br/>
-                        <span>• Spanish (basic)</span><br/>
+                        <span>getText(r.portuguese)</span><br/>
+                        <span>getText(r.english)</span><br/>
+                        <span>getText(r.spanish)</span><br/>
                     </p>           
                 </div><br/>                
                 <hr/>     
                 <div id="private-info">
                     <p>
-                        <span><i>[1]: This is a <strong>Public</strong> resume accessible anywhere on the Web. 
-                            For personal information such as phone number or more details, contact me via the provided email.</i></span>
+                        getText(r.private-info)
                     </p>
                 </div>
                 <div class="footer-bar">
                     <a href="resume.html"><button class="tablinks"><img class="img-icon" src="img/flag-uk.svg"></button></a>
-                    <a href="curriculo-publico.html"><button class="tablinks"><img class="img-icon" src="img/flag-br.svg"></button></a>
+                    <a href="resume.html?lang=pt"><button class="tablinks"><img class="img-icon" src="img/flag-br.svg"></button></a>
                 </div>
                 <footer class="footer-bar">
-                    <span>2024, Made with ❤️ by Mence.</span>
+                    <span>getText(footer.text)</span>
                 </footer>
             </p>
         </div>     
     </div>
 </body>
+<script>openResume(); </script>
 </html>

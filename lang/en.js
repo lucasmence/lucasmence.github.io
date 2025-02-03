@@ -163,5 +163,10 @@ const language =
     {
         "text": "2025, Made with ❤️ by Mence."
     },
+
+    "misc":
+    {
+        "lang": "en"
+    },
     
 };
