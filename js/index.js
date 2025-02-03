@@ -46,6 +46,28 @@ function openDefaultTab()
     return true;
 }
 
+function openResume()
+{
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const lang = urlParams.get('lang') ?? "en";
+
+    if (lang) {
+        let script = document.createElement('script');
+        script.src = `lang/resume/${lang}.js`;  
+        script.type = 'text/javascript';
+        script.onload = function() {  
+            translatePage();
+        };
+        script.onerror = function() {
+            console.error(`Erro ao carregar o script js.`);
+        };
+        document.head.appendChild(script); 
+    }
+    
+    return true;
+}
+
 function translatePage() {
     try {
         document.body.innerHTML = document.body.innerHTML.replace(/getText\((.*?)\)/g, (match, key) => {
