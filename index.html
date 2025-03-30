@@ -1,198 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/general.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
-    <script src="js/index.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <title>Mence</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>Mence - Homepage</title>
+  <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
-    <div class="content">
-        <div class="tab">
-            <span class="tablinks sidenav-btn" onclick="toggleNav()">&#9776;</span>
-            <div class="default-buttons">
-                <button class="tablinks" id="btn-default-tab" onclick="changeTab(event, 'summary')">getText(menu.summary)</button>
-                <button class="tablinks" id="aboutme" onclick="changeTab(event, 'about-me')">getText(menu.about-me)</button>
-                <button class="tablinks" id="myprojects" onclick="changeTab(event, 'projects')">getText(menu.projects)</button>
-                <button class="tablinks" id="myfriends" onclick="changeTab(event, 'friends')">getText(menu.friends)</button>
-                <button class="tab-divisor">|</button>
-                <a href="resume.html?lang=getText(misc.lang)"><button class="tablinks">getText(menu.resume)</button></a> 
-                <a href="https://linktr.ee/lucasmence"><button class="tablinks">getText(menu.social-media)</button></a>
-            </div>
-        </div> 
-        <div id="sidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a id="btn-default-tab" onclick="changeTab(event, 'summary')">getText(menu.summary)</a>
-            <a onclick="changeTab(event, 'about-me')">getText(menu.about-me)</a>
-            <a onclick="changeTab(event, 'projects')">getText(menu.projects)</a>
-            <a onclick="changeTab(event, 'friends')">getText(menu.friends)</a>
-            <a href="resume.html?lang=getText(misc.lang)">getText(menu.resume)</a> 
-            <a href="https://linktr.ee/lucasmence">getText(menu.social-media)</a>
-        </div>
-        <div id="summary" class="tabcontent">  
-            <h2>getText(summary.welcome)</h2>
-            <h4>getText(summary.introduction)</h4>
-            <div class="img-avatar-group"><img class="img-avatar" src="img/mence.png"></div><br/><br/>
-            <span>getText(summary.bio)</span>
-            <br/><br/>
-            <span>getText(summary.info)</span>
-            <br/><br/>
-            <span>getText(summary.footer)</span>
-
-        </div> 
-
-        <div id="about-me" class="tabcontent">  
-            <p>
-                <h3>getText(about-me.title)</h3>
-                getText(about-me.description)
-            </p>
-        </div>
-
-        <div id="projects" class="tabcontent">  
-            <h3>getText(projects.title)</h3>
-            <table>    
-                <tr><td class="table-line-divisor"><hr/></td></tr>
-                <tr>
-                <tr>
-                    <th class="table-line-header">getText(projects.boltcraft-ii-title)</th>
-                </tr> 
-                <tr>
-                    <td class="table-line-img"><img class="img-project-greater" src="img/projects/boltcraft-ii.png"></td>
-                </tr>
-                <tr>
-                    <td class="table-line-description">getText(projects.boltcraft-ii-description)</td>
-                </tr>  
-                <tr><td class="table-line-divisor"><hr/></td></tr>
-                <th class="table-line-header">getText(projects.helper-title)</th>
-                </tr> 
-                <tr>
-                    <td class="table-line-img"><img class="img-project" src="img/projects/helper-kubuntu-logo.svg"></td>
-                </tr>
-                <tr>
-                    <td class="table-line-description">getText(projects.helper-description) </td>
-                </tr>
-                <tr><td class="table-line-divisor"><hr/></td></tr>
-                <tr>
-                    <th class="table-line-header">getText(projects.boltcraft-title)</th>
-                </tr> 
-                <tr>
-                    <td class="table-line-img"><img class="img-project" src="img/projects/boltcraft.gif"></td>
-                </tr>
-                <tr>
-                    <td class="table-line-description">getText(projects.boltcraft-description)</td>
-                </tr>
-
-                <tr><td class="table-line-divisor"><hr/></td></tr>
-                <tr>
-                    <th class="table-line-header">getText(projects.realm-editor-title)</th>
-                </tr> 
-                <tr>
-                    <td class="table-line-img"><img class="img-project" src="img/projects/realm-editor.gif"></td>
-                </tr>
-                <tr>
-                    <td class="table-line-description">getText(projects.realm-editor-description)</td>
-                </tr>
-                <tr><td class="table-line-divisor"><hr/></td></tr>
-                <tr>
-                    <th class="table-line-header">getText(projects.lamina-title)</th>
-                </tr> 
-                <tr>
-                    <td class="table-line-img"><img class="img-project" src="img/projects/lamina-game-concept.gif"></td>
-                </tr>
-                <tr>
-                    <td class="table-line-description">getText(projects.lamina-description)</td>
-                </tr> 
-                <tr><td class="table-line-divisor"><hr/></td></tr>
-                <tr>
-                    <th class="table-line-header">getText(projects.mge-title)</th>
-                </tr> 
-                <tr>
-                    <td class="table-line-img"><img class="img-project" src="img/projects/mge.png"></td>
-                </tr>
-                <tr>
-                    <td class="table-line-description">getText(projects.mge-description)</td>
-                </tr> 
-                <tr><td class="table-line-divisor"><hr/></td></tr>
-                <tr>
-                    <th class="table-line-header">getText(projects.python-game-title)</th>
-                </tr> 
-                <tr>
-                    <td class="table-line-img"><img class="img-project" src="img/projects/python-game.png"></td>
-                </tr>
-                <tr>
-                    <td class="table-line-description">getText(projects.python-game-description)</td>
-                </tr>
-                <tr><td class="table-line-divisor"><hr/></td></tr>
-                <tr>
-                    <th class="table-line-header">getText(projects.pitchula-title)</th>
-                </tr> 
-                <tr>
-                    <td class="table-line-img"><img class="img-project" src="img/projects/python.png"></td>
-                </tr>
-                <tr>
-                    <td class="table-line-description">getText(projects.pitchula-description)</td>
-                </tr>  
-                <tr><td class="table-line-divisor"><hr/></td></tr> 
-            </table>
-        </div>
-
-        <div id="blog" class="tabcontent">  
-            <h3>getText(blog.title)</h3>
-            <div id="rss-feed"></div>
-            <script>
-                const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://feeds.feedburner.com/lucasmence/blog?fmt=xml';
-                const feedContainer = document.getElementById('rss-feed');
-                
-                fetch(rssUrl)
-                    .then(response => response.json())
-                    .then(data => {
-                        const items = data.items;
-                        let output = '<ul>';
-                        items.forEach(item => {
-                            output += `<div class="blog-content">
-                                            <div class="blog-box">
-                                                <span class="blog-date">${convertPubDateToYMD(item.pubDate)}<br/></span>
-                                                <div>
-                                                    <p class="blog-title"><strong>${item.title}</strong></p>
-                                                    <p>${item.description}</p>
-                                                </div>
-                                            </div>
-                                        </div>`;
-                        });
-                        output += '</ul>';
-                        feedContainer.innerHTML = output;
-                    })
-                    .catch(error => {
-                        feedContainer.innerHTML = 'RSS feed error.';
-                        console.error('Erro:', error);
-                    });
-            </script>
-        </div> 
-
-        <div id="friends" class="tabcontent">  
-            <p>
-                <h3>getText(friends.title)</h3>
-                <div class="friends-group">
-                    <div class="img-avatar-group"><a href="https://csfelix.github.io/"><img class="img-float img-friends" src="img/friends/logoFelix.png"></a></div><br/><br/>
-                    <a href="https://csfelix.github.io/"><h3>getText(friends.felix-title)</h3></a>
-                    <p>
-                        getText(friends.felix-description)
-                    </p>
-                </div>
-            </p>
-        </div>
-
-        <div class="footer-bar">
-            <a href="index.html"><button class="tablinks"><img class="img-icon" src="img/flag-uk.svg"></button></a>
-            <a href="index.html?lang=pt"><button class="tablinks"><img class="img-icon" src="img/flag-br.svg"></button></a>
-        </div>
-        <footer class="footer-bar">
-            <span>getText(footer.text)</span>
-        </footer>
+  <div class="background" id="background"></div>
+  <header>Greetings!</header>
+  <div class="content">
+    <div class="post">
+      <div style="text-align: center;">
+        <img style="max-width: 20%; height: auto;" src="img/mence.jpeg">
+      </div>
+      <div style="text-align: center;">
+      <h3 style="text-align: center;">I'm Mence. Based on São Paulo, BR</h3>
+      <i>Learn, understand, practice, assimilate and consolidate! 🔥</i>
     </div>
+    </div>
+    <div class="post">
+      <h2>Education</h2>
+      <p>
+        2012 - 2013 | ETEC Centro Paula Souza<br/>
+        Technical Degree in Computer Science<br/><br/>
+        
+        2014 - 2018 | UniSALESIANO Araçatuba - SP<br/>
+        Bachelor's Degree in Computer Engineering<br/><br/>
+        
+        2021 - 2022 | PUC Minas<br/>
+        Post-Graduate in Cybersecurity and Data Governance<br/><br/>
+        
+        2017 | Residential and Commercial Security Course - Intelbras<br/>
+        2018 | Linux Server Management Course - InterSOLID
+      </p>
+    </div>
+    <div class="post">
+      <h2>Languages</h2>
+      <p>
+        • Portuguese (first language)<br/>
+        • English (second language)<br/>
+        • Spanish (basic)
+      </p>
+    </div>
+    <div class="post">
+      <h2>Skills</h2>
+      <p>
+        <h4>BACKEND</h4>
+        • NodeJS (Express, PM2, Sequelize, Redis)<br/>
+        • Python (Django / Selenium / TesseractOCR / gunicorn)<br/>
+        • C / C++ (CMake / Boost / ENet / SFML / Arduino)<br/>
+        • Java (Spring) <br/>
+        • PHP<br/> 
+        • Delphi / Pascal<br/>
+        • Databases (MySQL / MariaDB / Firebird / SQLite / MongoDB) <br/>
+        <br/>
+        
+        <h4>FRONTEND</h4>
+        • ReactJS (Redux / Axios / MUI / Tailwind / Formik)<br/>
+        • Javascript (Bootstrap / jQuery / AJAX)<br/>
+        <br/> 
+
+        <h4>DEVOPS</h4>
+        • Linux Server Management (SSH / bash / systemd / cron / netstat)<br/>
+        • NGINX<br/>
+        • Supervisorctl<br/>
+        • Docker<br/>
+        • RabbitMQ<br/>
+        <br/>
+
+        <h4>MISCELLANEOUS</h4>
+        • AndroidStudio<br/>
+        • Amazon S3 / FTP<br/>
+        • Raspberry PI<br/>
+        • Data Structures<br/>
+        • OpenCV<br/>
+        • QT<br/>
+        • Chromium Embedded Framework (CEF)
+      </p>
+    </div>
+    <div class="post">
+      <h2>Coursework</h2>
+      <p>    
+        • GLSL<br/>
+        • Machine Learning<br/>
+        • Godot<br/>
+        • Unity
+      </p>
+    </div>
+    <div class="post">
+      <h2>Experiences</h2>
+      <p>
+        <h3>Invoice Issuer for Small Businesses with a Focus on Mobile Devices</h3>
+        • Primarily worked on the Front-End of an invoice issuance system using ReactJS with Formik and Material UI (MUI). <br/> 
+        • Also contributed to the Back-End using NodeJS with Express and Sequelize for database management in MySQL.
+        <br/><br/>
+
+        <h3>WhatsApp Conversation Management System</h3>
+        • Worked as part of a development team on a project where each client instance could manage multiple WhatsApp numbers, primarily focusing on the Back-End using NodeJS, Express, Puppeteer, and Sequelize.<br/>
+        • Developed a complete API for bulk message sending and receiving, allowing integration with other systems and scheduling messages for customer number lists. Used Python and Django Rest Framework for API development and implemented the service on an Ubuntu system with RabbitMQ and Gunicorn for daemon persistence.
+        <br/><br/>
+
+        <h3>Management of Updates, Backup Generation, and Web System Backup Delivery</h3>
+        • Designed and developed automated scripts and routines for backup and update processes on Ubuntu web servers using SSH, Bash commands, and crontab scheduling.<br/>
+        • Integrated webhooks to detect pushes from the main Git branch and notify about process completion or potential issues.<br/>
+        • Designed sandbox and contingency systems for homologation testing, using the same configurations as production environments.
+        <br/><br/>
+
+        <h3>News Detection and Delivery System for Desktop Clients</h3>
+        • Independently developed a news registration system with PHP and an API consumed by desktop systems to autonomously display news, updates, and notifications.
+        <br/><br/>
+
+        <h3>Automated Transmission of Fiscal Files from Businesses to Accounting Firms</h3>
+        • Participated in the development of an application suite for transmitting business files to their respective accounting offices.<br/>
+        • Worked on the project responsible for sending files from businesses using Delphi/Pascal and developed the file query and storage system using PHP.
+        <br/><br/>
+
+        <h3>Development of 2D Multiplayer-Compatible Games</h3>
+        • Independently developed 2D games using C++ with the SFML library, some of which were officially released, including one published on Steam as an experiment.<br/> 
+        • Although I currently develop games as a hobby, I have refined my custom multiplayer engine, initially using UDP, with future plans to support TCP connections.
+        <br/><br/>
+
+        <h3>2D Game Map Editor Using Tilesets with JSON Map Generation</h3>
+        • Designed and created a map editor for the early versions of my games. It utilizes the same map reading system to include terrains, rules, and elements, using the same resources as the game engine.
+        <br/><br/>
+
+        <h3>Desktop System for Online File Submission to the Federal Government</h3>
+        • Contributed to the development of Delphi/Pascal systems for accounting firms, handling calculations, generating fiscal files, and submitting reports to government agencies.
+        <br/><br/>
+
+        <h3>Printed Document Reader System with Text-to-Speech Conversion</h3>
+        • As a final graduation project, I designed a device using a Raspberry Pi 2 with Python to capture images of documents, process them with OpenCV, convert them to text using TesseractOCR, and use a Google API to convert the text into speech for audio output. The goal was to assist visually impaired individuals.
+      </p>
+    </div>
+    <div class="post">
+      <h2>Projects I've worked on</h2>
+      <p>
+        <a style="padding-right: 10px;" href="https://bestzap.com.br/" target="_blank"><img src="img/projects/bestzap.png" alt="BestZap"></a>
+        <a href="https://notacerta.com.br/" target="_blank"><img src="img/projects/notacerta.png" alt="NotaCerta"></a>
+      </p>
+    </div>
+    <div class="post">
+      <h2>My projects</h2>
+      <p>
+        <a style="padding-right: 10px;" href="https://lucasmence.itch.io/wizardry-duels" target="_blank"><img src="img/projects/wizardry-duels.png" alt="Wizardry Duels"></a>
+        <a style="padding-right: 10px;" href="https://lucasmence.itch.io/boltcraft-ii-redux-edition" target="_blank"><img src="img/projects/boltcraft-ii.png" alt="Boltcraft II"></a>
+        <a style="padding-right: 10px;" href="https://store.steampowered.com/app/2005930/Boltcraft/" target="_blank"><img src="img/projects/boltcraft.jpg" alt="Boltcraft"></a>
+        <a style="padding-right: 10px;" href="https://github.com/lucasmence/realm-editor" target="_blank"><img src="img/projects/realm-editor.png" alt="Realm Editor"></a>
+        <a style="padding-right: 10px;" href="https://github.com/lucasmence/helper" target="_blank"><img src="img/projects/kubuntu-autoinstaller.png" alt="Kubuntu Auto-Installer"></a>
+        <a style="padding-right: 10px;" href="https://github.com/lucasmence/sfml-tcp-chat" target="_blank"><img src="img/projects/sfml-tcp-chat.png" alt="sfml-tcp-chat"></a>
+        <a style="padding-right: 10px;" href="https://github.com/lucasmence/ProcessamentoDigitalDeImagem" target="_blank"><img src="img/projects/python-image-processing.png" alt="python-digital-image-processing"></a>
+        <a style="padding-right: 10px;" href="https://github.com/lucasmence/pitchula" target="_blank"><img src="img/projects/photoreader.png" alt="Photoreader"></a>
+        <a style="padding-right: 10px;" href="https://github.com/lucasmence/chrome-firefox-example-plugin" target="_blank"><img src="img/projects/webbrowser-plugin.png" alt="Firefox-Chrome Plugin"></a>
+      </p>
+    </div>
+    <div class="post">
+      <h2>Honors & Awards</h2>
+      <p>
+        <strong>• WINNER OF THE BEST PROJECT AT ETEC 2013.</strong><br/>
+        <span>Best final course project at ETEC Centro Paula Souza in Andradina - SP in the year 2013.</span>
+        
+        <br/><br/>
+
+        <strong>• WINNER OF THE BEST PROJECT AT ENGETEC 2018.</strong><br/>
+        <span>Best technology project in the Computer Engineering field awarded during the Engineering and Technology Week (ENGTEC) in 2018.</span>
+        
+        <br/><br/>
+
+        <strong>• BEST STUDENT IN THE COMPUTER ENGINEERING CLASS.</strong><br/>
+        <span>Recognized as the top student in the Computer Engineering class at UniSALESIANO Araçatuba - SP, among the 2018 graduates.</span>
+        
+        <br/><br/>
+
+        <strong>• Student creates “Interpreter” of books for people with visual impairments - 2019.</strong><br/>
+        <span>A article made by the university about my thesis project (in portuguese).</span>
+        <a style="color: white" href="https://unisalesiano.com.br/aracatuba/aluno-do-unisalesiano-cria-o-interpretador-de-livros-para-pessoas-com-deficiencia-visual/" target="_blank">Link to the article</a>
+        
+        <br/><br/>
+
+        <strong><span>• Project enables blind and illiterate individuals to read independently - 2019.</span></strong><br/>
+        <span>A news report by the local TV station about my project.</span><br/>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2wcfIPebA9Y?si=gODkt_i71kmWbIV_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </p>
+    </div>
+    <div class="post">
+      <h2>My references</h2>
+      <p>
+        <a style="color: white" href="https://csfelix.github.io/" target="_blank">CSFelix</a><br/>
+        <a style="color: white" href="https://tm.tyron.at/" target="_blank">Tyron </a><br/>
+        <a style="color: white" href="https://tynansylvester.com/" target="_blank">Tynan Sylvester</a>
+      </p>
+    </div>
+    <div class="post">
+      <h2>Contact</h2>
+      <div style="text-align: center;">
+        <a href="https://linktr.ee/lucasmence" target="_blank"><img src="img/linktree.png" alt="linktree"></a><br/>
+        <a style="color: white" href="https://linktr.ee/lucasmence" target="_blank">linktr.ee</a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>2024-2025, Made with ❤️ by Mence.</p>
+  </footer>
+  
+  <script src="js/index.js"></script>
+
 </body>
-<script>openDefaultTab(); </script>
 </html>
