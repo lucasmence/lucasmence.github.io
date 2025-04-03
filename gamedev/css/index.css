@@ -47,7 +47,7 @@ header {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-.post h2 {
+.post h1, h2, h3 {
     color: #9370DB;
 }
 

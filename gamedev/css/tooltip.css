@@ -1,0 +1,41 @@
+.image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .hover-image {
+    height: auto;
+    cursor: pointer;
+  }
+  
+  .tooltip {
+    position: absolute;
+    left: 150%; 
+    top: -20%;
+    transform: translateX(-50%);
+    background: rgba(75, 0, 130, 0.8); 
+    color: white;
+    padding:  0px 15px 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 9999;
+  }
+  
+  .image-container:hover .tooltip {
+    opacity: 1;
+  }
+
+  .div-container {
+    font-size: 20px;
+    overflow: hidden; 
+    word-wrap: break-word; 
+    white-space: normal; 
+  }
+  
+  

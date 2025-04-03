@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/favicon.png" type="image/png">
     <link href="css/index.css" rel="stylesheet">
-    <title>Mence Games</title>
+    <link href="css/tooltip.css" rel="stylesheet">
+    <title>Mence's Projects</title>
     <style>
         
     </style>
@@ -15,28 +16,63 @@
     <canvas id="fireCanvas" width="500px" height="500px"></canvas>
 
     <div class="blog">
-        <header><img style="margin-left: -30px; margin-top: -200px" src="img/mence-2.png" alt="avatar"> Mence Games</header>
+        <header><img style="margin-left: -30px; margin-top: -200px" src="img/mence-2.png" alt="avatar">Mence's Projects</header>
 
         <div class="post">
-            <h2>Projects</h2>
+            <h2>My Games</h2>
             <p>
-                <a style="margin-left: -10px; padding-right: 10px;" href="https://lucasmence.itch.io/wizardry-duels" target="_blank"><img src="../img/projects/wizardry-duels.png" alt="Wizardry Duels"></a>
-                <a style="padding-right: 10px;" href="https://lucasmence.itch.io/boltcraft-ii-redux-edition" target="_blank"><img src="../img/projects/boltcraft-ii.png" alt="Boltcraft II"></a>
-                <a href="https://store.steampowered.com/app/2005930/Boltcraft/" target="_blank"><img src="../img/projects/boltcraft.jpg" alt="Boltcraft"></a>
+                <div class="image-container">
+                    <a style="margin-left: -10px; padding-right: 10px;" href="https://lucasmence.itch.io/wizardry-duels" target="_blank"><img class="hover-image" src="../img/projects/wizardry-duels.png" alt="Wizardry Duels"></a>
+                    <div class="tooltip">
+                        <h1>Wizardry Duels</h1>
+                        <div style="text-align: center"><img width="300px" height="200px" src="../img/projects/gifs/wizardry-duels-1.gif"></div>
+                        <div class="div-container">
+                            <br/>
+                            Face another player in this PvP arena where 2 players battle using 3 unique spells: <strong>Icy Spear</strong>, <strong>Blink</strong>, and <strong>Thunderbolt</strong>.
+                            <br/><br/>
+                            I developed this game as a prototype featuring <strong>multiplayer</strong> functionality.<br/> 
+                            Packet loss and slow connections may cause issues such as desync during gameplay.<br/>
+                            This game supports local network connections using UDP protocol. 
+                            <br/><br/>
+                            <strong>Available for free on itch.io</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <a style="padding-right: 10px;" href="https://lucasmence.itch.io/boltcraft-ii-redux-edition" target="_blank"><img class="hover-image" src="../img/projects/boltcraft-ii.png" alt="Boltcraft II"></a>
+                    <div class="tooltip">
+                        <h1>Boltcraft II</h1>
+                        <div style="text-align: center"><img width="300px" height="200px" src="../img/projects/gifs/boltcraft-ii.gif"></div>
+                        <div class="div-container">
+                            <br/>
+                            An action <strong>hack'n'slash</strong> combat containing skills with unique natures that can synergize with other skills in the most diverse combinations.
+                            <br/><br/>
+                            With each new adventure started, a new map will be generated (<strong>procedural generation</strong>), learn to use bushes and walls to outwit enemies and use the terrain to your advantage.
+                            <br/><br/>
+                            <strong>Available for free on itch.io</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <a href="https://store.steampowered.com/app/2005930/Boltcraft/" target="_blank"><img class="hover-image" src="../img/projects/boltcraft.jpg" alt="Boltcraft"></a>
+                    <div class="tooltip">
+                        <h1>Boltcraft (Classic)</h1>
+                        <div style="text-align: center"><img width="300px" height="200px" src="../img/projects/gifs/boltcraft-classic.gif"></div>
+                        <div class="div-container">
+                            <br/>
+                            Boltcraft is an action <strong>hack'n'slash</strong> combat that has a lot of inspiration from <strong>Warcraft III</strong> Custom Games and MOBAs like <strong>Dota 2</strong> and <strong>League of Legends</strong>.
+                            <br/><br/>
+                            Choose one of <strong>3 classes</strong> with unique skills and traits to start the adventure. Visit the <strong>6 regions</strong> present in the adventure with a unique diversity of enemies.
+                            <br/><br/>
+                            <strong>Available on Steam</strong>
+                        </div>
+                    </div>
+                </div>
             </p>
         </div>
 
-        <div class="post" hidden>
-            <h2>About me</h2>
-            <p>
-                <div style="text-align: center;"><img src="img/mence.png" alt="Avatar"></div><br/>
-                Mence here, I like developing games as a hobby.<br/><br/>
-                I discovered my passion for programming at the age of ten when I edited and tried to create my own custom maps for games like Warcraft III and Unreal Tournament.<br/><br/>
-                Since then, I have always been involved with computers and programming, trying to bring my ideas and concepts from my mind into the digital world.<br/><br/> 
-                You will always find me working on some personal project, starting with an idea or fixing existing ones. <br/>
-                I am always working on new projects in my free time (usually games), I like to automate manual server tasks with bash on Linux and think about new spells for RPGs. The ideas never stop flowing.
-            </p>
-        </div>
 
         <div class="post">
             <h2>Contact</h2>
@@ -50,9 +86,6 @@
         </footer>
     </div>
 
-    <script>
-        
-    </script>
     <script src="js/index.js"></script>
 
 </body>
