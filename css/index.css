@@ -17,14 +17,28 @@ body {
     font-weight: bold;
   }
 
-  .content {
-    max-width: 800px;
-    margin: auto;
-    padding: 2rem;
-    position: relative;
-    z-index: 2;
-    flex-grow: 1;
+  @media (min-width: 768px) {
+    .content {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
+      flex-grow: 1;
+    }
   }
+
+  @media (max-width: 800px) {
+    .content {
+      max-width: 400px;
+      margin: auto;
+      padding: 1rem;
+      position: relative;
+      z-index: 2;
+      flex-grow: 1;
+    }
+  }
+
 
   .post {
     background: rgba(255, 255, 255, 0.05);
