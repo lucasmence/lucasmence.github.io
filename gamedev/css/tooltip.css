@@ -2,13 +2,15 @@
   position: relative;
   display: inline-block;
 }
-  
-.hover-image {
-  height: auto;
-  cursor: pointer;
-}
 
 @media (min-width: 768px) {
+  .hover-image {
+    height: auto;
+    cursor: pointer;
+    width: 250px;
+    height: 75px;
+  }
+
   .tooltip {
     position: absolute;
     left: 150%; 
@@ -30,6 +32,13 @@
 }
 
 @media (max-width: 768px) {
+  .hover-image {
+    height: auto;
+    cursor: pointer;
+    width: 250px;
+    height: 75px;
+  }
+
   .tooltip {
     max-width: 350px;
     position: absolute;
