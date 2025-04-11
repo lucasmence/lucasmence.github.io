@@ -19,14 +19,29 @@ canvas {
     z-index: 1;
 }
 
-.blog {
-    position: relative;
-    z-index: 2;
-    width: 75%;
-    max-width: 1000px;
-    margin: 40px auto 40px auto;
-    padding: 20px;
-    box-sizing: border-box;
+@media (min-width: 768px) {
+    .blog {
+        position: relative;
+        z-index: 2;
+        width: 75%;
+        max-width: 900px;
+        margin: 40px auto 40px auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+  }
+
+@media (max-width: 768px) {
+    .blog {
+        position: relative;
+        z-index: 1;
+        width: 75%;
+        max-width: 400px;
+        margin: 10px auto 10px auto;
+        padding: 5px;
+        padding-top: 40px;
+        box-sizing: border-box;
+    }
 }
 
 header {
