@@ -30,11 +30,11 @@ body {
 
   @media (max-width: 800px) {
     .content {
-      max-width: 400px;
+      max-width: 350px;
       margin: auto;
       padding: 1rem;
       position: relative;
-      z-index: 2;
+      z-index: 1;
       flex-grow: 1;
     }
   }
