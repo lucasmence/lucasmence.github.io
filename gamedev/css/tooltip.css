@@ -1,14 +1,9 @@
-.image-container {
-  position: relative;
-  display: inline-block;
-}
-
 @media (min-width: 768px) {
   .hover-image {
     height: auto;
     cursor: pointer;
-    max-width: 250px;
-    max-height: 75px;
+    max-width: 350px;
+    max-height: 125px;
   }
 
   .tooltip {
