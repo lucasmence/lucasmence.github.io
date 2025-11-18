@@ -3,19 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mence</title>
+  <title>Mence Games</title>
   <link rel="icon" href="../img/favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
   <link href="css/index.css" rel="stylesheet">
   <link href="css/tooltip.css" rel="stylesheet">
 </head>
 <body>
   <div class="logo">
-    <img src="img/mence-2.png" alt="Mence">
-  </div>
-
-  <div class="description">
-    <label>Mence</label>
+    <a href="https://linktr.ee/lucasmence" target="_blank"><img src="img/mence-logo.png" alt="Mence"></a>
   </div>
 
   <div class="gallery-container">
@@ -31,14 +30,18 @@
     </div>
 
     <div class="gif-image" id="gif-preview"></div>
-    <div class="tooltip-description">
-      <label id="label-description"></label>
+    <div class="tooltip-group">
+      <div class="tooltip-description">
+        <div class="label-description">
+          <label id="label-description"></label>
+        </div>
+      </div>
     </div>
 
   </div>
 
   <footer>
-    <label><a src="https://linktr.ee/lucasmence" target="_blank">© 2022-2025 Mence</a></label>
+    © 2022-2025 <a style="color: white;" href="https://linktr.ee/lucasmence" target="_blank">Mence</a>
   </footer>
 
   <script>
@@ -52,7 +55,7 @@
         tooltip: `A virus released from the glaciers has spread across the world. You must find your way through the city to survive against the infected.<br/><br/>
                   Collect cash, weapons, and equipment by destroying barrels or simply buy them from shops. Learn to deal with every type of threat that appears in front of you in this procedurally generated game.
                   <br/><br/>
-                  <a href="https://lucasmence.itch.io/protocol-undeath" target="_blank"><strong>Available for free on itch.io</strong></a>`
+                  <strong>Available for free on <a style="color: white;" href="https://lucasmence.itch.io/protocol-undeath" target="_blank">itch.io</a></strong>`
       },
       {
         url: "../img/projects/boltcraft-ii.png",
@@ -63,7 +66,7 @@
                   <br/><br/>
                   With each new adventure started, a new map will be generated (<strong>procedural generation</strong>), learn to use bushes and walls to outwit enemies and use the terrain to your advantage.
                   <br/><br/>
-                  <a href="https://lucasmence.itch.io/boltcraft-ii-redux-edition" target="_blank"><strong>Available for free on itch.io</strong></a>`
+                  <strong>Available for free on <a style="color: white;" href="https://lucasmence.itch.io/boltcraft-ii-redux-edition" target="_blank">itch.io</a></strong>`
       },
       {
         url: "../img/projects/wizardry-duels.png",
@@ -76,7 +79,7 @@
                   Packet loss and slow connections may cause issues such as desync during gameplay.<br/>
                   This game supports local network connections using UDP protocol. 
                   <br/><br/>
-                  <a href="https://lucasmence.itch.io/wizardry-duels" target="_blank"><strong>Available for free on itch.io</strong></a>`
+                  <strong>Available for free on <a style="color: white;" href="https://lucasmence.itch.io/wizardry-duels" target="_blank">itch.io</a></strong>`
       },
       {
         url: "../img/projects/boltcraft.jpg",
@@ -87,7 +90,7 @@
                   <br/><br/>
                   Choose one of <strong>3 classes</strong> with unique skills and traits to start the adventure. Visit the <strong>6 regions</strong> present in the adventure with a unique diversity of enemies.
                   <br/><br/>
-                  <a href="https://store.steampowered.com/app/2005930/Boltcraft/"" target="_blank"><strong>Available on Steam</strong></a>`
+                  <strong>Available on <a style="color: white;" href="https://store.steampowered.com/app/2005930/Boltcraft/" target="_blank">Steam</a></strong>`
       }
     ];
 
@@ -110,7 +113,7 @@
       rightPreview.innerHTML = `<img src="${imageData[rightIndex].url}" alt="next-img">`;
 
       gifImageContainer.innerHTML = `
-        <img style="width='200px' height='100px'" src="${imageData[currentIndex].gif}">
+        <a href="${imageData[currentIndex].link}" target="_blank"><img style="width='200px' height='100px'" src="${imageData[currentIndex].gif}"></a>
       `
 
       labelDescription.innerHTML = `
@@ -128,7 +131,7 @@
       renderSlider();
     }
 
-    setInterval(nextSlide, 5000);
+    setInterval(nextSlide, 10000);
     renderSlider();
   </script>
 </body>
