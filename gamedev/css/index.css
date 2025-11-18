@@ -1,8 +1,10 @@
 body {
     margin: 0;
     background: linear-gradient(to top, #022512, #140127);
-    font-family: 'Press Start 2P', monospace;
-    color: #fff;
+    font-family: 'Press Start 2P', system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,17 +23,24 @@ body {
     text-align: center;
     margin: 20px 0;
     font-size: 0.9rem;
-    font-family: 'Press Start 2P', monospace;
-    color: #ccc;
+    color: white;
     max-width: 80%;
+  }
+
+  .tooltip-group {
+    align-items: center;
   }
 
   .tooltip-description {
     margin: 20px 0;
     text-align: center;
     font-size: 0.9rem;
-    font-family: 'Press Start 2P', monospace;
-    color: #ccc;
+    color: white;
+  }
+
+  .label-description {
+    max-width: 70%;
+    padding-left: 15%;
   }
 
   .gallery-container {
@@ -39,6 +48,7 @@ body {
     max-width: 1000px;
     overflow: hidden;
     position: relative;
+    margin-top: 50px;
   }
 
   .slider-wrapper {
