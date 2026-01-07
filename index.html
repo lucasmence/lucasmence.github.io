@@ -1,167 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="img/favicon.png" type="image/png">
-  <title>Lucas Mence - Homepage</title>
-  <link href="css/index.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Lucas Mence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
-  <div></div>
-  <header>Lucas Mence</header>
-  <div style="text-align: center">
-    <img style="width: 200px; height: 210px; border-radius: 50%; object-fit: cover;" src="img/mence.png">
-  </div>
-  <div class="content">
-    <div class="post" style="background-color: rgb(0, 0, 0, 0);">
-      <div style="text-align: end;">
-        <select onchange="window.location.href = this.value"> 
-          <option value="#">🇬🇧 English</option>
-          <option value="https://mence.dev/">🇧🇷 Português</option>
-        </select>
-      </div>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <div class="box-central">
+            <div class="box-content">
+              <div class="div-avatar">
+                <img class="img-avatar" src="img/mence.png">
+              </div>
+              <div class="div-personal-content">
+                <p class="div-personal-name">Lucas Mence</p>
+                <div class="div-personal-description">
+                  <p>Software Developer with 12+ years experience.
+                    <br/> 
+                    I've worked with devops, web, mobile, and gamedev.
+                    <br/>
+                    Currently, I working with React/Node.js and C++ gamedev.
+                  </p>
+                </div>
+              </div>
+              <div class="div-icons">
+                <a href="mailto:mence.dev@proton.me" target="_blank" class="btn"><img class="icon" src="img/email-svgrepo-com.svg"></a>
+                <a href="https://github.com/lucasmence" target="_blank" class="btn"><img class="icon" src="img/github-svgrepo-com.svg"></a>
+                <a href="https://www.linkedin.com/in/lucassilva96/" target="_blank" class="btn"><img class="icon" src="img/linkedin-svgrepo-com.svg"></a>
+                <a href="https://linktr.ee/lucasmence" target="_blank" class="btn"><img class="icon" src="img/link-circle-svgrepo-com.svg"></a>
+              </div>
+            </div>
+            <div class="box-footer">
+              <a href="resume.html" class="btn">Resume</a>
+              <a href="projects.html" class="btn">Projects</a>
+          </div>
+        </div> 
     </div>
-    <div class="post">
-      <h2>Skills</h2>
-      <div style="width:100%; display:flex;">
-        <div class="post" style="width:45%; margin-right: 2%;">
-          <h4>BACKEND</h4>
-          • NodeJS (Express, PM2, Sequelize, Redis)<br/>
-          • Python (Django / Selenium / TesseractOCR / gunicorn)<br/>
-          • C / C++ (CMake / Boost / ENet / SFML / Arduino)<br/>
-          • Java (Spring) <br/>
-          • PHP<br/> 
-          • Delphi / Pascal<br/>
-          • Databases (MySQL / MariaDB / Firebird / SQLite) <br/>
-        </div>
-        <div class="post" style="width:45%;">
-          <h4>FRONTEND</h4>
-          • ReactJS (Redux / Axios / MUI / Formik)<br/>
-          • Javascript (Bootstrap / jQuery / AJAX)
-        </div>
-      </div>
-      <div style="width:100%; display:flex;">
-        <div class="post" style="width:45%; margin-right: 2%;">
-          <h4>DEVOPS</h4>
-          • Linux Server Management (SSH / bash / systemd / cron / netstat)<br/>
-          • NGINX<br/>
-          • Supervisorctl<br/>
-          • Docker<br/>
-          • RabbitMQ
-        </div>
-
-        <div class="post" style="width:45%;">
-          <h4>MISCELLANEOUS</h4>
-          • Game Development <a style="color: white;" href="https://lucasmence.github.io/gamedev/" target="_blank">🔗</a><br/>
-          • AndroidStudio<br/>
-          • Amazon S3 / FTP<br/>
-          • Raspberry PI<br/>
-          • Data Structures<br/>
-          • OpenCV<br/>
-          • QT<br/>
-          • Chromium Embedded Framework (CEF)
-        </div>
-      </div>
-    </div>
-    <div style="width:100%; display:flex;">
-      <div class="post" style="width:45%; margin-right: 2%;">
-        <h2>Education</h2>
-        <p>
-          <strong title="2012 - 2013 | ETEC Centro Paula Souza">• Technical Degree in Computer Science</strong>
-          <br/><br/>
-          <strong title="2014 - 2018 | UniSALESIANO Araçatuba - SP">• Bachelor's Degree in Computer Engineering</strong>
-          <br/><br/>
-          <strong title="2021 - 2022 | PUC Minas">• Post-Graduate in Cybersecurity and Data Governance</strong>
-          <br/><br/>
-          <strong title="2018 | Linux Server Management Course - InterSOLID">• Linux Server Management</strong>
-        </p>
-      </div>
-      <div class="post" style="width:45%;">
-        <h2>Honors & Awards</h2>
-        <p>
-          <strong>• WINNER OF THE BEST PROJECT AT ETEC 2013. <span title="Best final course project at ETEC Centro Paula Souza in Andradina - SP in the year 2013.">🔍</span></strong><br/> 
-          <br/><br/>
-          <strong>• WINNER OF THE BEST PROJECT AT ENGETEC 2018. <span title="Best technology project in the Computer Engineering field awarded during the Engineering and Technology Week (ENGTEC) in 2018.">🔍</span></strong><br/>
-          <br/><br/>
-          <strong>• BEST STUDENT IN THE COMPUTER ENGINEERING CLASS. <span title="Recognized as the top student in the Computer Engineering class at UniSALESIANO Araçatuba - SP, among the 2018 graduates.">🔍</span></strong><br/>
-          <br/><br/>
-          <strong>• Student creates “Interpreter” of books for people with visual impairments - 2019. <a title="A article made by the university about my thesis project (in portuguese)." style="color: white" href="https://unisalesiano.com.br/aracatuba/aluno-do-unisalesiano-cria-o-interpretador-de-livros-para-pessoas-com-deficiencia-visual/" target="_blank">🔗</a></strong><br/>
-          <br/><br/>
-          <strong><span>• Project enables blind and illiterate individuals to read independently - 2019. <a title="A news report by the local TV station about my project." style="color: white" href="https://www.youtube.com/embed/2wcfIPebA9Y?si=gODkt_i71kmWbIV_" target="_blank">🎬</a></span></strong><br/>
-        </p>
-      </div>
-    </div>
-    <div class="post">
-      <h2>Experiences</h2>
-      <p>
-        • Developed a complete API for bulk message sending and receiving, allowing integration with other systems and scheduling messages for customer number lists. Used Python and Django Rest Framework for API development and implemented the service on an Ubuntu system with RabbitMQ and Gunicorn for daemon persistence.
-        <br/><br/>
-        • Designed and developed automated scripts and routines for backup and update processes on Ubuntu web servers using SSH, Bash commands, and crontab scheduling.
-        <br/><br/>
-        • Integrated webhooks to detect pushes from the main Git branch and notify about process completion or potential issues.
-        <br/><br/>
-        • Independently developed 2D games using C++ with the SFML library, some of which were officially released, including one published on Steam as an experiment.
-        <br/><br/> 
-        • Designed and created a map editor for the early versions of my games. It utilizes the same map reading system to include terrains, rules, and elements, using the same resources as the game engine.
-      </p>
-    </div>
-    <div class="post">
-      <h2>Projects I've worked on</h2>
-      <p>
-        <a style="padding-right: 10px;" href="https://bestzap.com.br/" target="_blank"><img src="img/projects/bestzap.png" alt="BestZap"></a>
-        <a href="https://notacerta.com.br/" target="_blank"><img src="img/projects/notacerta.png" alt="NotaCerta"></a>
-      </p>
-    </div>
-    <div class="post">
-      <h2>My projects</h2>
-      <p>
-        <a style="padding-right: 10px;" href="https://lucasmence.itch.io/protocol-undeath" target="_blank"><img src="img/projects/protocol-undeath.png" alt="Protocol Undeath"></a>
-        <a style="padding-right: 10px;" href="https://lucasmence.itch.io/wizardry-duels" target="_blank"><img src="img/projects/wizardry-duels.png" alt="Wizardry Duels"></a>
-        <a style="padding-right: 10px;" href="https://lucasmence.itch.io/boltcraft-ii-redux-edition" target="_blank"><img src="img/projects/boltcraft-ii.png" alt="Boltcraft II"></a>
-        <a style="padding-right: 10px;" href="https://store.steampowered.com/app/2005930/Boltcraft/" target="_blank"><img src="img/projects/boltcraft.jpg" alt="Boltcraft"></a>
-        <a style="padding-right: 10px;" href="https://github.com/lucasmence/realm-editor" target="_blank"><img src="img/projects/realm-editor.png" alt="Realm Editor"></a>
-        <a style="padding-right: 10px;" href="https://github.com/lucasmence/helper" target="_blank"><img src="img/projects/kubuntu-autoinstaller.png" alt="Kubuntu Auto-Installer"></a>
-        <a style="padding-right: 10px;" href="https://github.com/lucasmence/sfml-tcp-chat" target="_blank"><img src="img/projects/sfml-tcp-chat.png" alt="sfml-tcp-chat"></a>
-        <a style="padding-right: 10px;" href="https://github.com/lucasmence/ProcessamentoDigitalDeImagem" target="_blank"><img src="img/projects/python-image-processing.png" alt="python-digital-image-processing"></a>
-        <a style="padding-right: 10px;" href="https://github.com/lucasmence/pitchula" target="_blank"><img src="img/projects/photoreader.png" alt="Photoreader"></a>
-        <a style="padding-right: 10px;" href="https://github.com/lucasmence/chrome-firefox-example-plugin" target="_blank"><img src="img/projects/webbrowser-plugin.png" alt="Firefox-Chrome Plugin"></a>
-      </p>
-    </div>
-    <div style="width:100%; display:flex;">
-      <div class="post" style="width:45%; margin-right: 2%;">
-        <h2>Languages</h2>
-        <p>
-          • Portuguese (first language)<br/>
-          • English (second language)<br/>
-          • Spanish (basic)
-        </p>
-      </div>
-      <div class="post" style="width:45%">
-        <h2>My references</h2>
-        <p>
-          <a style="color: white" href="https://csfelix.github.io/" target="_blank">CSFelix</a><br/>
-          <a style="color: white" href="https://tm.tyron.at/" target="_blank">Tyron </a><br/>
-          <a style="color: white" href="https://tynansylvester.com/" target="_blank">Tynan Sylvester</a><br/>
-          <a style="color: white" href="hhttps://dafluffypotato.com/" target="_blank">DaFluffyPotato</a><br/>
-          <a style="color: white" href="https://onelonecoder.com/" target="_blank">OneLoneCoder</a>  
-        </p>
-      </div>
-    </div>
-    <div class="post">
-      <h2>Contact</h2>
-      <div style="text-align: center;">
-        <a href="https://linktr.ee/lucasmence" target="_blank"><img src="img/linktree.png" alt="linktree"></a><br/>
-        <a style="color: white" href="https://linktr.ee/lucasmence" target="_blank">linktr.ee</a>
-        <a style="display: none" rel="me" href="https://mastodon.social/@lucasmence"></a>
-      </div>
-    </div>
-  </div>
-  <footer>
-    <p>2019-2025, Made with ❤️ by Mence.</p>
-  </footer>
-  
-  <script src="js/index.js"></script>
-
+    <footer class="footer">
+      <p>2019-2026, Made with ❤️ by Mence.</p>
+    </footer>
 </body>
 </html>
