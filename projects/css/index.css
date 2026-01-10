@@ -1,0 +1,135 @@
+.full-height-wrapper {
+  min-height: 0vh;
+  padding: 1vh 0vh;  
+
+  display: flex;
+  justify-content: center;   
+  color: rgb(60, 60, 60);
+  position: relative;
+  z-index: 1;
+}
+
+.box-vertical-background {
+  width: 100vh;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 50%;                    
+  transform: translateX(-50%); 
+
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.box-vertical {
+  width: 100vh;              
+  height: 95vh;            
+}
+
+.box-project {
+  width: 350px;
+  height: 150px;
+  justify-content: center;     
+  text-align: center;
+}
+
+.img-project {
+  width: 280px;
+  height: 150px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.link-project {
+  color: rgb(80, 79, 79);
+  text-decoration: none;
+}
+
+.span-title-project {
+  text-align: center;  
+  font-size: 24px;
+}
+
+.project-container {
+  display: flex;
+  padding-bottom: 120px;
+}
+
+.img-container {
+  position: relative;    
+  width: 288px;     
+  margin: 0px 10px;
+}
+
+.img-container img {
+  width: 100%;
+  display: block;
+}
+
+.img-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+  pointer-events: none; 
+  bottom: 10px;
+  right: 10px;
+  top: auto;
+  left: auto;
+  transform: none;
+}
+
+.div-project-description {
+  padding-top: 20px;
+  color: rgb(102, 101, 101);
+}
+
+.page-title {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.span-page-title {
+  font-size: 42px;
+  font-style: bold;
+}
+
+.link-references {
+  color: rgb(102, 101, 101);
+  text-decoration: none;
+}
+
+.div-references {
+  margin: 0 auto; 
+}
+
+.row-references {
+  padding-right: 20px;
+}
+
+.div-icons-project {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+.div-icons-project .btn {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 6px;
+  background: white;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
