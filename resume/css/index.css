@@ -1,0 +1,10 @@
+.resume {
+  width: 90vh;
+  height: 82vh;
+}
+
+.div-resume {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
