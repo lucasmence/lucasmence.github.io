@@ -17,7 +17,7 @@ const TRANSLATIONS = {
   br: {
     title: 'lucas@mence.dev:~/projetos$',
     back: 'voltar para ~',
-    backUrl: '../lang=br',
+    backUrl: '../?lang=br',
     pageTitle: '~/projetos$ ls -la',
     myProjects: 'Meus Projetos',
     workedOn: 'Projetos em que trabalhei',

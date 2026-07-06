@@ -19,7 +19,7 @@ const TRANSLATIONS = {
   br: {
     title: 'lucas@mence.dev:~/curriculo$',
     back: 'voltar para ~',
-    backUrl: '../lang=br',
+    backUrl: '../?lang=br',
     pageTitle: '~/curriculo$ cat curriculo.pdf',
     windowLabel: '~/curriculo',
     cmdEcho: 'cat curriculo.pdf',
