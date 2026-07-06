@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("../img/background.png"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.background-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.20); 
+  backdrop-filter: blur(8px);   
+  -webkit-backdrop-filter: blur(8px); 
+  z-index: 0;
+}
+
+.footer {
+  height: 50px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+  margin: 0;   
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-central {
+  width: 600px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.box-content {
+  padding: 30px 30px 0px 30px;
+}
+
+.menu,
+.container {
+  color: rgb(60, 60, 60);
+  position: relative;
+  z-index: 1;
+}
+
+.div-avatar {
+  text-align: center;
+}
+
+.img-avatar {
+  width: 160px; 
+  height: 160px; 
+  border-radius: 50%; 
+  object-fit: cover;
+}
+
+.div-personal-content {
+  padding: 10px;
+}
+
+.div-personal-name {
+  font-size: 26px;
+}
+
+.div-personal-description {
+  padding: 30px
+}
+
+.box-footer {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.box-footer .btn {
+  padding: 10px 18px;
+  margin: 0px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: white;
+  color: #000;
+  transition: transform 0.15s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.box-footer .btn {
+  padding: 10px 18px;
+  margin: 0px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: white;
+  color: #000;
+  transition: transform 0.15s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.div-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.div-icons .btn {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 12px;
+  border-radius: 6px;
+  background: white;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+  background: #ffeeee;
+  transform: scale(1.05);
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+}

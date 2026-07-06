@@ -699,8 +699,8 @@ function cmd_social(ctx){
 }
 function cmd_projects_panel(ctx, runCommand){
   const links = [
-    { label: `${t.btnResume}`, href: (currentLang === 'br' ? 'br/' : '') + 'resume/' },
-    { label: `${t.btnProjects}`, href: (currentLang === 'br' ? 'br/' : '') + 'projects/' }
+    { label: `${t.btnResume}`, href: 'resume/' + (currentLang === 'br' ? '?lang=br' : '')},
+    { label: `${t.btnProjects}`, href: 'projects/' + (currentLang === 'br' ? '?lang=br' : '') }
   ];
   const width = Math.max(...links.map(l => l.label.length));
   const html = `<div class="ascii-btn-row">${links.map(l => `<a class="ascii-btn" href="${l.href}" target="_blank" rel="noopener">${asciiButtonLabel(l.label, width)}</a>`).join('')}</div>`;

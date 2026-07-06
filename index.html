@@ -1,130 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>lucas@mence.dev:~$</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/index.css">
+  <meta charset="UTF-8">
+  <meta property="og:title" content="mence.dev">
+  <meta property="og:description" content="Software Engineer with experience in web, desktop, DevOps and game development.">
+  <meta property="og:image" content="https://mence.dev/img/mence.jpg">
+  <meta property="og:url" content="https://mence.dev/">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#272822">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lucas@mence.dev:~$</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
 <body>
-
-<div id="boot">
-<div id="boot-text"></div>
-</div>
-
-<div class="vignette"></div>
-<div class="crt-overlay"></div>
-
-<main id="main">
-  <div class="topline" style="justify-content:flex-end;">
-    <div class="toolbar">
-      <div class="minimized-container" id="minimized-bar"></div>
-
-      <div class="lang-switcher">
-        <span class="label">lang:</span>
-        <a href="?lang=en" id="lang-en">EN</a>
-        <span style="color:var(--border);">|</span>
-        <a href="?lang=br" id="lang-br">BR</a>
-      </div>
-      <div class="theme-switcher" id="theme-switcher">
-        <span class="label">theme:</span>
-        <button class="swatch" data-theme="monokai" style="background:linear-gradient(135deg,#272822 50%,#a6e22e 50%)" title="Monokai"></button>
-        <button class="swatch" data-theme="green" style="background:linear-gradient(135deg,#0a0d0a 50%,#5ee87d 50%)" title="Green"></button>
-        <button class="swatch" data-theme="light" style="background:linear-gradient(135deg,#f2f2ee 50%,#1f8a3d 50%)" title="Light"></button>
-        <button class="swatch" data-theme="purple" style="background:linear-gradient(135deg,#170f24 50%,#c792ea 50%)" title="Purple"></button>
-        <button class="swatch" data-theme="blue" style="background:linear-gradient(135deg,#0a121e 50%,#5ec6ff 50%)" title="Blue"></button>
-      </div>
-      <button class="reset-layout" id="btn-reset-layout" title="Reset layout">&#8635; reset</button>
-      <span id="clock">--:--:--</span>
-    </div>
+  <div id="boot">
+    <div id="boot-text"></div>
   </div>
-
-  <div id="desktop">
-    <div class="card window" id="win-avatar" data-title="avatar">
-      <div class="card-titlebar">
-        <div class="window-controls">
-          <button class="dot r" onclick="closeWindow('win-avatar')" title="Close">×</button>
-          <button class="dot y" onclick="minimizeWindow('win-avatar')" title="Minimize">−</button>
-          <button class="dot g" onclick="maximizeWindow('win-avatar')" title="Maximize">+</button>
+  <div class="vignette"></div>
+  <div class="crt-overlay"></div>
+  <main id="main">
+    <div class="topline" style="justify-content:flex-end;">
+      <div class="toolbar">
+        <div class="minimized-container" id="minimized-bar"></div>
+        <div class="lang-switcher">
+          <span class="label">lang:</span>
+          <a href="?lang=en" id="lang-en">EN</a>
+          <span style="color:var(--border);">|</span>
+          <a href="?lang=br" id="lang-br">BR</a>
         </div>
-        <div class="titlebar-drag"><span class="path">~/avatar</span></div>
-      </div>
-      <div class="term-screen" tabindex="-1">
-        <div class="output"></div>
-        <div class="inputline">
-          <span class="prompt">lucas@mence.dev</span><span class="sym">:</span><span class="path prompt-path">~</span><span class="sym">$</span>
-          <input class="cmdline" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" />
+        <div class="theme-switcher" id="theme-switcher">
+          <span class="label">theme:</span>
+          <button class="swatch" data-theme="monokai" style="background:linear-gradient(135deg,#272822 50%,#a6e22e 50%)" title="Monokai"></button>
+          <button class="swatch" data-theme="green" style="background:linear-gradient(135deg,#0a0d0a 50%,#5ee87d 50%)" title="Green"></button>
+          <button class="swatch" data-theme="light" style="background:linear-gradient(135deg,#f2f2ee 50%,#1f8a3d 50%)" title="Light"></button>
+          <button class="swatch" data-theme="purple" style="background:linear-gradient(135deg,#170f24 50%,#c792ea 50%)" title="Purple"></button>
+          <button class="swatch" data-theme="blue" style="background:linear-gradient(135deg,#0a121e 50%,#5ec6ff 50%)" title="Blue"></button>
         </div>
+        <button class="reset-layout" id="btn-reset-layout" title="Reset layout">&#8635; reset</button>
+        <span id="clock">--:--:--</span>
       </div>
-      <div class="resizer t"></div><div class="resizer b"></div><div class="resizer l"></div><div class="resizer r"></div>
-      <div class="resizer tl"></div><div class="resizer tr"></div><div class="resizer bl"></div><div class="resizer br"></div>
     </div>
-
+    <div id="desktop">
+      <div class="card window" id="win-avatar" data-title="avatar">
+        <div class="card-titlebar">
+          <div class="window-controls">
+            <button class="dot r" onclick="closeWindow('win-avatar')" title="Close">×</button>
+            <button class="dot y" onclick="minimizeWindow('win-avatar')" title="Minimize">−</button>
+            <button class="dot g" onclick="maximizeWindow('win-avatar')" title="Maximize">+</button>
+          </div>
+          <div class="titlebar-drag"><span class="path">~/avatar</span></div>
+        </div>
+        <div class="term-screen" tabindex="-1">
+          <div class="output"></div>
+          <div class="inputline">
+            <span class="prompt">lucas@mence.dev</span><span class="sym">:</span><span class="path prompt-path">~</span><span class="sym">$</span>
+            <input class="cmdline" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" />
+          </div>
+        </div>
+        <div class="resizer t"></div><div class="resizer b"></div><div class="resizer l"></div><div class="resizer r"></div>
+        <div class="resizer tl"></div><div class="resizer tr"></div><div class="resizer bl"></div><div class="resizer br"></div>
+      </div>
         <div class="card window" id="win-card" data-title="whoami">
-      <div class="card-titlebar">
-        <div class="window-controls">
-          <button class="dot r" onclick="closeWindow('win-card')" title="Close">×</button>
-          <button class="dot y" onclick="minimizeWindow('win-card')" title="Minimize">−</button>
-          <button class="dot g" onclick="maximizeWindow('win-card')" title="Maximize">+</button>
+        <div class="card-titlebar">
+          <div class="window-controls">
+            <button class="dot r" onclick="closeWindow('win-card')" title="Close">×</button>
+            <button class="dot y" onclick="minimizeWindow('win-card')" title="Minimize">−</button>
+            <button class="dot g" onclick="maximizeWindow('win-card')" title="Maximize">+</button>
+          </div>
+          <div class="titlebar-drag"><span class="path">~/whoami</span></div>
         </div>
-        <div class="titlebar-drag"><span class="path">~/whoami</span></div>
-      </div>
-      <div class="term-screen" tabindex="-1">
-        <div class="output"></div>
-        <div class="inputline">
-          <span class="prompt">lucas@mence.dev</span><span class="sym">:</span><span class="path prompt-path">~</span><span class="sym">$</span>
-          <input class="cmdline" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" />
+        <div class="term-screen" tabindex="-1">
+          <div class="output"></div>
+          <div class="inputline">
+            <span class="prompt">lucas@mence.dev</span><span class="sym">:</span><span class="path prompt-path">~</span><span class="sym">$</span>
+            <input class="cmdline" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" />
+          </div>
         </div>
+        <div class="resizer t"></div><div class="resizer b"></div><div class="resizer l"></div><div class="resizer r"></div>
+        <div class="resizer tl"></div><div class="resizer tr"></div><div class="resizer bl"></div><div class="resizer br"></div>
       </div>
-      <div class="resizer t"></div><div class="resizer b"></div><div class="resizer l"></div><div class="resizer r"></div>
-      <div class="resizer tl"></div><div class="resizer tr"></div><div class="resizer bl"></div><div class="resizer br"></div>
-    </div>
-      <div class="term-wrap window" id="win-term" data-title="terminal">
+        <div class="term-wrap window" id="win-term" data-title="terminal">
+          <div class="term-titlebar">
+            <div class="window-controls">
+              <button class="dot r" onclick="closeWindow('win-term')" title="Close">×</button>
+              <button class="dot y" onclick="minimizeWindow('win-term')" title="Minimize">−</button>
+              <button class="dot g" onclick="maximizeWindow('win-term')" title="Maximize">+</button>
+            </div>
+            <div class="titlebar-drag"><span class="name">~/aboutme</span></div>
+          </div>
+        <div class="term-screen" tabindex="-1">
+          <div class="output"></div>
+          <div class="inputline">
+            <span class="prompt">lucas@mence.dev</span><span class="sym">:</span><span class="path prompt-path">~</span><span class="sym">$</span>
+            <input class="cmdline" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus/>
+          </div>
+        </div>
+        <div class="resizer t"></div><div class="resizer b"></div><div class="resizer l"></div><div class="resizer r"></div>
+        <div class="resizer tl"></div><div class="resizer tr"></div><div class="resizer bl"></div><div class="resizer br"></div>
+      </div>
+      <div class="term-wrap window" id="win-starship" data-title="starship">
         <div class="term-titlebar">
           <div class="window-controls">
-            <button class="dot r" onclick="closeWindow('win-term')" title="Close">×</button>
-            <button class="dot y" onclick="minimizeWindow('win-term')" title="Minimize">−</button>
-            <button class="dot g" onclick="maximizeWindow('win-term')" title="Maximize">+</button>
+            <button class="dot r" onclick="closeWindow('win-starship')" title="Close">×</button>
+            <button class="dot y" onclick="minimizeWindow('win-starship')" title="Minimize">−</button>
+            <button class="dot g" onclick="maximizeWindow('win-starship')" title="Maximize">+</button>
           </div>
-          <div class="titlebar-drag"><span class="name">~/aboutme</span></div>
+          <div class="titlebar-drag"><span class="name">~/starship</span></div>
         </div>
-      <div class="term-screen" tabindex="-1">
-        <div class="output"></div>
-        <div class="inputline">
-          <span class="prompt">lucas@mence.dev</span><span class="sym">:</span><span class="path prompt-path">~</span><span class="sym">$</span>
-          <input class="cmdline" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus/>
+        <div class="term-screen" tabindex="-1">
+          <div class="output"></div>
+          <div class="inputline">
+            <span class="prompt">lucas@mence.dev</span><span class="sym">:</span><span class="path prompt-path">~</span><span class="sym">$</span>
+            <input class="cmdline" type="text" autocomplete="off" autocapitalize="off" spellcheck="false"/>
+          </div>
         </div>
+        <div class="resizer t"></div><div class="resizer b"></div><div class="resizer l"></div><div class="resizer r"></div>
+        <div class="resizer tl"></div><div class="resizer tr"></div><div class="resizer bl"></div><div class="resizer br"></div>
       </div>
-      <div class="resizer t"></div><div class="resizer b"></div><div class="resizer l"></div><div class="resizer r"></div>
-      <div class="resizer tl"></div><div class="resizer tr"></div><div class="resizer bl"></div><div class="resizer br"></div>
     </div>
-
-    <div class="term-wrap window" id="win-starship" data-title="starship">
-      <div class="term-titlebar">
-        <div class="window-controls">
-          <button class="dot r" onclick="closeWindow('win-starship')" title="Close">×</button>
-          <button class="dot y" onclick="minimizeWindow('win-starship')" title="Minimize">−</button>
-          <button class="dot g" onclick="maximizeWindow('win-starship')" title="Maximize">+</button>
-        </div>
-        <div class="titlebar-drag"><span class="name">~/starship</span></div>
-      </div>
-      <div class="term-screen" tabindex="-1">
-        <div class="output"></div>
-        <div class="inputline">
-          <span class="prompt">lucas@mence.dev</span><span class="sym">:</span><span class="path prompt-path">~</span><span class="sym">$</span>
-          <input class="cmdline" type="text" autocomplete="off" autocapitalize="off" spellcheck="false"/>
-        </div>
-      </div>
-      <div class="resizer t"></div><div class="resizer b"></div><div class="resizer l"></div><div class="resizer r"></div>
-      <div class="resizer tl"></div><div class="resizer tr"></div><div class="resizer bl"></div><div class="resizer br"></div>
-    </div>
-  </div>
-
-  <footer>© <span id="year-start"></span> - <span id="year-current"></span> mence.dev</footer>
-</main>
-
-<script src="js/index.js"></script>
+    <footer>© <span id="year-start"></span> - <span id="year-current"></span> mence.dev</footer>
+  </main>
+  <script src="js/index.js"></script>
 </body>
 </html>

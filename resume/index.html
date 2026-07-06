@@ -1,43 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta property="og:title" content="Lucas Mence | Software Engineer | Resume">
-    <meta property="og:description" content="Software Engineer with 12+ years of experience in web, desktop, DevOps and game development.">
-    <meta property="og:image" content="https://mence.dev/img/mence.png">
+  <head>
+     <meta charset="UTF-8">
+    <meta property="og:title" content="mence.dev | Projects">
+    <meta property="og:description" content="Software Engineer with experience in web, desktop, DevOps and game development.">
+    <meta property="og:image" content="https://mence.dev/img/mence.jpg">
     <meta property="og:url" content="https://mence.dev/resume">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#0069FF">
-
-    <title>Lucas Mence - Resume</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#272822">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lucas@mence.dev:~/resume$</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="icon" href="../img/favicon.png" type="image/png">
-    <link href="../css/index.css" rel="stylesheet">
-    <link href="../projects/css/index.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
-</head>
-<body>
-    <div class="background-overlay"></div>
-    <div class="box-vertical-background"></div>
-    <div class="full-height-wrapper">
-    <div class="content">
-      <div class="box-vertical">
-          <div class="box-content">
-
-            <div class="div-icons-project">
-              <a href="../" class="btn"><img class="icon" src="../img/home-svgrepo-com.svg"></a>
+  </head>
+  <body>
+    <div class="vignette"></div>
+    <div class="crt-overlay"></div>
+    <main id="main" class="show">
+      <div class="topline">
+        <a class="back-link" id="back-link" href="../">&larr; <span id="txt-back">back to ~</span></a>
+        <div class="toolbar">
+          <div class="lang-switcher">
+            <span class="label">lang:</span>
+            <a href="?lang=en" id="lang-en">EN</a>
+            <span style="color:var(--border);">|</span>
+            <a href="?lang=br" id="lang-br">BR</a>
+          </div>
+          <div class="theme-switcher" id="theme-switcher">
+            <span class="label">theme:</span>
+            <button class="swatch" data-theme="monokai" style="background:linear-gradient(135deg,#272822 50%,#a6e22e 50%)" title="Monokai"></button>
+            <button class="swatch" data-theme="green" style="background:linear-gradient(135deg,#0a0d0a 50%,#5ee87d 50%)" title="Green"></button>
+            <button class="swatch" data-theme="light" style="background:linear-gradient(135deg,#f2f2ee 50%,#1f8a3d 50%)" title="Light"></button>
+            <button class="swatch" data-theme="purple" style="background:linear-gradient(135deg,#170f24 50%,#c792ea 50%)" title="Purple"></button>
+            <button class="swatch" data-theme="blue" style="background:linear-gradient(135deg,#0a121e 50%,#5ec6ff 50%)" title="Blue"></button>
+          </div>
+          <span id="clock">--:--:--</span>
+        </div>
+      </div>
+      <div class="page-title" id="txt-page-title">~/resume$ cat resume.pdf</div>
+      <div class="resume-wrap">
+        <div class="term-wrap resume-window">
+          <div class="term-titlebar">
+            <div class="window-controls">
+              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
             </div>
-            
-            <div class="page-title">
-              <span class="span-page-title">Resume</span>
-            </div>
-
-            <div class="div-resume">
-              <object class="resume" data="assets/LucasVinicius-PublicResume-2026.pdf" type="application/pdf" name="fitvid0"></object>
+            <span class="name" id="txt-window-label">~/resume</span>
+          </div>
+          <div class="term-screen resume-screen">
+            <div class="line cmd"><span class="cmd-prompt-group"><span class="prompt">lucas@mence.dev</span><span class="sym">:</span><span class="path">~</span><span class="sym">$</span></span> <span id="txt-cmd-echo">cat resume.pdf</span></div>
+            <div class="pdf-frame-wrap">
+              <iframe id="pdf-frame" title="Resume"></iframe>
             </div>
           </div>
+        </div>
+        <div class="download-row">
+          <a class="ascii-btn" id="btn-download" download>
+            <span id="txt-download">&#8595; Download PDF</span>
+          </a>
+        </div>
       </div>
-    </div>
-  </div>
-</body>
+      <footer>© <span id="year-start"></span> - <span id="year-current"></span> mence.dev</footer>
+    </main>
+    <script src="js/index.js"></script>
+  </body>
 </html>
