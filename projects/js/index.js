@@ -101,12 +101,32 @@ document.getElementById('grid-games').innerHTML = GAMES.map(renderProjectWindow)
 document.getElementById('grid-work').innerHTML = WORK.map(renderProjectWindow).join('');
 document.getElementById('references-row').innerHTML = `<div class="ascii-btn-row">${REFERENCES.map(r => `<a class="ascii-btn" href="${r.href}" target="_blank" rel="noopener">${r.label}</a>`).join('')}</div>`;
 
+(function animateCards(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const cards = document.querySelectorAll('.proj-window');
+  const btns = document.querySelectorAll('#references-row .ascii-btn');
+  const all = [...cards, ...btns];
+  all.forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(12px) scale(0.97)';
+    el.style.animationDelay = `${i * 50}ms`;
+  });
+  if (all.length) {
+    void all[0].offsetHeight;
+    all.forEach(el => {
+      el.classList.add('emerge-fast');
+      el.addEventListener('animationend', () => {
+        el.style.opacity = '';
+        el.style.transform = '';
+        el.style.animationDelay = '';
+      }, { once: true });
+    });
+  }
+})();
+
 function pad(n){ return n.toString().padStart(2, '0'); }
 function tickClock(){ const d = new Date(); document.getElementById('clock').textContent = `${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`; }
 tickClock();
 setInterval(tickClock, 1000);
 
-const swatches = document.querySelectorAll('.swatch');
-function setTheme(name){ document.body.dataset.theme = name; swatches.forEach(s => s.classList.toggle('active', s.dataset.theme === name)); }
-swatches.forEach(s => s.addEventListener('click', () => setTheme(s.dataset.theme)));
-setTheme('monokai');
+

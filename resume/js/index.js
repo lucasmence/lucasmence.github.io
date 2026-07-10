@@ -45,12 +45,33 @@ const btnDownload = document.getElementById('btn-download');
 btnDownload.href = t.pdfPath;
 btnDownload.setAttribute('download', t.downloadName);
 
+(function animateResume(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const win = document.querySelector('.resume-wrap');
+  const btn = document.querySelector('.download-row');
+  [win, btn].forEach((el, i) => {
+    if (!el) return;
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(16px) scale(0.97)';
+    el.style.animationDelay = `${i * 120}ms`;
+  });
+  if (win) {
+    void win.offsetHeight;
+    [win, btn].forEach(el => {
+      if (!el) return;
+      el.classList.add('emerge');
+      el.addEventListener('animationend', () => {
+        el.style.opacity = '';
+        el.style.transform = '';
+        el.style.animationDelay = '';
+      }, { once: true });
+    });
+  }
+})();
+
 function pad(n){ return n.toString().padStart(2, '0'); }
 function tickClock(){ const d = new Date(); document.getElementById('clock').textContent = `${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`; }
 tickClock();
 setInterval(tickClock, 1000);
 
-const swatches = document.querySelectorAll('.swatch');
-function setTheme(name){ document.body.dataset.theme = name; swatches.forEach(s => s.classList.toggle('active', s.dataset.theme === name)); }
-swatches.forEach(s => s.addEventListener('click', () => setTheme(s.dataset.theme)));
-setTheme('monokai');
+

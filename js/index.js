@@ -8,36 +8,6 @@ const TRANSLATIONS = {
   en: {
     starshipHint: '> Use arrows to \nmove and shoot <',
     welcomeTerm: 'Type "help" to see available commands.',
-    bootLines: [
-      'mence.dev boot', 
-      'Copyright (c) — all rights reserved', 
-      '',
-      '##### PRESS ANY KEY TO SKIP THIS ANIMATION #####',
-      '[  0.001200 ] Initializing memory... OK', 
-      '[  0.041800 ] Mounting /dev/experience... OK',
-      '[  0.089300 ] Loading modules: projects, resume, games... OK', 
-      '[  0.310000 ] Mounting virtual file system (RAM)... OK', 
-      '[  0.450000 ] Loading AI Storyteller: Randy Random',
-      '[  0.580000 ] Loading WorldEditor unit data...',
-      '[  0.620000 ] Arthas has claimed Frostmourne.',
-      '[  0.655000 ] https://bulbapedia.bulbagarden.net/wiki/Salamence_(Pokemon)',
-      '[  0.710000 ] Pokedex: Initializing national dex entries...',
-      '[  0.920000 ] Checking colonists: 3/3 active',
-      '[  0.980000 ] Daemon: Starting crontab',
-      '[  1.020000 ] Daemon: Starting systemd-logging',
-      '[  1.050000 ] Daemon: Starting shiny hunt...',
-      '[  1.100000 ] App: Loading environment variables',
-      '[  1.150000 ] App: Loading Lordaeron map assets...',
-      '[  1.250000 ] Module: loading /lib/modules/projects.mod',
-      '[  1.300000 ] Warning: Colonist is having a mental break!',
-      '[  1.500000 ] HM01 Cut taught successfully',
-      '[  1.600000 ] I serve only the Frozen Throne...',
-      '[  1.800000 ] Professor Oak says "There\'s a time and place for everything!"',
-      '[  1.850000 ] User: Setting locale to en_US.UTF-8',
-      '[  1.950000 ] Ate without table (-3)',
-      '[  2.000000 ] Finalizing startup sequence...',
-      'Welcome. Loading portfolio_4.sh...',
-    ],
     whoami_txt: 
     `<div class="term-name glitch-text">Lucas Vinicius</div>`+
     `<div class="term-subtitle">Software Developer · 12+ years of experience</div>`+
@@ -130,8 +100,7 @@ const TRANSLATIONS = {
     `  social             show social & contact links\n`+
     `  career             quick-access buttons (resume & project list)\n`+
     `  starship           launch a spaceship shooter mini-game (ESC to quit)\n`+
-    `  theme <name>       change theme (monokai, green, light, purple, blue)\n`+
-    `  reset              reposition layout windows on screen\n`+
+  `  reset              reposition layout windows on screen\n`+
     `  clear              clear screen\n`+
     `  help               show this message`,
     errNotFound: 'file or directory not found', 
@@ -140,9 +109,6 @@ const TRANSLATIONS = {
     errInvalidPath: 'invalid path', 
     errExists: 'already exists', 
     errNotDirR: 'directory not empty (use -r)', 
-    themeCurrent: 'current theme', 
-    themeChanged: 'theme changed to', 
-    themeNotFound: 'does not exist', 
     resetMsg: 'windows layout restored.', 
     manMsgNone: 'No manual for', 
     manMsgAsk: 'What manual page do you want?', 
@@ -162,36 +128,6 @@ const TRANSLATIONS = {
   br: {
     starshipHint: '> Use as setas para \nmover e atirar <',
     welcomeTerm: 'Digite "help" para ver os comandos disponíveis.',
-    bootLines: [
-      'mence.dev boot', 
-      'Copyright (c) — todos os direitos reservados', 
-      '',
-      '##### PRESSIONE QUALQUER TECLA PARA PULAR ESTA ANIMAÇÃO #####',
-      '[  0.001200 ] Inicializando memória... OK', 
-      '[  0.041800 ] Montando /dev/experience... OK',
-      '[  0.089300 ] Carregando módulos: projetos, currículo, jogos... OK', 
-      '[  0.310000 ] Montando sistema de arquivos virtual (RAM)... OK', 
-      '[  0.450000 ] Carregando AI Storyteller: Randy Random',
-      '[  0.580000 ] Carregando dados da unidade WorldEditor...',
-      '[  0.620000 ] Arthas reivindicou a Frostmourne.',
-      '[  0.655000 ] https://bulbapedia.bulbagarden.net/wiki/Salamence_(Pokemon)',
-      '[  0.710000 ] Pokedex: Inicializando entradas da dex nacional...',
-      '[  0.920000 ] Verificando colonos: 3/3 ativos',
-      '[  0.980000 ] Daemon: Iniciando crontab',
-      '[  1.020000 ] Daemon: Iniciando systemd-logging',
-      '[  1.050000 ] Daemon: Iniciando busca por shiny...',
-      '[  1.100000 ] App: Carregando variáveis de ambiente',
-      '[  1.150000 ] App: Carregando assets do mapa de Lordaeron...',
-      '[  1.250000 ] Módulo: carregando /lib/modules/projects.mod',
-      '[  1.300000 ] Aviso: Colono está tendo um colapso mental!',
-      '[  1.500000 ] HM01 Corte ensinado com sucesso',
-      '[  1.600000 ] Eu sirvo apenas ao Trono Congelado...',
-      '[  1.800000 ] Professor Oak diz "Há um tempo e lugar para tudo!"',
-      '[  1.850000 ] Usuário: Definindo localidade para pt_BR.UTF-8',
-      '[  1.950000 ] Comeu sem mesa (-3)',
-      '[  2.000000 ] Finalizando sequência de inicialização...',
-      'Bem-vindo. Carregando portfolio_4.sh...',
-    ],
     whoami_txt: `<div class="term-name">Lucas Vinicius</div>`+
     `<div class="term-subtitle">Desenvolvedor de Software · 12+ anos de experiência</div>`+
     `<div class="term-bio">Trabalho com <span class="k">devops</span>, <span class="k">web</span>, <span class="k">mobile</span> e <span class="k">gamedev</span>. `+
@@ -282,9 +218,7 @@ const TRANSLATIONS = {
     `   history              mostrar histórico de comandos\n`+
     `   social               mostrar links de redes sociais e contato\n`+
     `   career               botões de acesso rápido (currículo e lista de projetos)\n`+
-    `   starship             iniciar minijogo de nave espacial (ESC para sair)\n`+
-    `   theme <nome>         mudar tema (monokai, green, light, purple, blue)\n`+
-    `   reset                reposicionar janelas de layout na tela\n`+
+    `   starship             iniciar minijogo de nave espacial (ESC para sair)\n`+   `  reset                reposicionar janelas de layout na tela\n`+
     `   clear                limpar tela\n`+
     `   help                 mostrar esta mensagem`,
     errNotFound: 'arquivo ou diretório não encontrado', 
@@ -293,9 +227,6 @@ const TRANSLATIONS = {
     errInvalidPath: 'caminho inválido', 
     errExists: 'já existe', 
     errNotDirR: 'diretório não vazio (use -r)', 
-    themeCurrent: 'tema atual', 
-    themeChanged: 'tema alterado para', 
-    themeNotFound: 'não existe', 
     resetMsg: 'layout das janelas restaurado.', 
     manMsgNone: 'Nenhum manual para', 
     manMsgAsk: 'Qual página de manual você deseja?', 
@@ -314,27 +245,6 @@ const TRANSLATIONS = {
 };
 
 const t = TRANSLATIONS[currentLang];
-
-(function boot(){
-  const bootEl = document.getElementById('boot');
-  const textEl = document.getElementById('boot-text');
-  const mainEl = document.getElementById('main');
-  const lines = t.bootLines;
-  let i = 0, done = false;
-
-  function typeNext(){
-    if(i >= lines.length){ finish(); return; }
-    textEl.textContent += lines[i] + '\n'; i++;
-    setTimeout(typeNext, lines[i-1] === '' ? 60 : 90 + Math.random()*70);
-  }
-  function finish(){
-    if(done) return; done = true;
-    bootEl.classList.add('hidden'); mainEl.classList.add('show');
-  }
-  bootEl.addEventListener('click', finish);
-  window.addEventListener('keydown', finish, {once:true});
-  setTimeout(finish, 4200); typeNext();
-})();
 
 function pad(n){ return n.toString().padStart(2,'0'); }
 function tickClock(){
@@ -503,7 +413,6 @@ function createShell(rootEl, seedCommand){
       lines.forEach((line, index) => {
           g.fillText(line, canvas.width / 2, (canvas.height * 0.4) + (index * lineHeight));
       });
-      // -------------------------------------------------------------
       drawTrail(ship, cAccent, ship.history);
       g.fillStyle = cAccent;
       g.beginPath();
@@ -606,7 +515,7 @@ function createShell(rootEl, seedCommand){
       case 'career': cmd_projects_panel(ctx, runCommand); break;
       case 'social': cmd_social(ctx); break;
       case 'starship': cmd_starship(); break;
-      case 'theme': if(!args[0]) ctx.print(`${t.themeCurrent}: ${document.body.dataset.theme}`); else if(setTheme(args[0])) ctx.print(`${t.themeChanged} "${args[0]}"`, 'accent'); else ctx.print(`theme "${args[0]}" ${t.themeNotFound}`, 'err'); break;
+
       case 'reset': resetLayout(); ctx.print(t.resetMsg, 'accent'); break; 
       case 'clear': outputEl.innerHTML=''; break; 
       default: ctx.print(`${command}: ${t.cmdNotFound}`, 'err');
@@ -710,15 +619,10 @@ function cmd_projects_panel(ctx, runCommand){
 const shellAvatar = createShell(document.getElementById('win-avatar'), 'display avatar.jpg');
 const shellCard = createShell(document.getElementById('win-card'), 'whoami');
 const shellTerm = createShell(document.getElementById('win-term'));
-const shellStarship = createShell(document.getElementById('win-starship'));
 shellTerm.runCommand('social');
 shellTerm.runCommand('career');
 shellTerm.print(t.welcomeTerm, 'info'); shellTerm.print('');
 if(shellTerm.inputEl) shellTerm.inputEl.focus();
-
-const swatches = document.querySelectorAll('.swatch');
-function setTheme(name){ document.body.dataset.theme = name; swatches.forEach(s=> s.classList.toggle('active', s.dataset.theme === name)); return true; }
-swatches.forEach(s=> s.addEventListener('click', ()=> setTheme(s.dataset.theme))); setTheme('monokai');
 
 function closeWindow(id) {
   const win = document.getElementById(id);
@@ -790,7 +694,6 @@ const desktop = document.getElementById('desktop');
 const winCard = document.getElementById('win-card');
 const winAvatar = document.getElementById('win-avatar');
 const winTerm = document.getElementById('win-term');
-const winStarship = document.getElementById('win-starship');
 let zTop = 10; let desktopMode = false; let deskHeight = 0;
 
 function bringToFront(win){ win.style.zIndex = ++zTop; }
@@ -874,10 +777,9 @@ function computeDefaultLayout(){
   const avatarW = Math.min(360, (deskRect.width - GAP - 20) * 0.38);
   const nameW = Math.min(500, (deskRect.width - GAP - 20) * 0.62);
   const bottomRowMaxW = Math.min(920, deskRect.width - 20);
-  const starshipW = Math.min(280, bottomRowMaxW * 0.3);
-  const termW = bottomRowMaxW - starshipW - GAP;
+  const termW = bottomRowMaxW;
 
-  [winCard, winAvatar, winTerm, winStarship].forEach(w=> w.classList.remove('closed', 'minimized', 'maximized'));
+  [winCard, winAvatar, winTerm].forEach(w=> w.classList.remove('closed', 'minimized', 'maximized'));
   document.getElementById('minimized-bar').innerHTML = '';
 
   const rowWidth = avatarW + GAP + nameW;
@@ -890,19 +792,15 @@ function computeDefaultLayout(){
   winAvatar.style.left = rowLeft + 'px'; winAvatar.style.top = '0px'; winAvatar.style.height = ROW_H + 'px';
   winCard.style.left = (rowLeft + avatarW + GAP) + 'px'; winCard.style.top = '0px'; winCard.style.height = ROW_H + 'px';
 
-  const bottomRowWidth = termW + GAP + starshipW;
-  const bottomRowLeft = (deskRect.width - bottomRowWidth) / 2;
-  winTerm.style.width = termW + 'px'; winTerm.style.left = bottomRowLeft + 'px'; winTerm.style.top = (ROW_H + GAP) + 'px';
-  winStarship.style.width = starshipW + 'px'; winStarship.style.left = (bottomRowLeft + termW + GAP) + 'px'; winStarship.style.top = (ROW_H + GAP) + 'px';
+  const termLeft = (deskRect.width - termW) / 2;
+  winTerm.style.width = termW + 'px'; winTerm.style.left = termLeft + 'px'; winTerm.style.top = (ROW_H + GAP) + 'px';
 
   const footerEl = document.querySelector('footer');
   const reserved = (footerEl ? footerEl.offsetHeight : 0) + 30;
   const available = window.innerHeight - deskRect.top - (ROW_H + GAP) - reserved;
   const termTotalH = Math.max(200, Math.min(480, available));
   winTerm.style.height = termTotalH + 'px';
-  winStarship.style.height = termTotalH + 'px';
   handleTermResize(winTerm, termW, termTotalH);
-  handleTermResize(winStarship, starshipW, termTotalH);
 
   deskHeight = parseFloat(winTerm.style.top) + termTotalH;
   desktop.style.height = deskHeight + 'px';
@@ -912,7 +810,7 @@ function applyLayoutMode(){
   if(window.innerWidth > 700) { desktopMode = true; computeDefaultLayout(); bringToFront(winTerm); }
   else {
     desktopMode = false;
-    [winCard, winAvatar, winTerm, winStarship].forEach(win=>{ win.classList.remove('closed', 'minimized', 'maximized'); win.style.cssText = ''; });
+    [winCard, winAvatar, winTerm].forEach(win=>{ win.classList.remove('closed', 'minimized', 'maximized'); win.style.cssText = ''; });
     document.querySelectorAll('.term-screen').forEach(s => s.style.height = ''); desktop.style.height = '';
     document.getElementById('minimized-bar').innerHTML = '';
   }
@@ -923,12 +821,29 @@ function resetLayout(){ if(desktopMode) { computeDefaultLayout(); zTop = 10; bri
 makeDraggable(winCard, winCard.querySelector('.card-titlebar'));
 makeDraggable(winAvatar, winAvatar.querySelector('.card-titlebar'));
 makeDraggable(winTerm, winTerm.querySelector('.term-titlebar'));
-makeDraggable(winStarship, winStarship.querySelector('.term-titlebar'));
 setupOmniResize(winCard, 220, 140, null);
 setupOmniResize(winAvatar, 200, 160, null);
 setupOmniResize(winTerm, 420, 260, (w,h)=>handleTermResize(winTerm,w,h));
-setupOmniResize(winStarship, 260, 220, (w,h)=>handleTermResize(winStarship,w,h));
 
-window.addEventListener('load', ()=>{ applyLayoutMode(); shellStarship.runCommand('starship'); });
+window.addEventListener('load', ()=>{
+  applyLayoutMode();
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const wins = [winAvatar, winCard, winTerm];
+    wins.forEach((win, i) => {
+      win.style.opacity = '0';
+      win.style.transform = 'translateY(16px) scale(0.97)';
+      win.style.animationDelay = `${i * 120}ms`;
+    });
+    void wins[0].offsetHeight;
+    wins.forEach(win => win.classList.add('emerge'));
+    wins.forEach(win => {
+      win.addEventListener('animationend', () => {
+        win.style.opacity = '';
+        win.style.transform = '';
+        win.style.animationDelay = '';
+      }, { once: true });
+    });
+  }
+});
 let resizeT; window.addEventListener('resize', ()=>{ clearTimeout(resizeT); resizeT = setTimeout(applyLayoutMode, 200); });
 document.getElementById('btn-reset-layout').addEventListener('click', resetLayout);
