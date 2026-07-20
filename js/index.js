@@ -299,7 +299,7 @@ function pathString(segs){
 }
 function escapeHTML(s){ return s.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
 
-const AVATAR_IMG_SRC = 'img/mence.jpg';
+const AVATAR_IMG_SRC = 'https://github.com/lucasmence.png';
 const AVATAR_IMG_HTML = `<div class="glitch-stage" id="avatar-glitch-stage">
   <img class="glitch-layer glitch-r" src="${AVATAR_IMG_SRC}" width="200" height="200" alt="" aria-hidden="true" onerror="handleAvatarLoadError()">
   <img class="glitch-layer glitch-b" src="${AVATAR_IMG_SRC}" width="200" height="200" alt="" aria-hidden="true" onerror="handleAvatarLoadError()">
