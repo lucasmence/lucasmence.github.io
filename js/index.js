@@ -7,9 +7,8 @@ document.getElementById(`lang-${currentLang}`).style.fontWeight = 'bold';
 const TRANSLATIONS = {
   en: {
     starshipHint: '> Use arrows to \nmove and shoot <',
-    welcomeTerm: 'Type "help" to see available commands.',
     whoami_txt: 
-    `<div class="term-name glitch-text">Lucas Vinicius</div>`+
+    `<div class="term-name">Lucas Vinicius</div>`+
     `<div class="term-subtitle">Software Developer · 12+ years of experience</div>`+
     `<div class="term-bio">I work with <span class="k">devops</span>, <span class="k">web</span>, <span class="k">mobile</span> and <span class="k">gamedev</span>. `+
     `Currently building products with <span class="k">React / Node.js</span> and games in <span class="k">C++</span>.</div>`,
@@ -22,57 +21,38 @@ const TRANSLATIONS = {
     `DEVOPS          Docker, CI/CD, Linux, Jenkins, Proxmox\n`+
     `OTHERS          Neovim, git`,
     proj_boltcraft: 
-    `<div class="term-subtitle"># Boltcraft</div>`+
+    `<div class="term-subtitle"># Boltcraft <span class="proj-year">(2022)</span></div>`+
     `My first released game, a 2D top-down dungeon crawler. I learned a lot from it and also made many mistakes along the way (SFML and C++). Available on Steam.\n\n`+
     `<a class="ascii-btn" href="https://store.steampowered.com/agecheck/app/2005930/" target="_blank" rel="noopener">Get Boltcraft on Steam!</a>`,
     proj_boltcraftii: 
-    `<div class="term-subtitle"># Boltcraft II</div>`+
+    `<div class="term-subtitle"># Boltcraft II <span class="proj-year">(2024)</span></div>`+
     `Project where I studied procedural map generation, talent trees, and weapon systems (SFML and C++). Free on itch.io.\n\n`+
     `<a class="ascii-btn" href="https://lucasmence.itch.io/boltcraft-ii-redux-edition" target="_blank" rel="noopener">Get Boltcraft II on itch.io!</a>`,
     proj_protocolundeath: 
-    `<div class="term-subtitle"># Protocol Undeath</div>`+
+    `<div class="term-subtitle"># Protocol Undeath <span class="proj-year">(2025)</span></div>`+
     `Post-apocalyptic survival game against zombies (SFML and C++). Free on itch.io.\n\n`+
     `<a class="ascii-btn" href="https://lucasmence.itch.io/protocol-undeath" target="_blank" rel="noopener">Get Protocol Undeath on itch.io!</a>`,
     proj_wizardryduels: 
-    `<div class="term-subtitle"># Wizardry Duels</div>`+
+    `<div class="term-subtitle"># Wizardry Duels <span class="proj-year">(2025)</span></div>`+
     `1v1 multiplayer game that uses SFMLs own UDP sockets for online gameplay (SFML and C++). Free on itch.io.\n\n`+
     `<a class="ascii-btn" href="https://lucasmence.itch.io/wizardry-duels" target="_blank" rel="noopener">Get Wizardry Duels on itch.io!</a>`,
-    proj_spellthief: 
-    `<div class="term-subtitle"># Spellthief</div>`+
-    `Experimental project where I play with the Spell Steal mechanic, inspired by Rubick from DotA (SFML and C++). Free on itch.io.\n\n`+
-    `<a class="ascii-btn" href="https://lucasmence.itch.io/spellthief" target="_blank" rel="noopener">Get Spellthief on itch.io!</a>`,
     proj_realmeditor: 
-    `<div class="term-subtitle"># Realm Editor</div>`+
+    `<div class="term-subtitle"># Realm Editor <span class="proj-year">(2021)</span></div>`+
     `My own custom map editor for my games (SFML and C++).\n\n`+
     `<a class="ascii-btn" href="https://github.com/lucasmence/realm-editor" target="_blank" rel="noopener">GitHub</a>`,
-    proj_pythonimgprocessing: 
-    `<div class="term-subtitle"># Python Image Processing</div>`+
-    `Study involving several image processing algorithms (Python and Matplotlib).\n\n`+
-    `<a class="ascii-btn" href="https://github.com/lucasmence/ProcessamentoDigitalDeImagem" target="_blank" rel="noopener">GitHub</a>`,
-    proj_photoreader: 
-    `<div class="term-subtitle"># Photoreader</div>`+
-    `Automation test where an image containing text is provided and spoken audio is returned (Python, OpenCV, and Tesseract OCR).\n\n`+
-    `<a class="ascii-btn" href="https://github.com/lucasmence/pitchula" target="_blank" rel="noopener">GitHub</a>`,
-    proj_webbrowserplugin: 
-    `<div class="term-subtitle"># Webbrowser Plugin</div>`+
-    `Experiment focused on creating a browser plugin for potential automation tasks (JavaScript).\n\n`+
-    `<a class="ascii-btn" href="https://github.com/lucasmence/chrome-firefox-example-plugin" target="_blank" rel="noopener">GitHub</a>`,
-    proj_kubuntuautoinstaller: 
-    `<div class="term-subtitle"># Kubuntu Autoinstaller</div>`+
-    `Application installer for the Kubuntu 24.04 LTS distribution, using a modular approach (Shell Script).\n\n`+
-    `<a class="ascii-btn" href="https://github.com/lucasmence/helper" target="_blank" rel="noopener">GitHub</a>`,
-    proj_sfmltcpchat: 
-    `<div class="term-subtitle"># SFML TCP Chat</div>`+
-    `Test project created to study the basics of socket connections (SFML and C++).\n\n`+
-    `<a class="ascii-btn" href="https://github.com/lucasmence/sfml-tcp-chat" target="_blank" rel="noopener">GitHub</a>`,
     proj_notacerta: 
-    `<div class="term-subtitle"># NotaCerta</div>`+
+    `<div class="term-subtitle"># NotaCerta <span class="proj-year">(2024)</span></div>`+
     `[EXTERNAL PROJECT] Online application for issuing invoices (React and Node.js).\n\n`+
     `<a class="ascii-btn" href="https://notacerta.com.br/" target="_blank" rel="noopener">NotaCerta website</a>`,
     proj_bestzap: 
-    `<div class="term-subtitle"># Bestzap</div>`+
+    `<div class="term-subtitle"># Bestzap <span class="proj-year">(2023)</span></div>`+
     `[EXTERNAL PROJECT] Messaging application that uses a WhatsApp library for management and automation (React and Node.js).\n\n`+
     `<a class="ascii-btn" href="https://bestzap.com.br/" target="_blank" rel="noopener">Bestzap website</a>`,
+    proj_revisor: 
+    `<div class="term-subtitle"># Revisor <span class="proj-year">(2026)</span></div>`+
+    `AI-powered, 100% local web application for transcribing videos and YouTube links using OpenAI Whisper.\n\n`+
+    `Features AI correction via Ollama, video clipping, email delivery (Brevo), and export to TXT/SRT/CSV. Python, Flask, FFmpeg.\n\n`+
+    `<a class="ascii-btn" href="https://github.com/lucasmence/revisor" target="_blank" rel="noopener">GitHub</a>`,
     neofetch: [
       'lucas@mence.dev',
       '------------',
@@ -110,11 +90,6 @@ const TRANSLATIONS = {
     errExists: 'already exists', 
     errNotDirR: 'directory not empty (use -r)', 
     resetMsg: 'windows layout restored.', 
-    manMsgNone: 'No manual for', 
-    manMsgAsk: 'What manual page do you want?', 
-    sudoMsg: 'lucas is not in the sudoers file.', 
-    exitMsg: 'cannot exit real life from here.', 
-    editorMsg: 'editor not available in this simulated terminal. Nice try though.', 
     cmdNotFound: 'command not found. Type "help" to see the list.', 
     starshipHud1: 'SCORE', 
     starshipHud2: 'LIVES', 
@@ -127,7 +102,6 @@ const TRANSLATIONS = {
 
   br: {
     starshipHint: '> Use as setas para \nmover e atirar <',
-    welcomeTerm: 'Digite "help" para ver os comandos disponíveis.',
     whoami_txt: `<div class="term-name">Lucas Vinicius</div>`+
     `<div class="term-subtitle">Desenvolvedor de Software · 12+ anos de experiência</div>`+
     `<div class="term-bio">Trabalho com <span class="k">devops</span>, <span class="k">web</span>, <span class="k">mobile</span> e <span class="k">gamedev</span>. `+
@@ -141,57 +115,38 @@ const TRANSLATIONS = {
     `DEVOPS          Docker, CI/CD, Linux, Jenkins, Proxmox\n`+
     `OUTROS          Neovim, git`,
     proj_boltcraft: 
-    `<div class="term-subtitle"># Boltcraft</div>`+
+    `<div class="term-subtitle"># Boltcraft <span class="proj-year">(2022)</span></div>`+
     `Meu primeiro jogo lançado, um dungeon crawler 2D top-down. Aprendi muito com ele e também cometi muitos erros pelo caminho (SFML e C++). Disponível na Steam.\n\n`+
     `<a class="ascii-btn" href="https://store.steampowered.com/agecheck/app/2005930/" target="_blank" rel="noopener">Obtenha Boltcraft na Steam!</a>`,
     proj_boltcraftii: 
-    `<div class="term-subtitle"># Boltcraft II</div>`+
+    `<div class="term-subtitle"># Boltcraft II <span class="proj-year">(2024)</span></div>`+
     `Projeto onde estudei geração procedural de mapas, árvores de talentos e sistemas de armas (SFML e C++). Gratuito no itch.io.\n\n`+
     `<a class="ascii-btn" href="https://lucasmence.itch.io/boltcraft-ii-redux-edition" target="_blank" rel="noopener">Obtenha Boltcraft II no itch.io!</a>`,
     proj_protocolundeath: 
-    `<div class="term-subtitle"># Protocol Undeath</div>`+
+    `<div class="term-subtitle"># Protocol Undeath <span class="proj-year">(2025)</span></div>`+
     `Jogo de sobrevivência pós-apocalíptico contra zumbis (SFML e C++). Gratuito no itch.io.\n\n`+
     `<a class="ascii-btn" href="https://lucasmence.itch.io/protocol-undeath" target="_blank" rel="noopener">Obtenha Protocol Undeath no itch.io!</a>`,
     proj_wizardryduels: 
-    `<div class="term-subtitle"># Wizardry Duels</div>`+
+    `<div class="term-subtitle"># Wizardry Duels <span class="proj-year">(2025)</span></div>`+
     `Jogo multiplayer 1v1 que usa os próprios sockets UDP da SFML para jogabilidade online (SFML e C++). Gratuito no itch.io.\n\n`+
     `<a class="ascii-btn" href="https://lucasmence.itch.io/wizardry-duels" target="_blank" rel="noopener">Obtenha Wizardry Duels no itch.io!</a>`,
-    proj_spellthief: 
-    `<div class="term-subtitle"># Spellthief</div>`+
-    `Projeto experimental onde brinco com a mecânica de roubo de magias, inspirado no Rubick de DotA (SFML e C++). Gratuito no itch.io.\n\n`+
-    `<a class="ascii-btn" href="https://lucasmence.itch.io/spellthief" target="_blank" rel="noopener">Obtenha Spellthief no itch.io!</a>`,
     proj_realmeditor: 
-    `<div class="term-subtitle"># Realm Editor</div>`+
+    `<div class="term-subtitle"># Realm Editor <span class="proj-year">(2021)</span></div>`+
     `Meu próprio editor de mapas personalizado para meus jogos (SFML e C++).\n\n`+
     `<a class="ascii-btn" href="https://github.com/lucasmence/realm-editor" target="_blank" rel="noopener">GitHub</a>`,
-    proj_pythonimgprocessing: 
-    `<div class="term-subtitle"># Processamento de Imagem Python</div>`+
-    `Estudo envolvendo vários algoritmos de processamento de imagem (Python e Matplotlib).\n\n`+
-    `<a class="ascii-btn" href="https://github.com/lucasmence/ProcessamentoDigitalDeImagem" target="_blank" rel="noopener">GitHub</a>`,
-    proj_photoreader: 
-    `<div class="term-subtitle"># Photoreader</div>`+
-    `Teste de automação onde uma imagem contendo texto é fornecida e áudio falado é retornado (Python, OpenCV e Tesseract OCR).\n\n`+
-    `<a class="ascii-btn" href="https://github.com/lucasmence/pitchula" target="_blank" rel="noopener">GitHub</a>`,
-    proj_webbrowserplugin: 
-    `<div class="term-subtitle"># Plugin de Navegador</div>`+
-    `Experimento focado na criação de um plugin de navegador para potenciais tarefas de automação (JavaScript).\n\n`+
-    `<a class="ascii-btn" href="https://github.com/lucasmence/chrome-firefox-example-plugin" target="_blank" rel="noopener">GitHub</a>`,
-    proj_kubuntuautoinstaller: 
-    `<div class="term-subtitle"># Instalador Automático Kubuntu</div>`+
-    `Instalador de aplicativos para a distribuição Kubuntu 24.04 LTS, usando uma abordagem modular (Shell Script).\n\n`+
-    `<a class="ascii-btn" href="https://github.com/lucasmence/helper" target="_blank" rel="noopener">GitHub</a>`,
-    proj_sfmltcpchat: 
-    `<div class="term-subtitle"># Chat TCP SFML</div>`+
-    `Projeto de teste criado para estudar o básico de conexões de socket (SFML e C++).\n\n`+
-    `<a class="ascii-btn" href="https://github.com/lucasmence/sfml-tcp-chat" target="_blank" rel="noopener">GitHub</a>`,
     proj_notacerta: 
-    `<div class="term-subtitle"># NotaCerta</div>`+
+    `<div class="term-subtitle"># NotaCerta <span class="proj-year">(2024)</span></div>`+
     `[PROJETO EXTERNO] Aplicativo online para emissão de notas fiscais (React e Node.js).\n\n`+
     `<a class="ascii-btn" href="https://notacerta.com.br/" target="_blank" rel="noopener">Site do NotaCerta</a>`,
     proj_bestzap: 
-    `<div class="term-subtitle"># Bestzap</div>`+
+    `<div class="term-subtitle"># Bestzap <span class="proj-year">(2023)</span></div>`+
     `[PROJETO EXTERNO] Aplicativo de mensagens que usa uma biblioteca WhatsApp para gerenciamento e automação (React e Node.js).\n\n`+
     `<a class="ascii-btn" href="https://bestzap.com.br/" target="_blank" rel="noopener">Site do Bestzap</a>`,
+    proj_revisor: 
+    `<div class="term-subtitle"># Revisor <span class="proj-year">(2026)</span></div>`+
+    `Aplicação web 100% local com IA para transcrever vídeos e links do YouTube usando OpenAI Whisper.\n\n`+
+    `Recursos: correção via Ollama, clipe de vídeo, entrega por email (Brevo) e exportação para TXT/SRT/CSV. Python, Flask, FFmpeg.\n\n`+
+    `<a class="ascii-btn" href="https://github.com/lucasmence/revisor" target="_blank" rel="noopener">GitHub</a>`,
     neofetch: [
       'lucas@mence.dev',
       '------------',
@@ -228,11 +183,6 @@ const TRANSLATIONS = {
     errExists: 'já existe', 
     errNotDirR: 'diretório não vazio (use -r)', 
     resetMsg: 'layout das janelas restaurado.', 
-    manMsgNone: 'Nenhum manual para', 
-    manMsgAsk: 'Qual página de manual você deseja?', 
-    sudoMsg: 'lucas não está no arquivo sudoers.', 
-    exitMsg: 'não é possível sair da vida real daqui.', 
-    editorMsg: 'editor não disponível neste terminal simulado. Boa tentativa.', 
     cmdNotFound: 'comando não encontrado. Digite "help" para ver a lista.', 
     starshipHud1: 'PONTUAÇÃO', 
     starshipHud2: 'VIDAS', 
@@ -260,6 +210,7 @@ function file(content){ return { type:'file', content: content }; }
 const FS = dir({
   home: dir({
     lucas: dir({
+      'me.jpg': file('[image] use "display me.jpg" to view'),
       'skills.txt': file(t.skills),
       'contact.txt': file(`email:    mence.dev@proton.me\ngithub:   github.com/lucasmence\nlinkedin: lucasmsv96\nsite:     mence.dev`),
       projects: dir({
@@ -267,15 +218,10 @@ const FS = dir({
         'boltcraft-ii.md': file(t.proj_boltcraftii),
         'protocol-undeath.md': file(t.proj_protocolundeath),
         'wizardry-duels.md': file(t.proj_wizardryduels),
-        'spellthief.md': file(t.proj_spellthief),
         'realm-editor.md': file(t.proj_realmeditor),
-        'python-img-processing.md': file(t.proj_pythonimgprocessing),
-        'photoreader.md': file(t.proj_photoreader),
-        'webbrowser-plugin.md': file(t.proj_webbrowserplugin),
-        'kubuntu-autoinstaller.md': file(t.proj_kubuntuautoinstaller),
-        'sfml-tcp-chat.md': file(t.proj_sfmltcpchat),
         'nota-certa.md': file(t.proj_notacerta),
         'bestzap.md': file(t.proj_bestzap), 
+        'revisor.md': file(t.proj_revisor), 
       })
     })
   })
@@ -300,17 +246,13 @@ function pathString(segs){
 function escapeHTML(s){ return s.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
 
 const AVATAR_IMG_SRC = 'https://github.com/lucasmence.png';
-const AVATAR_IMG_HTML = `<div class="glitch-stage" id="avatar-glitch-stage">
-  <img class="glitch-layer glitch-r" src="${AVATAR_IMG_SRC}" width="200" height="200" alt="" aria-hidden="true" onerror="handleAvatarLoadError()">
-  <img class="glitch-layer glitch-b" src="${AVATAR_IMG_SRC}" width="200" height="200" alt="" aria-hidden="true" onerror="handleAvatarLoadError()">
-  <img class="glitch-main" src="${AVATAR_IMG_SRC}" width="200" height="200" alt="mence.dev" onerror="handleAvatarLoadError()">
-</div>`;
+const AVATAR_IMG_HTML = `<img class="avatar-img" src="${AVATAR_IMG_SRC}" width="200" height="200" alt="mence.dev" onerror="handleAvatarLoadError()">`;
 function handleAvatarLoadError(){
-  const stage = document.getElementById('avatar-glitch-stage');
-  if(stage) stage.outerHTML = `<div class="avatar-missing">avatar.jpg not found next to index.html</div>`;
+  const img = document.querySelector('.avatar-img');
+  if(img) img.outerHTML = `<div class="avatar-missing">me.jpg not found</div>`;
 }
 
-function createShell(rootEl, seedCommand){
+function createShell(rootEl){
   const screenEl = rootEl.querySelector('.term-screen');
   const outputEl = screenEl.querySelector('.output');
   const inputEl = screenEl.querySelector('.cmdline');
@@ -492,8 +434,8 @@ function createShell(rootEl, seedCommand){
     animId = requestAnimationFrame(loop);
 }
 
-  function runCommand(raw){
-    printCmdEcho(raw); const trimmed = raw.trim(); if(trimmed !== ''){ ctx.history.push(trimmed); } ctx.historyPos = ctx.history.length; if(trimmed === ''){ return; }
+  function execCommand(raw) {
+    const trimmed = raw.trim(); if(trimmed !== ''){ ctx.history.push(trimmed); } ctx.historyPos = ctx.history.length; if(trimmed === ''){ return; }
     const parts = trimmed.match(/(?:[^\s"]+|"[^"]*")+/g) || []; const command = parts[0]; const args = parts.slice(1).map(a=> a.replace(/^"|"$/g,''));
     switch(command){
       case 'help': ctx.print(t.help); break; 
@@ -522,18 +464,58 @@ function createShell(rootEl, seedCommand){
     }
   }
 
+  function runCommand(raw){
+    printCmdEcho(raw);
+    execCommand(raw);
+  }
+
+  function typeCommand(raw, speed = 28) {
+    return new Promise((resolve) => {
+      const div = document.createElement('div');
+      div.className = 'line cmd';
+      div.innerHTML = `<span class="cmd-prompt-group"><span class="prompt">lucas@mence.dev</span><span class="sym">:</span><span class="path">${pathString(ctx.cwd)}</span><span class="sym">$</span></span> `;
+      outputEl.appendChild(div);
+
+      const cursor = document.createElement('span');
+      cursor.className = 'cursor-blink';
+      div.appendChild(cursor);
+      scrollBottom();
+
+      let i = 0;
+      function typeNext() {
+        if (i < raw.length) {
+          const ch = document.createTextNode(raw[i]);
+          div.insertBefore(ch, cursor);
+          i++;
+          scrollBottom();
+          const jitter = Math.random() * 16 - 8;
+          setTimeout(typeNext, speed + jitter);
+        } else {
+          cursor.remove();
+          scrollBottom();
+          setTimeout(() => {
+            try { execCommand(raw); } catch(e) { /* silent */ }
+            scrollBottom();
+            resolve();
+          }, 150 + Math.random() * 100);
+        }
+      }
+      setTimeout(typeNext, 60 + Math.random() * 60);
+    });
+  }
+
   if(inputEl) {
     inputEl.addEventListener('keydown', (e)=>{
       if(e.key === 'Enter'){ const val = inputEl.value; inputEl.value = ''; runCommand(val); scrollBottom(); }
       else if(e.key === 'ArrowUp'){ e.preventDefault(); if(ctx.historyPos > 0){ ctx.historyPos--; inputEl.value = ctx.history[ctx.historyPos] || ''; } }
       else if(e.key === 'ArrowDown'){ e.preventDefault(); if(ctx.historyPos < ctx.history.length-1){ ctx.historyPos++; inputEl.value = ctx.history[ctx.historyPos] || ''; } else { ctx.historyPos = ctx.history.length; inputEl.value=''; } }
+      else if(e.ctrlKey && e.key === 'l'){ e.preventDefault(); outputEl.innerHTML=''; scrollBottom(); }
     });
   }
   screenEl.addEventListener('click', ()=> { if(inputEl) inputEl.focus(); });
 
   ctx.updatePrompt();
-  if(seedCommand) runCommand(seedCommand);
-  return { runCommand, print: ctx.print, printHTML: ctx.printHTML, inputEl };
+  return { runCommand, typeCommand, print: ctx.print, printHTML: ctx.printHTML, inputEl };
 }
 
 function cmd_ls(ctx, args){
@@ -586,7 +568,7 @@ function cmd_neofetch(ctx){
   const info = t.neofetch; for(let i=0;i<Math.max(art.length,info.length);i++){ ctx.printHTML(`<span style="color:var(--accent-soft)">${(art[i]||'').padEnd(19)}</span>  ${escapeHTML(info[i]||'')}`); } }
 function cmd_display(ctx, args){
   if(!args[0]){ ctx.print(`display: ${t.errMissingOp}`, 'err'); return; }
-  if(args[0] === 'avatar.jpg' || args[0] === 'avatar.png' || args[0] === 'avatar'){ ctx.printHTML(AVATAR_IMG_HTML); }
+  if(args[0] === 'me.jpg' || args[0] === 'avatar.jpg' || args[0] === 'avatar.png' || args[0] === 'avatar'){ ctx.printHTML(AVATAR_IMG_HTML); }
   else { ctx.print(`display: ${args[0]}: ${t.errNotFound}`, 'err'); }
 }
 
@@ -616,13 +598,24 @@ function cmd_projects_panel(ctx, runCommand){
   ctx.printHTML(html);
 }
 
-const shellAvatar = createShell(document.getElementById('win-avatar'), 'display avatar.jpg');
-const shellCard = createShell(document.getElementById('win-card'), 'whoami');
 const shellTerm = createShell(document.getElementById('win-term'));
-shellTerm.runCommand('social');
-shellTerm.runCommand('career');
-shellTerm.print(t.welcomeTerm, 'info'); shellTerm.print('');
-if(shellTerm.inputEl) shellTerm.inputEl.focus();
+
+if(shellTerm.typeCommand && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if(shellTerm.inputEl) shellTerm.inputEl.disabled = true;
+  (async () => {
+    await shellTerm.typeCommand('display me.jpg');
+    await shellTerm.typeCommand('whoami');
+    await shellTerm.typeCommand('social');
+    await shellTerm.typeCommand('career');
+    if(shellTerm.inputEl) { shellTerm.inputEl.disabled = false; shellTerm.inputEl.focus(); }
+  })().catch(() => { if(shellTerm.inputEl) shellTerm.inputEl.disabled = false; });
+} else {
+  shellTerm.runCommand('display me.jpg');
+  shellTerm.runCommand('whoami');
+  shellTerm.runCommand('social');
+  shellTerm.runCommand('career');
+  if(shellTerm.inputEl) shellTerm.inputEl.focus();
+}
 
 function closeWindow(id) {
   const win = document.getElementById(id);
@@ -691,8 +684,6 @@ function restoreWindow(id) {
 }
 
 const desktop = document.getElementById('desktop');
-const winCard = document.getElementById('win-card');
-const winAvatar = document.getElementById('win-avatar');
 const winTerm = document.getElementById('win-term');
 let zTop = 10; let desktopMode = false; let deskHeight = 0;
 
@@ -772,33 +763,18 @@ function handleTermResize(win, w, h){
 
 function computeDefaultLayout(){
   const deskRect = desktop.getBoundingClientRect();
-  const GAP = 14;
+  const termW = Math.min(920, deskRect.width - 20);
 
-  const avatarW = Math.min(360, (deskRect.width - GAP - 20) * 0.38);
-  const nameW = Math.min(500, (deskRect.width - GAP - 20) * 0.62);
-  const bottomRowMaxW = Math.min(920, deskRect.width - 20);
-  const termW = bottomRowMaxW;
-
-  [winCard, winAvatar, winTerm].forEach(w=> w.classList.remove('closed', 'minimized', 'maximized'));
+  [winTerm].forEach(w=> w.classList.remove('closed', 'minimized', 'maximized'));
   document.getElementById('minimized-bar').innerHTML = '';
 
-  const rowWidth = avatarW + GAP + nameW;
-  const rowLeft = (deskRect.width - rowWidth) / 2;
-
-  winAvatar.style.width = avatarW + 'px'; winAvatar.style.height = 'auto';
-  winCard.style.width = nameW + 'px'; winCard.style.height = 'auto';
-  const ROW_H = Math.max(winAvatar.scrollHeight, winCard.scrollHeight, 150) + 6;
-
-  winAvatar.style.left = rowLeft + 'px'; winAvatar.style.top = '0px'; winAvatar.style.height = ROW_H + 'px';
-  winCard.style.left = (rowLeft + avatarW + GAP) + 'px'; winCard.style.top = '0px'; winCard.style.height = ROW_H + 'px';
-
   const termLeft = (deskRect.width - termW) / 2;
-  winTerm.style.width = termW + 'px'; winTerm.style.left = termLeft + 'px'; winTerm.style.top = (ROW_H + GAP) + 'px';
+  winTerm.style.width = termW + 'px'; winTerm.style.left = termLeft + 'px'; winTerm.style.top = '0px';
 
   const footerEl = document.querySelector('footer');
   const reserved = (footerEl ? footerEl.offsetHeight : 0) + 30;
-  const available = window.innerHeight - deskRect.top - (ROW_H + GAP) - reserved;
-  const termTotalH = Math.max(200, Math.min(480, available));
+  const available = window.innerHeight - deskRect.top - reserved;
+  const termTotalH = Math.max(350, Math.min(600, available));
   winTerm.style.height = termTotalH + 'px';
   handleTermResize(winTerm, termW, termTotalH);
 
@@ -810,7 +786,7 @@ function applyLayoutMode(){
   if(window.innerWidth > 700) { desktopMode = true; computeDefaultLayout(); bringToFront(winTerm); }
   else {
     desktopMode = false;
-    [winCard, winAvatar, winTerm].forEach(win=>{ win.classList.remove('closed', 'minimized', 'maximized'); win.style.cssText = ''; });
+    winTerm.classList.remove('closed', 'minimized', 'maximized'); winTerm.style.cssText = '';
     document.querySelectorAll('.term-screen').forEach(s => s.style.height = ''); desktop.style.height = '';
     document.getElementById('minimized-bar').innerHTML = '';
   }
@@ -818,17 +794,13 @@ function applyLayoutMode(){
 
 function resetLayout(){ if(desktopMode) { computeDefaultLayout(); zTop = 10; bringToFront(winTerm); } }
 
-makeDraggable(winCard, winCard.querySelector('.card-titlebar'));
-makeDraggable(winAvatar, winAvatar.querySelector('.card-titlebar'));
 makeDraggable(winTerm, winTerm.querySelector('.term-titlebar'));
-setupOmniResize(winCard, 220, 140, null);
-setupOmniResize(winAvatar, 200, 160, null);
 setupOmniResize(winTerm, 420, 260, (w,h)=>handleTermResize(winTerm,w,h));
 
 window.addEventListener('load', ()=>{
   applyLayoutMode();
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const wins = [winAvatar, winCard, winTerm];
+    const wins = [winTerm];
     wins.forEach((win, i) => {
       win.style.opacity = '0';
       win.style.transform = 'translateY(16px) scale(0.97)';
@@ -846,4 +818,4 @@ window.addEventListener('load', ()=>{
   }
 });
 let resizeT; window.addEventListener('resize', ()=>{ clearTimeout(resizeT); resizeT = setTimeout(applyLayoutMode, 200); });
-document.getElementById('btn-reset-layout').addEventListener('click', resetLayout);
+

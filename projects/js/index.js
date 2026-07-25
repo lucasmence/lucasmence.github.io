@@ -36,35 +36,25 @@ document.getElementById('year-current').textContent = new Date().getFullYear();
 document.getElementById('back-link').href = t.backUrl;
 
 const GAMES = [
-  { name: 'Boltcraft II', slug: 'boltcraft-ii', href: 'https://lucasmence.itch.io/boltcraft-ii-redux-edition', img: '../img/projects/gifs/boltcraft-ii.gif',
-    desc: { en: 'Project where I studied procedural map generation, talent trees, and weapon systems (SFML and C++). Free on itch.io.', br: 'Projeto onde estudei geração procedural de mapas, árvores de talentos e sistemas de armas (SFML e C++). Grátis na itch.io.' } },
-  { name: 'Protocol Undeath', slug: 'protocol-undeath', href: 'https://lucasmence.itch.io/protocol-undeath', img: '../img/projects/gifs/protocol-undeath.gif',
-    desc: { en: 'Post-apocalyptic survival game against zombies (SFML and C++). Free on itch.io.', br: 'Jogo de sobrevivência pós-apocalíptico contra zumbis (SFML e C++). Grátis na itch.io.' } },
-  { name: 'Wizardry Duels', slug: 'wizardry-duels', href: 'https://lucasmence.itch.io/wizardry-duels', img: '../img/projects/gifs/wizardry-duels-1.gif',
-    desc: { en: "1v1 multiplayer game that uses SFML's own UDP sockets for online gameplay (SFML and C++). Free on itch.io.", br: 'Jogo multiplayer 1v1 que usa os próprios sockets UDP da SFML para jogo online (SFML e C++). Grátis na itch.io.' } },
-  { name: 'Boltcraft (Classic)', slug: 'boltcraft-classic', href: 'https://store.steampowered.com/app/2005930/Boltcraft/', img: '../img/projects/gifs/boltcraft-classic.gif',
+  { name: 'Revisor', year: '2026', slug: 'revisor', href: 'https://github.com/lucasmence/revisor', img: '../img/projects/revisor.png',
+    desc: { en: 'AI-powered, 100% local web app for transcribing videos and YouTube links using OpenAI Whisper (Python, Flask, FFmpeg).', br: 'App web 100% local com IA para transcrever vídeos e links do YouTube usando OpenAI Whisper (Python, Flask, FFmpeg).' } },
+  { name: 'Boltcraft (Classic)', year: '2022', slug: 'boltcraft-classic', href: 'https://store.steampowered.com/app/2005930/Boltcraft/', img: '../img/projects/gifs/boltcraft-classic.gif',
     desc: { en: 'My first released game, a 2D top-down dungeon crawler. I learned a lot from it and also made many mistakes along the way (SFML and C++). Available on Steam.', br: 'Meu primeiro jogo lançado, um dungeon crawler 2D top-down. Aprendi muito com ele e também cometi vários erros pelo caminho (SFML e C++). Disponível na Steam.' } },
-  { name: 'Spellthief', slug: 'spellthief', href: 'https://lucasmence.itch.io/spellthief', img: '../img/projects/gifs/spellthief.gif',
-    desc: { en: 'Experimental project where I play with the Spell Steal mechanic, inspired by Rubick from DotA (SFML and C++). Free on itch.io.', br: 'Projeto experimental onde brinco com a mecânica de Roubo de Feitiço, inspirada no Rubick de DotA (SFML e C++). Grátis na itch.io.' } },
-  { name: 'Realm Editor', slug: 'realm-editor', href: 'https://github.com/lucasmence/realm-editor', img: '../img/projects/gifs/realm-editor.gif',
-    desc: { en: 'My own custom map editor for my games (SFML and C++).', br: 'Meu próprio editor de mapas personalizado para meus jogos (SFML e C++).' } },
-  { name: 'Python Image Processing', slug: 'python-image-processing', href: 'https://github.com/lucasmence/ProcessamentoDigitalDeImagem', img: '../img/projects/gifs/python-image-processing.gif',
-    desc: { en: 'Study involving several image processing algorithms (Python and Matplotlib). GitHub.', br: 'Estudo envolvendo vários algoritmos de processamento de imagens (Python e Matplotlib). GitHub.' } },
-  { name: 'Photoreader', slug: 'photoreader', href: 'https://github.com/lucasmence/pitchula', img: '../img/projects/gifs/photoreader.gif',
-    desc: { en: 'Automation test where an image containing text is provided and spoken audio is returned (Python, OpenCV, and Tesseract OCR). GitHub.', br: 'Teste de automação onde uma imagem contendo texto é fornecida e um áudio falado é retornado (Python, OpenCV e Tesseract OCR). GitHub.' } },
-  { name: 'WebBrowser Plugin', slug: 'webbrowser-plugin', href: 'https://github.com/lucasmence/chrome-firefox-example-plugin', img: '../img/projects/gifs/webbrowser-plugin.gif',
-    desc: { en: 'Experiment focused on creating a browser plugin for potential automation tasks (JavaScript). GitHub.', br: 'Experimento focado em criar um plugin de navegador para possíveis tarefas de automação (JavaScript). GitHub.' } },
-  { name: 'Kubuntu Autoinstaller', slug: 'kubuntu-autoinstaller', href: 'https://github.com/lucasmence/helper', img: '../img/projects/gifs/kubuntu-autoinstaller.gif',
-    desc: { en: 'Application installer for the Kubuntu 24.04 LTS distribution, using a modular approach (Shell Script). GitHub.', br: 'Instalador de aplicativos para a distribuição Kubuntu 24.04 LTS, usando uma abordagem modular (Shell Script). GitHub.' } },
-  { name: 'SFML TCP Chat', slug: 'sfml-tcp-chat', href: 'https://github.com/lucasmence/sfml-tcp-chat', img: '../img/projects/gifs/sfml-tcp-chat.gif',
-    desc: { en: 'Test project created to study the basics of socket connections (SFML and C++). GitHub.', br: 'Projeto de teste criado para estudar o básico de conexões via socket (SFML e C++). GitHub.' } }
+  { name: 'Boltcraft II', year: '2024', slug: 'boltcraft-ii', href: 'https://lucasmence.itch.io/boltcraft-ii-redux-edition', img: '../img/projects/gifs/boltcraft-ii.gif',
+    desc: { en: 'Project where I studied procedural map generation, talent trees, and weapon systems (SFML and C++). Free on itch.io.', br: 'Projeto onde estudei geração procedural de mapas, árvores de talentos e sistemas de armas (SFML e C++). Grátis na itch.io.' } },
+  { name: 'Protocol Undeath', year: '2025', slug: 'protocol-undeath', href: 'https://lucasmence.itch.io/protocol-undeath', img: '../img/projects/gifs/protocol-undeath.gif',
+    desc: { en: 'Post-apocalyptic survival game against zombies (SFML and C++). Free on itch.io.', br: 'Jogo de sobrevivência pós-apocalíptico contra zumbis (SFML e C++). Grátis na itch.io.' } },
+  { name: 'Wizardry Duels', year: '2025', slug: 'wizardry-duels', href: 'https://lucasmence.itch.io/wizardry-duels', img: '../img/projects/gifs/wizardry-duels-1.gif',
+    desc: { en: "1v1 multiplayer game that uses SFML's own UDP sockets for online gameplay (SFML and C++). Free on itch.io.", br: 'Jogo multiplayer 1v1 que usa os próprios sockets UDP da SFML para jogo online (SFML e C++). Grátis na itch.io.' } },
+  { name: 'Realm Editor', year: '2021', slug: 'realm-editor', href: 'https://github.com/lucasmence/realm-editor', img: '../img/projects/gifs/realm-editor.gif',
+    desc: { en: 'My own custom map editor for my games (SFML and C++).', br: 'Meu próprio editor de mapas personalizado para meus jogos (SFML e C++).' } }
 ];
 
 const WORK = [
-  { name: 'NotaCerta', slug: 'notacerta', href: 'https://notacerta.com.br/', img: '../img/projects/notacerta.png',
-    desc: { en: 'Online application for issuing invoices (React and Node.js).', br: 'Aplicação online para emissão de notas fiscais (React e Node.js).' } },
-  { name: 'BestZap', slug: 'bestzap', href: 'https://bestzap.com.br/', img: '../img/projects/bestzap.png',
-    desc: { en: 'Messaging application that uses a WhatsApp library for management and automation (React and Node.js).', br: 'Aplicação de mensagens que usa uma biblioteca do WhatsApp para gestão e automação (React e Node.js).' } }
+  { name: 'BestZap', year: '2023', slug: 'bestzap', href: 'https://bestzap.com.br/', img: '../img/projects/bestzap.png',
+    desc: { en: 'Messaging application that uses a WhatsApp library for management and automation (React and Node.js).', br: 'Aplicação de mensagens que usa uma biblioteca do WhatsApp para gestão e automação (React e Node.js).' } },
+  { name: 'NotaCerta', year: '2024', slug: 'notacerta', href: 'https://notacerta.com.br/', img: '../img/projects/notacerta.png',
+    desc: { en: 'Online application for issuing invoices (React and Node.js).', br: 'Aplicação online para emissão de notas fiscais (React e Node.js).' } }
 ];
 
 const REFERENCES = [
@@ -85,7 +75,7 @@ function renderProjectWindow(p){
   return `<a class="proj-window" href="${p.href}" target="_blank" rel="noopener">
     <div class="proj-titlebar">
       <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-      <span class="proj-titlebar-label">~/${p.slug}</span>
+      <span class="proj-titlebar-label">~/${p.slug} <span class="proj-year">(${p.year})</span></span>
     </div>
     <div class="proj-media">
       <img src="${p.img}" alt="${p.name}" loading="lazy">

@@ -28,9 +28,6 @@
   .lang-switcher {display:flex; align-items:center; gap:6px; font-size:11px;}
   .lang-switcher a {color:var(--fg-dim); text-decoration:none; padding: 2px 4px; border-radius: 3px;}
   .lang-switcher a:hover {background: var(--border);}
-  
-  .reset-layout{ background:transparent; border:1px solid var(--border-bright); color:var(--fg-dimmer); font-family:var(--mono); font-size:11px; padding:3px 8px; border-radius:3px; cursor:pointer; letter-spacing:.04em; }
-  .reset-layout:hover{color:var(--accent); border-color:var(--accent-soft);}
 
   #desktop{ display:flex; flex-direction:column; gap:24px; }
   @media (min-width:701px){
@@ -114,6 +111,7 @@
 
   .term-name { font-family: var(--crt); font-size: 38px; color: var(--accent); font-weight: bold; line-height: 1; margin-bottom: 4px; letter-spacing: 1px; text-shadow: 0 0 4px rgba(80,250,123,0.3); }
   .term-subtitle { font-family: var(--mono); font-size: 13.5px; color: var(--amber); font-weight: bold; margin-bottom: 12px; }
+  .proj-year { color: var(--fg-dimmer); font-weight: normal; font-size: 12px; }
   .term-bio { font-family: var(--mono); font-size: 13px; line-height: 1.6; color: var(--fg-dim); }
   .term-bio .k { color: var(--cyan); font-weight: 500; }
 
@@ -122,44 +120,8 @@
   .ascii-btn:hover{ color:var(--accent); border-color:var(--accent); text-shadow:0 0 6px rgba(80,250,123,0.35); }
   .ascii-btn-label{ display:inline-block; text-align:center; }
 
-  .glitch-stage{ position:relative; width:200px; height:200px; margin:0 auto 10px; overflow:hidden; border-radius:4px; flex-shrink:0; }
-  .glitch-stage svg, .glitch-stage img{ position:absolute; inset:0; width:200px; height:200px; object-fit:cover; display:block; }
-  .glitch-main{ animation: glitch-crt 6s infinite ease-in-out, glitch-main-shift 3.4s infinite steps(1,end); }
-  .glitch-r{ mix-blend-mode:screen; opacity:0; filter:sepia(1) saturate(6) hue-rotate(-50deg); animation: glitch-ghost-r 3.4s infinite steps(1,end); }
-  .glitch-b{ mix-blend-mode:screen; opacity:0; filter:sepia(1) saturate(6) hue-rotate(150deg); animation: glitch-ghost-b 3.4s infinite steps(1,end); }
+  .avatar-img{ display:block; width:200px; height:200px; margin:0 auto 10px; object-fit:cover; border-radius:4px; flex-shrink:0; }
   .avatar-missing{ display:flex; align-items:center; justify-content:center; text-align:center; width:200px; height:200px; margin:0 auto 10px; border:1px dashed var(--border); border-radius:4px; color:var(--fg-dimmer); font-size:11px; padding:10px; flex-shrink:0; }
-  @keyframes glitch-crt{ 0%,100%{opacity:1;} 50%{opacity:.96;} }
-  @keyframes glitch-main-shift{
-    0%, 88%, 95%, 100% { transform:translate(0,0); filter:none; }
-    89% { transform:translate(1px,-1px); filter:contrast(1.3) saturate(1.3); }
-    90% { transform:translate(-2px,1px); filter:none; }
-    91% { transform:translate(2px,0); filter:contrast(1.4); }
-    92% { transform:translate(-1px,-1px); filter:none; }
-    93% { transform:translate(1px,2px); filter:contrast(1.2); }
-    94% { transform:translate(0,0); filter:none; }
-  }
-  @keyframes glitch-ghost-r{
-    0%, 88%, 95%, 100% { opacity:0; transform:translate(0,0); }
-    89% { opacity:.55; transform:translate(-3px,1px); }
-    90% { opacity:0; }
-    91% { opacity:.4; transform:translate(3px,-1px); }
-    92% { opacity:0; }
-    93% { opacity:.5; transform:translate(-2px,2px); }
-    94% { opacity:0; }
-  }
-  @keyframes glitch-ghost-b{
-    0%, 88%, 95%, 100% { opacity:0; transform:translate(0,0); }
-    89% { opacity:.5; transform:translate(3px,-1px); }
-    90% { opacity:0; }
-    91% { opacity:.45; transform:translate(-3px,1px); }
-    92% { opacity:0; }
-    93% { opacity:.5; transform:translate(2px,-2px); }
-    94% { opacity:0; }
-  }
-  @media (prefers-reduced-motion: reduce){
-    .glitch-main, .glitch-r, .glitch-b{ animation:none; }
-    .glitch-r, .glitch-b{ opacity:0; }
-  }
 
   @keyframes emerge {
     0% { opacity: 0; transform: translateY(16px) scale(0.97); }
@@ -177,26 +139,3 @@
   footer{ text-align:center; color:var(--fg-dimmer); font-size:11px; margin-top:14px; letter-spacing:.05em; }
   @media (max-width:600px){ .term-screen{height:360px;} }
 
-.glitch-text {
-  position: relative;
-  display: inline-block;
-  animation: glitch-jitter 2s infinite;
-}
-
-.glitch-text:hover {
-  animation: glitch-skew 0.2s infinite;
-}
-
-@keyframes glitch-skew {
-  0% { transform: skew(0deg); }
-  25% { transform: skew(5deg); }
-  50% { transform: skew(-5deg); }
-  75% { transform: skew(2deg); }
-  100% { transform: skew(0deg); }
-}
-
-@keyframes glitch-jitter {
-  0%, 100% { transform: skew(0deg); }
-  5%, 10% { transform: skew(2deg, 1deg); }
-  15% { transform: skew(0deg); }
-}

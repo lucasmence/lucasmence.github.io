@@ -28,58 +28,19 @@
           <span style="color:var(--border);">|</span>
           <a href="?lang=br" id="lang-br">BR</a>
         </div>
-        <button class="reset-layout" id="btn-reset-layout" title="Reset layout">&#8635; reset</button>
         <span id="clock">--:--:--</span>
       </div>
     </div>
     <div id="desktop">
-      <div class="card window" id="win-avatar" data-title="avatar">
-        <div class="card-titlebar">
+      <div class="term-wrap window" id="win-term" data-title="terminal">
+        <div class="term-titlebar">
           <div class="window-controls">
-            <button class="dot r" onclick="closeWindow('win-avatar')" title="Close">×</button>
-            <button class="dot y" onclick="minimizeWindow('win-avatar')" title="Minimize">−</button>
-            <button class="dot g" onclick="maximizeWindow('win-avatar')" title="Maximize">+</button>
+            <button class="dot r" onclick="closeWindow('win-term')" title="Close">×</button>
+            <button class="dot y" onclick="minimizeWindow('win-term')" title="Minimize">−</button>
+            <button class="dot g" onclick="maximizeWindow('win-term')" title="Maximize">+</button>
           </div>
-          <div class="titlebar-drag"><span class="path">~/avatar</span></div>
+          <div class="titlebar-drag"><span class="name">~/aboutme</span></div>
         </div>
-        <div class="term-screen" tabindex="-1">
-          <div class="output"></div>
-          <div class="inputline">
-            <span class="prompt">lucas@mence.dev</span><span class="sym">:</span><span class="path prompt-path">~</span><span class="sym">$</span>
-            <input class="cmdline" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" />
-          </div>
-        </div>
-        <div class="resizer t"></div><div class="resizer b"></div><div class="resizer l"></div><div class="resizer r"></div>
-        <div class="resizer tl"></div><div class="resizer tr"></div><div class="resizer bl"></div><div class="resizer br"></div>
-      </div>
-        <div class="card window" id="win-card" data-title="whoami">
-        <div class="card-titlebar">
-          <div class="window-controls">
-            <button class="dot r" onclick="closeWindow('win-card')" title="Close">×</button>
-            <button class="dot y" onclick="minimizeWindow('win-card')" title="Minimize">−</button>
-            <button class="dot g" onclick="maximizeWindow('win-card')" title="Maximize">+</button>
-          </div>
-          <div class="titlebar-drag"><span class="path">~/whoami</span></div>
-        </div>
-        <div class="term-screen" tabindex="-1">
-          <div class="output"></div>
-          <div class="inputline">
-            <span class="prompt">lucas@mence.dev</span><span class="sym">:</span><span class="path prompt-path">~</span><span class="sym">$</span>
-            <input class="cmdline" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" />
-          </div>
-        </div>
-        <div class="resizer t"></div><div class="resizer b"></div><div class="resizer l"></div><div class="resizer r"></div>
-        <div class="resizer tl"></div><div class="resizer tr"></div><div class="resizer bl"></div><div class="resizer br"></div>
-      </div>
-        <div class="term-wrap window" id="win-term" data-title="terminal">
-          <div class="term-titlebar">
-            <div class="window-controls">
-              <button class="dot r" onclick="closeWindow('win-term')" title="Close">×</button>
-              <button class="dot y" onclick="minimizeWindow('win-term')" title="Minimize">−</button>
-              <button class="dot g" onclick="maximizeWindow('win-term')" title="Maximize">+</button>
-            </div>
-            <div class="titlebar-drag"><span class="name">~/aboutme</span></div>
-          </div>
         <div class="term-screen" tabindex="-1">
           <div class="output"></div>
           <div class="inputline">
@@ -90,7 +51,6 @@
         <div class="resizer t"></div><div class="resizer b"></div><div class="resizer l"></div><div class="resizer r"></div>
         <div class="resizer tl"></div><div class="resizer tr"></div><div class="resizer bl"></div><div class="resizer br"></div>
       </div>
-
     </div>
     <footer>© <span id="year-start"></span> - <span id="year-current"></span> mence.dev</footer>
   </main>
