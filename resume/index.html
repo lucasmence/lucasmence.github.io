@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-     <meta charset="UTF-8">
-    <meta property="og:title" content="mence.dev | Projects">
+    <meta charset="UTF-8">
+    <meta property="og:title" content="mence.dev | Resume">
     <meta property="og:description" content="Software Engineer with experience in web, desktop, DevOps and game development.">
-    <meta property="og:image" content="https://mence.dev/img/mence.jpg">
+    <meta property="og:image" content="https://github.com/lucasmence.png">
     <meta property="og:url" content="https://mence.dev/resume">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#282a36">
@@ -17,12 +17,11 @@
     <link rel="icon" href="../img/favicon.png" type="image/png">
   </head>
   <body>
-    <div class="vignette"></div>
     <div class="crt-overlay"></div>
-    <main id="main" class="show">
-      <div class="topline">
+    <main id="main">
+      <div class="statusbar">
         <a class="back-link" id="back-link" href="../">&larr; <span id="txt-back">back to ~</span></a>
-        <div class="toolbar">
+        <div class="statusbar-right">
           <div class="lang-switcher">
             <span class="label">lang:</span>
             <a href="?lang=en" id="lang-en">EN</a>
@@ -35,27 +34,20 @@
       <div class="page-title" id="txt-page-title">~/resume$ cat resume.pdf</div>
       <div class="resume-wrap">
         <div class="term-wrap resume-window">
-          <div class="term-titlebar">
-            <div class="window-controls">
-              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-            </div>
-            <span class="name" id="txt-window-label">~/resume</span>
-          </div>
           <div class="term-screen resume-screen">
             <div class="line cmd"><span class="cmd-prompt-group"><span class="prompt">lucas@mence.dev</span><span class="sym">:</span><span class="path">~</span><span class="sym">$</span></span> <span id="txt-cmd-echo">cat resume.pdf</span></div>
             <div class="pdf-frame-wrap">
-              <iframe id="pdf-frame" title="Resume"></iframe>
+              <div id="pdf-viewer" class="pdf-viewer" aria-label="Resume preview"></div>
             </div>
           </div>
         </div>
         <div class="download-row">
-          <a class="ascii-btn" id="btn-download" download>
-            <span id="txt-download">&#8595; Download PDF</span>
-          </a>
+          <a class="ascii-btn" id="btn-download" download></a>
         </div>
       </div>
       <footer>© <span id="year-start"></span> - <span id="year-current"></span> mence.dev</footer>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

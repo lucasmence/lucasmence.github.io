@@ -16,12 +16,11 @@
   <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
 <body>
-  <div class="vignette"></div>
   <div class="crt-overlay"></div>
   <main id="main">
-    <div class="topline" style="justify-content:flex-end;">
-      <div class="toolbar">
-        <div class="minimized-container" id="minimized-bar"></div>
+    <div class="statusbar">
+      <span class="statusbar-title">lucas@mence.dev <span class="dim">: ~/aboutme</span></span>
+      <div class="statusbar-right">
         <div class="lang-switcher">
           <span class="label">lang:</span>
           <a href="?lang=en" id="lang-en">EN</a>
@@ -31,25 +30,13 @@
         <span id="clock">--:--:--</span>
       </div>
     </div>
-    <div id="desktop">
-      <div class="term-wrap window" id="win-term" data-title="terminal">
-        <div class="term-titlebar">
-          <div class="window-controls">
-            <button class="dot r" onclick="closeWindow('win-term')" title="Close">×</button>
-            <button class="dot y" onclick="minimizeWindow('win-term')" title="Minimize">−</button>
-            <button class="dot g" onclick="maximizeWindow('win-term')" title="Maximize">+</button>
-          </div>
-          <div class="titlebar-drag"><span class="name">~/aboutme</span></div>
+    <div id="win-term" class="term-wrap">
+      <div class="term-screen" tabindex="-1">
+        <div class="output"></div>
+        <div class="inputline">
+          <span class="prompt">lucas@mence.dev</span><span class="sym">:</span><span class="path prompt-path">~</span><span class="sym">$</span>
+          <input class="cmdline" type="text" autocomplete="off" autocapitalize="off" spellcheck="false"/>
         </div>
-        <div class="term-screen" tabindex="-1">
-          <div class="output"></div>
-          <div class="inputline">
-            <span class="prompt">lucas@mence.dev</span><span class="sym">:</span><span class="path prompt-path">~</span><span class="sym">$</span>
-            <input class="cmdline" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus/>
-          </div>
-        </div>
-        <div class="resizer t"></div><div class="resizer b"></div><div class="resizer l"></div><div class="resizer r"></div>
-        <div class="resizer tl"></div><div class="resizer tr"></div><div class="resizer bl"></div><div class="resizer br"></div>
       </div>
     </div>
     <footer>© <span id="year-start"></span> - <span id="year-current"></span> mence.dev</footer>

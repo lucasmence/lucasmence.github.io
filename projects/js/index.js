@@ -74,7 +74,6 @@ const REFERENCES = [
 function renderProjectWindow(p){
   return `<a class="proj-window" href="${p.href}" target="_blank" rel="noopener">
     <div class="proj-titlebar">
-      <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
       <span class="proj-titlebar-label">~/${p.slug} <span class="proj-year">(${p.year})</span></span>
     </div>
     <div class="proj-media">
@@ -87,9 +86,19 @@ function renderProjectWindow(p){
   </a>`;
 }
 
+function asciiBox(icon, label, width){
+  const inner = `[${icon}] ${label}`;
+  const w = Math.max(width || 0, inner.length) + 2;
+  const padL = Math.max(0, Math.floor((w - inner.length) / 2));
+  const padR = Math.max(0, w - inner.length - padL);
+  return '+' + '-'.repeat(w) + '+\n' +
+         '|' + ' '.repeat(padL) + inner + ' '.repeat(padR) + '|\n' +
+         '+' + '-'.repeat(w) + '+';
+}
 document.getElementById('grid-games').innerHTML = GAMES.map(renderProjectWindow).join('');
 document.getElementById('grid-work').innerHTML = WORK.map(renderProjectWindow).join('');
-document.getElementById('references-row').innerHTML = `<div class="ascii-btn-row">${REFERENCES.map(r => `<a class="ascii-btn" href="${r.href}" target="_blank" rel="noopener">${r.label}</a>`).join('')}</div>`;
+const refWidth = Math.max(...REFERENCES.map(r => r.label.length + 4));
+document.getElementById('references-row').innerHTML = `<div class="ascii-btn-row">${REFERENCES.map(r => `<a class="ascii-btn" href="${r.href}" target="_blank" rel="noopener">${asciiBox('*', r.label, refWidth)}</a>`).join('')}</div>`;
 
 (function animateCards(){
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;

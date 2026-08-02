@@ -1,3 +1,10 @@
+/* The shared base css (../css/index.css) locks body height for the terminal
+   page (overflow:hidden + full-width flex main). The projects page needs
+   normal document flow with page scrolling and the original 980px column. */
+html, body{ height:auto; overflow:visible; }
+body{ display:block; overflow-x:hidden; }
+main{ display:block; width:100%; max-width:980px; margin:0 auto; padding:26px 20px 30px; }
+
 .back-link{ color:var(--fg-dim); text-decoration:none; font-size:12px; display:inline-flex; align-items:center; gap:6px; white-space:nowrap; }
 .back-link:hover{ color:var(--accent); }
 
@@ -34,5 +41,14 @@
 .proj-overlay-desc{ color:#f2f2f2; font-size:12.5px; line-height:1.5; }
 
 #references-row{ margin-bottom:8px; }
+#references-row .ascii-btn-row{ display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; align-items:center; }
+#references-row .ascii-btn{ justify-self:center; }
+
+@media (max-width:900px){
+  #references-row .ascii-btn-row{ grid-template-columns:repeat(2, minmax(0,1fr)); }
+}
+@media (max-width:560px){
+  #references-row .ascii-btn-row{ grid-template-columns:1fr; }
+}
 
 @media (prefers-reduced-motion: reduce){ .proj-window{ transition:none; } .proj-window:hover{ transform:none; } }
