@@ -5,24 +5,21 @@ const TRANSLATIONS = {
     title: 'lucas@mence.dev:~/projects$',
     back: 'back to ~',
     backUrl: '../',
-    myProjects: 'My Projects',
-    workedOn: "Projects I've worked on",
+    projects: 'Projects',
     references: 'References'
   },
   br: {
     title: 'lucas@mence.dev:~/projetos$',
     back: 'voltar para ~',
     backUrl: '../?lang=br',
-    myProjects: 'Meus Projetos',
-    workedOn: 'Projetos em que trabalhei',
+    projects: 'Projetos',
     references: 'Referências'
   }
 };
 const t = TRANSLATIONS[currentLang];
 document.title = t.title;
 document.getElementById('txt-back').textContent = t.back;
-document.getElementById('txt-my-projects').textContent = t.myProjects;
-document.getElementById('txt-worked-on').textContent = t.workedOn;
+document.getElementById('txt-projects').textContent = t.projects;
 document.getElementById('txt-references').textContent = t.references;
 document.getElementById('back-link').href = t.backUrl;
 
@@ -62,26 +59,21 @@ const REFERENCES = [
   { label: 'Sindre Sorhus', href: 'https://sindresorhus.com/' }
 ];
 
-function renderProjectWindow(p){
-  return `<a class="proj-window" href="${p.href}" target="_blank" rel="noopener">
-    <div class="proj-titlebar">
-      <span class="proj-titlebar-label">~/${p.slug} <span class="proj-year">(${p.year})</span></span>
-    </div>
-    <div class="proj-media">
+function initBelt(container, projects){
+  const item = (p) => `
+    <a class="belt-item" href="${p.href}" target="_blank" rel="noopener">
       <img src="${p.img}" alt="${p.name}" loading="lazy">
-      <div class="proj-overlay">
-        <div class="proj-overlay-title">${p.name}</div>
-        <div class="proj-overlay-desc">${p.desc[currentLang]}</div>
+      <div class="belt-overlay">
+        <div class="belt-title">${p.name} <span class="belt-year">(${p.year})</span></div>
+        <div class="belt-desc">${p.desc[currentLang]}</div>
       </div>
-    </div>
-  </a>`;
+    </a>`;
+  container.innerHTML = `<div class="belt-track">${projects.map(item).join('')}${projects.map(item).join('')}</div>`;
 }
+initBelt(document.getElementById('belt'), [...GAMES, ...WORK]);
 
-document.getElementById('grid-games').innerHTML = GAMES.map(renderProjectWindow).join('');
-document.getElementById('grid-work').innerHTML = WORK.map(renderProjectWindow).join('');
-const refWidth = Math.max(...REFERENCES.map(r => r.label.length + 4));
-document.getElementById('references-row').innerHTML = `<div class="ascii-btn-row">${REFERENCES.map(r => `<a class="ascii-btn" href="${r.href}" target="_blank" rel="noopener">${asciiBox('*', r.label, refWidth)}</a>`).join('')}</div>`;
+document.getElementById('references-row').innerHTML = REFERENCES.map(r => `<a class="ref-link" href="${r.href}" target="_blank" rel="noopener">${r.label}</a>`).join('');
 
-animateIn([...document.querySelectorAll('.proj-window'), ...document.querySelectorAll('#references-row .ascii-btn')], { cls: 'emerge-fast', dy: 12, stagger: 50 });
+animateIn([document.querySelector('.belt'), document.querySelector('#references-row')], { cls: 'emerge-fast', dy: 12, stagger: 50 });
 
 
