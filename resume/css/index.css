@@ -1,12 +1,12 @@
 main{ padding:10px 18px 8px; }
-.back-link{ color:var(--fg-dim); text-decoration:none; font-size:12px; display:inline-flex; align-items:center; gap:6px; white-space:nowrap; margin-bottom:20px; }
+.back-link{ color:var(--fg-dim); text-decoration:none; font-size:14px; display:inline-flex; align-items:center; gap:6px; white-space:nowrap; margin-bottom:22px; }
 .back-link:hover{ color:var(--accent); }
 
 .pdf-viewer{ flex:1 1 auto; min-height:0; overflow-y:auto; overflow-x:hidden; padding:14px; box-sizing:border-box; }
 .pdf-viewer canvas{ display:block; width:100%; height:auto; margin:0 auto 14px; background:#fff; box-shadow:0 2px 12px rgba(0,0,0,.45); border-radius:2px; }
-.pdf-loading{ color:var(--fg-dim); font-size:13px; text-align:center; padding:40px 12px; }
-.pdf-fallback{ color:var(--fg-dim); font-size:13px; text-align:center; padding:40px 12px; }
+.pdf-loading{ color:var(--fg-dim); font-size:15px; text-align:center; padding:40px 12px; }
+.pdf-fallback{ color:var(--fg-dim); font-size:15px; text-align:center; padding:40px 12px; }
 .pdf-fallback .ascii-btn{ display:inline-block; margin-top:14px; }
 
 .download-row{ display:flex; justify-content:center; margin:0 0 16px; flex:0 0 auto; }
-.download-row .ascii-btn{ font-size:16px; }
+.download-row .ascii-btn{ font-size:17px; }

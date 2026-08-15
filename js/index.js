@@ -273,10 +273,10 @@ function createShell(rootEl){
 
     const g = canvas.getContext('2d');
     const styles = getComputedStyle(document.body);
-    const cAccent = (styles.getPropertyValue('--accent') || '#5ee87d').trim();
-    const cDim = (styles.getPropertyValue('--fg-dim') || '#a6a28c').trim();
-    const cRed = (styles.getPropertyValue('--red') || '#f92672').trim();
-    const cBg = (styles.getPropertyValue('--bg-crt') || '#0d1410').trim();
+    const cAccent = (styles.getPropertyValue('--accent') || '#8ae234').trim();
+    const cDim = (styles.getPropertyValue('--fg-dim') || '#cccccc').trim();
+    const cRed = (styles.getPropertyValue('--red') || '#ef2929').trim();
+    const cBg = (styles.getPropertyValue('--bg-crt') || '#000000').trim();
 
     const ship = { x: canvas.width / 2 - 9, y: canvas.height - 26, w: 18, h: 14, speed: 4.2, history: [] };
     let bullets = [], enemies = [], score = 0, lives = 3;
@@ -284,7 +284,7 @@ function createShell(rootEl){
     const keys = {};
 
     function spawnEnemy() { 
-      const colors = ['#f92672', '#66d9ef', '#e6db74', '#8f0bb8ff']; 
+      const colors = ['#ef2929', '#34e2e2', '#fce94f', '#ad7fa8']; 
       const randomColor = colors[Math.floor(Math.random() * colors.length)];
       
       enemies.push({ 
