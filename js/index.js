@@ -1,15 +1,15 @@
-const urlParams = new URLSearchParams(window.location.search);
-const currentLang = urlParams.get('lang') === 'br' ? 'br' : 'en';
-document.documentElement.lang = currentLang;
-document.getElementById(`lang-${currentLang}`).style.color = 'var(--accent)';
-document.getElementById(`lang-${currentLang}`).style.fontWeight = 'bold';
+const currentLang = setupLang();
 
 const AUTHOR_NAME = 'LUCAS VINICIUS';
+
+const AVATAR_IMG_SRC = 'https://github.com/lucasmence.png';
+const AVATAR_IMG_HTML = `<img class="avatar-img" src="${AVATAR_IMG_SRC}" width="200" height="200" alt="mence.dev" onerror="handleAvatarLoadError()">`;
 
 const TRANSLATIONS = {
   en: {
     starshipHint: '> Use arrows to \nmove and shoot <',
     whoami_txt: 
+    `${AVATAR_IMG_HTML}`+
     `<div class="ascii-name">${asciiNameBox(AUTHOR_NAME)}</div>`+
     `${careerButtonsHTML('Resume', 'Projects')}`+
     `<div>Software Developer · 12+ years of experience</div>`+
@@ -101,7 +101,8 @@ const TRANSLATIONS = {
 
   br: {
     starshipHint: '> Use as setas para \nmover e atirar <',
-    whoami_txt: `<div class="ascii-name">${asciiNameBox(AUTHOR_NAME)}</div>`+
+    whoami_txt: `${AVATAR_IMG_HTML}`+
+    `<div class="ascii-name">${asciiNameBox(AUTHOR_NAME)}</div>`+
     `${careerButtonsHTML('Currículo', 'Projetos')}`+
     `<div>Desenvolvedor de Software · 12+ anos de experiência</div>`+
     `<div class="term-bio">Trabalho com <span class="k">devops</span>, <span class="k">web</span>, <span class="k">mobile</span> e <span class="k">gamedev</span>. `+
@@ -193,25 +194,13 @@ const TRANSLATIONS = {
 
 const t = TRANSLATIONS[currentLang];
 
-// On touch devices (mobile/tablets) skip auto-focusing the terminal input so the
-// on-screen keyboard doesn't pop up and cover the screen right on page load.
 const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
-
-function pad(n){ return n.toString().padStart(2,'0'); }
-function tickClock(){
-  const d = new Date();
-  document.getElementById('clock').textContent = `${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
-}
-tickClock(); setInterval(tickClock, 1000);
-document.getElementById('year-current').textContent = new Date().getFullYear();
-document.getElementById('year-start').textContent = 2013;
 
 function dir(children){ return { type:'dir', children: children || {} }; }
 function file(content){ return { type:'file', content: content }; }
 const FS = dir({
   home: dir({
     lucas: dir({
-      'me.jpg': file('[image] use "display me.jpg" to view'),
       'skills.txt': file(t.skills),
       'contact.txt': file(`email:    mence.dev@proton.me\ngithub:   github.com/lucasmence\nlinkedin: lucasmsv96\nsite:     mence.dev`),
       projects: dir({
@@ -244,10 +233,6 @@ function pathString(segs){
   if(segs.length >= HOME.length && HOME.every((h,i)=>segs[i]===h)){ const rest = segs.slice(HOME.length).join('/'); return '~' + (rest ? '/' + rest : ''); }
   return '/' + segs.join('/');
 }
-function escapeHTML(s){ return s.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
-
-const AVATAR_IMG_SRC = 'https://github.com/lucasmence.png';
-const AVATAR_IMG_HTML = `<img class="avatar-img" src="${AVATAR_IMG_SRC}" width="200" height="200" alt="mence.dev" onerror="handleAvatarLoadError()">`;
 function handleAvatarLoadError(){
   const img = document.querySelector('.avatar-img');
   if(img) img.outerHTML = `<div class="avatar-missing">me.jpg not found</div>`;
@@ -453,7 +438,6 @@ function createShell(rootEl){
       case 'tree': cmd_tree(ctx, args); break; 
       case 'ps': cmd_ps(ctx); break; 
       case 'neofetch': cmd_neofetch(ctx); break; 
-      case 'display': cmd_display(ctx, args); break; 
       case 'echo': ctx.print(args.join(' ')); break; 
       case 'date': ctx.print(new Date().toString()); break; 
       case 'whoami': ctx.printHTML(t.whoami_txt); break; 
@@ -552,12 +536,6 @@ function cmd_neofetch(ctx){
   '        jgs \'._)           '
   ]; 
   const info = t.neofetch; for(let i=0;i<Math.max(art.length,info.length);i++){ ctx.printHTML(`<span style="color:var(--accent-soft)">${(art[i]||'').padEnd(19)}</span>  ${escapeHTML(info[i]||'')}`); } }
-function cmd_display(ctx, args){
-  if(!args[0]){ ctx.print(`display: ${t.errMissingOp}`, 'err'); return; }
-  if(args[0] === 'me.jpg' || args[0] === 'avatar.jpg' || args[0] === 'avatar.png' || args[0] === 'avatar'){ ctx.printHTML(AVATAR_IMG_HTML); }
-  else { ctx.print(`display: ${args[0]}: ${t.errNotFound}`, 'err'); }
-}
-
 function gitBranchName(cwd){
   const p = pathString(cwd);
   if(p === '~') return 'main';
@@ -624,16 +602,6 @@ function asciiNameBox(name){
   return border + '\n' + mid + '\n' + border;
 }
 
-function asciiBox(icon, label, width){
-  const inner = `[${icon}] ${label}`;
-  const w = Math.max(width || 0, inner.length) + 2;
-  const padL = Math.max(0, Math.floor((w - inner.length) / 2));
-  const padR = Math.max(0, w - inner.length - padL);
-  return '+' + '-'.repeat(w) + '+\n' +
-         '|' + ' '.repeat(padL) + inner + ' '.repeat(padR) + '|\n' +
-         '+' + '-'.repeat(w) + '+';
-}
-
 function socialButtonsHTML(){
   const links = [
     { icon: '@', label: 'Email', href: 'mailto:mence.dev@proton.me' },
@@ -650,7 +618,7 @@ function careerButtonsHTML(resumeLabel, projectsLabel){
     { icon: '~/', label: projectsLabel, href: 'projects/' + (currentLang === 'br' ? '?lang=br' : '') }
   ];
   const width = Math.max(...links.map(l => l.icon.length + 3 + l.label.length));
-  return `<div class="ascii-btn-row">${links.map(l => `<a class="ascii-btn" href="${l.href}" target="_blank" rel="noopener">${asciiBox(l.icon, l.label, width)}</a>`).join('')}</div>`;
+  return `<div class="ascii-btn-row">${links.map(l => `<a class="ascii-btn" href="${l.href}">${asciiBox(l.icon, l.label, width)}</a>`).join('')}</div>`;
 }
 
 const shellTerm = createShell(document.getElementById('win-term'));
@@ -658,27 +626,13 @@ const shellTerm = createShell(document.getElementById('win-term'));
 if(shellTerm.typeCommand && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   if(shellTerm.inputEl) shellTerm.inputEl.disabled = true;
   (async () => {
-    await shellTerm.typeCommand('display me.jpg');
     await shellTerm.typeCommand('whoami');
     if(shellTerm.inputEl) { shellTerm.inputEl.disabled = false; if(!isCoarsePointer) shellTerm.inputEl.focus(); }
   })().catch(() => { if(shellTerm.inputEl) shellTerm.inputEl.disabled = false; });
 } else {
-  shellTerm.runCommand('display me.jpg');
   shellTerm.runCommand('whoami');
   if(shellTerm.inputEl && !isCoarsePointer) shellTerm.inputEl.focus();
 }
 
-window.addEventListener('load', ()=>{
-  const term = document.getElementById('win-term');
-  if (term && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    term.style.opacity = '0';
-    term.style.transform = 'translateY(16px) scale(0.97)';
-    void term.offsetHeight;
-    term.classList.add('emerge');
-    term.addEventListener('animationend', () => {
-      term.style.opacity = '';
-      term.style.transform = '';
-    }, { once: true });
-  }
-});
+window.addEventListener('load', () => animateIn(document.getElementById('win-term')));
 
