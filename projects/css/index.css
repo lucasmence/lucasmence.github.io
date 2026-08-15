@@ -1,14 +1,9 @@
-/* The shared base css (../css/index.css) locks body height for the terminal
-   page (overflow:hidden + full-width flex main). The projects page needs
-   normal document flow with page scrolling and the original 980px column. */
 html, body{ height:auto; overflow:visible; }
 body{ display:block; overflow-x:hidden; }
 main{ display:block; width:100%; max-width:980px; margin:0 auto; padding:26px 20px 30px; }
 
-.back-link{ color:var(--fg-dim); text-decoration:none; font-size:12px; display:inline-flex; align-items:center; gap:6px; white-space:nowrap; }
+.back-link{ color:var(--fg-dim); text-decoration:none; font-size:12px; display:inline-flex; align-items:center; gap:6px; white-space:nowrap; margin-bottom:20px; }
 .back-link:hover{ color:var(--accent); }
-
-.page-title{ color:var(--fg-dimmer); font-size:13px; margin:4px 0 22px; letter-spacing:.03em; }
 
 .section-title{ font-family:var(--crt); font-size:26px; color:var(--accent); letter-spacing:1px; margin:8px 0 16px; text-shadow:0 0 4px rgba(80,250,123,.25); }
 
@@ -41,8 +36,8 @@ main{ display:block; width:100%; max-width:980px; margin:0 auto; padding:26px 20
 .proj-overlay-desc{ color:#f2f2f2; font-size:12.5px; line-height:1.5; }
 
 #references-row{ margin-bottom:8px; }
-#references-row .ascii-btn-row{ display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; align-items:center; }
-#references-row .ascii-btn{ justify-self:center; }
+#references-row .ascii-btn-row{ display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:6px 8px; align-items:center; }
+#references-row .ascii-btn{ justify-self:center; font-size:12px; line-height:1.4; }
 
 @media (max-width:900px){
   #references-row .ascii-btn-row{ grid-template-columns:repeat(2, minmax(0,1fr)); }
