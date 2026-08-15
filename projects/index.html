@@ -19,27 +19,15 @@
   <body>
   <div class="crt-overlay"></div>
     <main id="main">
-      <div class="statusbar">
-        <a class="back-link" id="back-link" href="../">&larr; <span id="txt-back">back to ~</span></a>
-        <div class="statusbar-right">
-          <div class="lang-switcher">
-            <span class="label">lang:</span>
-            <a href="?lang=en" id="lang-en">EN</a>
-            <span style="color:var(--border);">|</span>
-            <a href="?lang=br" id="lang-br">BR</a>
-          </div>
-          <span id="clock">--:--:--</span>
-        </div>
-      </div>
-      <div class="page-title" id="txt-page-title">~/projects$ ls -la</div>
+      <a class="back-link" id="back-link" href="../">&larr; <span id="txt-back">back to ~</span></a>
       <h2 class="section-title" id="txt-my-projects">My Projects</h2>
       <div class="project-grid" id="grid-games"></div>
       <h2 class="section-title" id="txt-worked-on">Projects I've worked on</h2>
       <div class="project-grid" id="grid-work"></div>
       <h2 class="section-title" id="txt-references">References</h2>
       <div id="references-row"></div>
-      <footer>© <span id="year-start"></span> - <span id="year-current"></span> mence.dev</footer>
     </main>
+    <script src="../js/utils.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

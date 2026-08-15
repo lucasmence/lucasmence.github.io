@@ -18,18 +18,6 @@
 <body>
   <div class="crt-overlay"></div>
   <main id="main">
-    <div class="statusbar">
-      <span class="statusbar-title">lucas@mence.dev <span class="dim">: ~/aboutme</span></span>
-      <div class="statusbar-right">
-        <div class="lang-switcher">
-          <span class="label">lang:</span>
-          <a href="?lang=en" id="lang-en">EN</a>
-          <span style="color:var(--border);">|</span>
-          <a href="?lang=br" id="lang-br">BR</a>
-        </div>
-        <span id="clock">--:--:--</span>
-      </div>
-    </div>
     <div id="win-term" class="term-wrap">
       <div class="term-screen" tabindex="-1">
         <div class="output"></div>
@@ -39,8 +27,8 @@
         </div>
       </div>
     </div>
-    <footer>© <span id="year-start"></span> - <span id="year-current"></span> mence.dev</footer>
   </main>
+  <script src="js/utils.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>
