@@ -1,15 +1,10 @@
-const urlParams = new URLSearchParams(window.location.search);
-const currentLang = urlParams.get('lang') === 'br' ? 'br' : 'en';
-document.documentElement.lang = currentLang;
-document.getElementById(`lang-${currentLang}`).style.color = 'var(--accent)';
-document.getElementById(`lang-${currentLang}`).style.fontWeight = 'bold';
+const currentLang = setupLang();
 
 const TRANSLATIONS = {
   en: {
     title: 'lucas@mence.dev:~/projects$',
     back: 'back to ~',
     backUrl: '../',
-    pageTitle: '~/projects$ ls -la',
     myProjects: 'My Projects',
     workedOn: "Projects I've worked on",
     references: 'References'
@@ -18,7 +13,6 @@ const TRANSLATIONS = {
     title: 'lucas@mence.dev:~/projetos$',
     back: 'voltar para ~',
     backUrl: '../?lang=br',
-    pageTitle: '~/projetos$ ls -la',
     myProjects: 'Meus Projetos',
     workedOn: 'Projetos em que trabalhei',
     references: 'Referências'
@@ -27,12 +21,9 @@ const TRANSLATIONS = {
 const t = TRANSLATIONS[currentLang];
 document.title = t.title;
 document.getElementById('txt-back').textContent = t.back;
-document.getElementById('txt-page-title').textContent = t.pageTitle;
 document.getElementById('txt-my-projects').textContent = t.myProjects;
 document.getElementById('txt-worked-on').textContent = t.workedOn;
 document.getElementById('txt-references').textContent = t.references;
-document.getElementById('year-start').textContent = 2013;
-document.getElementById('year-current').textContent = new Date().getFullYear();
 document.getElementById('back-link').href = t.backUrl;
 
 const GAMES = [
@@ -86,46 +77,11 @@ function renderProjectWindow(p){
   </a>`;
 }
 
-function asciiBox(icon, label, width){
-  const inner = `[${icon}] ${label}`;
-  const w = Math.max(width || 0, inner.length) + 2;
-  const padL = Math.max(0, Math.floor((w - inner.length) / 2));
-  const padR = Math.max(0, w - inner.length - padL);
-  return '+' + '-'.repeat(w) + '+\n' +
-         '|' + ' '.repeat(padL) + inner + ' '.repeat(padR) + '|\n' +
-         '+' + '-'.repeat(w) + '+';
-}
 document.getElementById('grid-games').innerHTML = GAMES.map(renderProjectWindow).join('');
 document.getElementById('grid-work').innerHTML = WORK.map(renderProjectWindow).join('');
 const refWidth = Math.max(...REFERENCES.map(r => r.label.length + 4));
 document.getElementById('references-row').innerHTML = `<div class="ascii-btn-row">${REFERENCES.map(r => `<a class="ascii-btn" href="${r.href}" target="_blank" rel="noopener">${asciiBox('*', r.label, refWidth)}</a>`).join('')}</div>`;
 
-(function animateCards(){
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const cards = document.querySelectorAll('.proj-window');
-  const btns = document.querySelectorAll('#references-row .ascii-btn');
-  const all = [...cards, ...btns];
-  all.forEach((el, i) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(12px) scale(0.97)';
-    el.style.animationDelay = `${i * 50}ms`;
-  });
-  if (all.length) {
-    void all[0].offsetHeight;
-    all.forEach(el => {
-      el.classList.add('emerge-fast');
-      el.addEventListener('animationend', () => {
-        el.style.opacity = '';
-        el.style.transform = '';
-        el.style.animationDelay = '';
-      }, { once: true });
-    });
-  }
-})();
-
-function pad(n){ return n.toString().padStart(2, '0'); }
-function tickClock(){ const d = new Date(); document.getElementById('clock').textContent = `${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`; }
-tickClock();
-setInterval(tickClock, 1000);
+animateIn([...document.querySelectorAll('.proj-window'), ...document.querySelectorAll('#references-row .ascii-btn')], { cls: 'emerge-fast', dy: 12, stagger: 50 });
 
 
