@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta property="og:title" content="mence.dev | Resume">
-    <meta property="og:description" content="Software Engineer with experience in web, desktop, DevOps and game development.">
+    <meta property="og:title" content="Lucas Vinícius | Software Engineer | Resume">
+    <meta property="og:description" content="Software Engineer with 12+ years of experience in web, desktop, DevOps and game development.">
     <meta property="og:image" content="https://github.com/lucasmence.png">
     <meta property="og:url" content="https://mence.dev/resume">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#000000">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lucas@mence.dev:~/resume$</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="css/index.css">
+    <meta name="theme-color" content="#0069FF">
+
+    <title data-i18n="resume-meta-title">Lucas Vinícius - Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../img/favicon.png" type="image/png">
-  </head>
-  <body>
-    <div class="crt-overlay"></div>
-    <main id="main">
-      <a class="back-link" id="back-link" href="../">&larr; <span id="txt-back">back to ~</span></a>
-      <div class="download-row">
-        <a class="ascii-btn" id="btn-download" download></a>
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../projects/css/index.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="box-vertical-background"></div>
+    <div class="full-height-wrapper">
+    <div class="content">
+      <div class="box-vertical">
+          <div class="box-content">
+
+            <div class="div-icons-project">
+              <a href="../" class="btn"><img class="icon" src="../img/home-svgrepo-com.svg"></a>
+            </div>              <div class="page-title">
+              <span class="span-page-title" data-i18n="resume-title">Resume</span>
+            </div>
+
+            <div class="div-resume">
+              <object class="resume" data="assets/LucasVinicius-PublicResume-2026.pdf" data-i18n-src="resume-pdf" type="application/pdf" name="fitvid0"></object>
+            </div>
+          </div>
       </div>
-      <div class="pdf-viewer" id="pdf-viewer" aria-label="Resume preview"></div>
-    </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-    <script src="../js/utils.js"></script>
-    <script src="js/index.js"></script>
-  </body>
+    </div>
+  </div>
+    <script src="../js/lang.js"></script>
+</body>
 </html>

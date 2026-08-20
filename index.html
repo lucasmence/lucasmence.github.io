@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta property="og:title" content="mence.dev">
-  <meta property="og:description" content="Software Engineer with experience in web, desktop, DevOps and game development.">
-  <meta property="og:image" content="https://github.com/lucasmence.png">
-  <meta property="og:url" content="https://mence.dev/">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#000000">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>lucas@mence.dev:~$</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="icon" href="img/favicon.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta property="og:title" content="Lucas Vinícius | Software Engineer">
+    <meta property="og:description" content="Software Engineer with 12+ years of experience in web, desktop, DevOps and game development.">
+    <meta property="og:image" content="https://mence.dev/img/mence.png">
+    <meta property="og:url" content="https://mence.dev">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0069FF">
+
+    <title data-i18n="page-title">Lucas Vinícius</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
-  <div class="crt-overlay"></div>
-  <main id="main">
-    <div id="win-term" class="term-wrap">
-      <div class="term-screen" tabindex="-1">
-        <div class="output"></div>
-        <div class="inputline">
-          <span class="prompt">lucas@mence.dev</span><span class="sym">:</span><span class="path prompt-path">~</span><span class="sym">$</span>
-          <input class="cmdline" type="text" autocomplete="off" autocapitalize="off" spellcheck="false"/>
-        </div>
-      </div>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <div class="box-central">
+            <div class="box-content">
+              <div class="div-avatar">
+                <img class="img-avatar" src="https://github.com/lucasmence.png">
+              </div>
+              <div class="div-personal-content">
+                <p class="div-personal-name">Lucas Vinícius</p>
+                <div class="div-personal-description" data-i18n="description">
+                  <p>Software Developer with over 12+ years experience.
+                    <br/> 
+                    I've worked with devops, web, mobile, and gamedev.
+                    <br/>
+                    Currently, I working with React/Node.js and C++ gamedev.
+                  </p>
+                </div>
+              </div>
+              <div class="div-icons">
+                <a href="mailto:mence.dev@proton.me" target="_blank" class="btn"><img class="icon" src="img/email-svgrepo-com.svg"></a>
+                <a href="https://github.com/lucasmence" target="_blank" class="btn"><img class="icon" src="img/github-svgrepo-com.svg"></a>
+                <a href="https://www.linkedin.com/in/lucasmsv96/" target="_blank" class="btn"><img class="icon" src="img/linkedin-svgrepo-com.svg"></a>
+                <a href="https://linktr.ee/lucasmence" target="_blank" class="btn"><img class="icon" src="img/link-circle-svgrepo-com.svg"></a>
+              </div>
+            </div>
+            <div class="box-footer">
+              <a href="resume/" class="btn" data-i18n="btn-resume">Resume</a>
+              <a href="projects/" class="btn" data-i18n="btn-projects">Projects</a>
+          </div>
+        </div> 
     </div>
-  </main>
-  <script src="js/utils.js"></script>
-  <script src="js/index.js"></script>
+    <script src="js/lang.js"></script>
 </body>
 </html>

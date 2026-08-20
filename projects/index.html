@@ -1,31 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta property="og:title" content="mence.dev | Projects">
-    <meta property="og:description" content="Software Engineer with experience in web, desktop, DevOps and game development.">
-    <meta property="og:image" content="https://github.com/lucasmence.png">
+    <meta property="og:title" content="Lucas Vinícius | Software Engineer | Projects">
+    <meta property="og:description" content="Software Engineer with 12+ years of experience in web, desktop, DevOps and game development.">
+    <meta property="og:image" content="https://mence.dev/img/mence.png">
     <meta property="og:url" content="https://mence.dev/projects">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#000000">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lucas@mence.dev:~/projects$</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="css/index.css">
+    <meta name="theme-color" content="#0069FF">
+
+    <title data-i18n="projects-meta-title">Lucas Vinícius - Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../img/favicon.png" type="image/png">
-  </head>
-  <body>
-  <div class="crt-overlay"></div>
-    <main id="main">
-      <a class="back-link" id="back-link" href="../">&larr; <span id="txt-back">back to ~</span></a>
-      <h2 class="section-title" id="txt-projects">Projects</h2>
-      <div class="belt" id="belt" aria-label="Projects slideshow"></div>
-      <h2 class="section-title" id="txt-references">References</h2>
-      <div id="references-row"></div>
-    </main>
-    <script src="../js/utils.js"></script>
-    <script src="js/index.js"></script>
-  </body>
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="box-vertical-background"></div>
+    <div class="full-height-wrapper">
+      <div class="content">
+        <div class="box-vertical">
+            <div class="box-content">
+
+              <div class="div-icons-project">
+                <a href="../" class="btn"><img class="icon" src="../img/home-svgrepo-com.svg"></a>
+              </div>
+              
+              <div class="page-title">
+                <span class="span-page-title" data-i18n="projects-title">Projects</span>
+              </div>
+
+              <div class="project-container">
+
+                <div class="box-project img-container">
+                  <a class="link-project" href="https://lucasmence.itch.io/boltcraft-ii-redux-edition" target="_blank">
+                    <img class="img-project" src="../img/projects/gifs/boltcraft-ii.gif">
+                      <div class="span-title-project">
+                        <span class="img-text">Boltcraft II</span>
+                      </div>
+                  </a>
+                  <div class="div-project-description">
+                    <span data-i18n="proj-boltcraft-desc">Project where I studied procedural map generation, talent trees, and weapon systems (SFML and C++). Free on itch.io.</span>
+                  </div>
+                </div>
+
+                <div class="box-project img-container">
+                  <a class="link-project" href="https://lucasmence.itch.io/protocol-undeath" target="_blank">
+                    <img class="img-project" src="../img/projects/gifs/protocol-undeath.gif">
+                    <div class="span-title-project">
+                      <span class="img-text">Protocol Undeath</span>
+                    </div>
+                  </a>
+                  <div class="div-project-description">
+                    <span data-i18n="proj-protocol-desc">Post-apocalyptic survival game against zombies (SFML and C++). Free on itch.io.</span>
+                  </div>
+                </div>
+                <div class="box-project img-container">
+                  <a class="link-project" href="https://lucasmence.itch.io/wizardry-duels" target="_blank">
+                    <img class="img-project" src="../img/projects/gifs/wizardry-duels-1.gif">
+                    <div class="span-title-project">
+                      <span class="img-text">Wizardry Duels</span>
+                    </div>
+                  </a>
+                  <div class="div-project-description">
+                    <span data-i18n="proj-wizardry-desc">1v1 multiplayer game that uses SFMLs own UDP sockets for online gameplay (SFML and C++).<br/>Free on itch.io.</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="project-container">
+
+                <div class="box-project img-container">
+                  <a class="link-project" href="https://store.steampowered.com/app/2005930/Boltcraft/" target="_blank">
+                    <img class="img-project" src="../img/projects/gifs/boltcraft-classic.gif">
+                    <div class="span-title-project">
+                      <span class="img-text">Boltcraft (Classic)</span>
+                    </div>
+                  </a>
+                  <div class="div-project-description">
+                    <span data-i18n="proj-boltcraft-classic-desc">My first released game, a 2D top-down dungeon crawler. I learned a lot from it and also made many mistakes along the way (SFML and C++). Available on Steam.</span>
+                  </div>
+                </div>
+                <div class="box-project img-container">
+                  <a class="link-project" href="https://github.com/lucasmence/realm-editor" target="_blank">
+                    <img class="img-project" src="../img/projects/gifs/realm-editor.gif">
+                    <div class="span-title-project">
+                      <span class="img-text">Realm Editor</span>
+                    </div>
+                  </a>
+                  <div class="div-project-description">
+                    <span data-i18n="proj-realm-desc">My own custom map editor for my games (SFML and C++). Coming soon to GitHub.</span>
+                  </div>
+                </div>
+
+              </div>
+
+               <div class="project-container">
+
+                <div class="box-project img-container">
+                  <a class="link-project" href="https://notacerta.com.br/" target="_blank">
+                    <img class="img-project" src="../img/projects/notacerta.png">
+                  </a>
+                  <div class="div-project-description">
+                    <span data-i18n="proj-notacerta-desc">Online application for issuing invoices (React and Node.js).</span>
+                  </div>
+                </div>
+
+                <div class="box-project img-container">
+                  <a class="link-project" href="https://bestzap.com.br/" target="_blank">
+                    <img class="img-project" src="../img/projects/bestzap.png">
+                  </a>
+                  <div class="div-project-description">
+                    <span data-i18n="proj-bestzap-desc">Messaging application that uses a WhatsApp library for management and automation (React and Node.js).</span>
+                  </div>
+                </div>
+
+              </div>
+             
+
+              <div class="page-title">
+                <span class="span-page-title" data-i18n="references-title">References</span>
+              </div>
+
+              <div class="project-container">
+                <div class="div-references">
+                  <table>
+                    <tr>
+                      <td class="row-references"><a class="link-references" href="https://tm.tyron.at/" target="_blank"><span class="mark-reference">• </span>Tyron</a></td>
+                      <td class="row-references"><a class="link-references" href="https://csfelix.github.io/" target="_blank"><span class="mark-reference">• </span>CSFelix</a></td>
+                      <td class="row-references"><a class="link-references" href="https://duerrenberger.dev/" target="_blank"><span class="mark-reference">• </span>Lukas Dürrenberger</a></td>
+                    </tr>
+                    <tr class="row-references">
+                      <td class="row-references"><a class="link-references" href="https://tynansylvester.com/" target="_blank"><span class="mark-reference">• </span>Tynan Sylvester</a></td>
+                      <td class="row-references"><a class="link-references" href="https://dafluffypotato.com/" target="_blank"><span class="mark-reference">• </span>DaFluffyPotato</a></td>
+                      <td class="row-references"><a class="link-references" href="https://qualquerrafa.github.io/" target="_blank"><span class="mark-reference">• </span>QualquerRafa</a></td>
+                    </tr>
+                    <tr class="row-references">
+                      <td class="row-references"><a class="link-references" href="https://slikey.de/" target="_blank"><span class="mark-reference">• </span>Slikey</a></td>
+                      <td class="row-references"><a class="link-references" href="https://thorlon.com/" target="_blank"><span class="mark-reference">• </span>Thorlon</a></td>
+                      <td class="row-references"><a class="link-references" href="https://onelonecoder.com/" target="_blank"><span class="mark-reference">• </span>OneLoneCoder</a></td>
+                    </tr>
+                    <tr class="row-references">
+                      <td class="row-references"><a class="link-references" href="https://ktar.dev/" target="_blank"><span class="mark-reference">• </span>ktar.dev</a></td>
+                      <td class="row-references"><a class="link-references" href="https://sindresorhus.com/" target="_blank"><span class="mark-reference">• </span>Sindre Sorhus</a></td>
+                    </tr>
+                  </table>
+                </div>
+            </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+    <script src="../js/lang.js"></script>
+</body>
 </html>
