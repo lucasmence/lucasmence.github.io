@@ -7,16 +7,21 @@
   var translations = {
     br: {
       // index.html
-      "meta-title": "Lucas Vinícius",
-      "meta-description": "Engenheiro de Software com mais de 12 anos de experiência em web, desktop, DevOps e desenvolvimento de jogos.",
-      "page-title": "Lucas Vinícius",
-      "description": "Desenvolvedor de Software com mais de 12 anos de experiência.\nTrabalhei com devops, web, mobile e gamedev.\nAtualmente trabalho com React/Node.js e C++ gamedev.",
-      "btn-resume": "Currículo",
-      "btn-projects": "Projetos",
+      "meta-title": "LUCAS VINICIUS | ARQUITETO DE SOFTWARE",
+      "meta-description": "Desenvolvedor com mais de 12 anos de experiência em web, desktop, DevOps e desenvolvimento de jogos.",
+      "page-title": "LUCAS VINICIUS | ARQUITETO DE SOFTWARE",
+      "subtitle": "ARQUITETO DE SOFTWARE",
+      "description": "Desenvolvedor com mais de 12 anos de experiência. Trabalhei com devops, web, mobile e gamedev. Atualmente trabalho com React/Node.js e gamedev em C++.",
+      "contact-title": "CONTATO",
+      "link-email": "EMAIL",
+      "link-home": "INÍCIO",
+      "pages-title": "PÁGINAS",
+      "btn-resume": "CURRÍCULO",
+      "btn-projects": "PROJETOS",
 
       // projects/index.html
-      "projects-title": "Projetos",
-      "projects-meta-title": "Lucas Vinícius - Projetos",
+      "projects-title": "PROJETOS",
+      "projects-meta-title": "LUCAS VINICIUS | ARQUITETO DE SOFTWARE | PROJETOS",
       "proj-boltcraft-desc": "Projeto onde estudei geração procedural de mapas, árvores de talentos e sistemas de armas (SFML e C++). Gratuito no itch.io.",
       "proj-protocol-desc": "Jogo de sobrevivência pós-apocalíptico contra zumbis (SFML e C++). Gratuito no itch.io.",
       "proj-wizardry-desc": "Jogo multiplayer 1v1 que usa os próprios sockets UDP da SFML para jogabilidade online (SFML e C++).<br/>Gratuito no itch.io.",
@@ -27,8 +32,8 @@
       "references-title": "Referências",
 
       // resume/index.html
-      "resume-title": "Currículo",
-      "resume-meta-title": "Lucas Vinícius - Currículo",
+      "resume-title": "CURRÍCULO",
+      "resume-meta-title": "LUCAS VINICIUS | ARQUITETO DE SOFTWARE | CURRÍCULO",
       "resume-pdf": "assets/br/LucasVinicius-Curriculo-2026.pdf"
     }
   };
@@ -63,13 +68,9 @@
 
   // Swap meta tags
   var titleEl = document.querySelector("title");
-  if (titleEl && t["page-title"]) {
-    titleEl.textContent = t["page-title"];
-  }
-
   var ogTitle = document.querySelector('meta[property="og:title"]');
-  if (ogTitle && t["projects-meta-title"]) {
-    ogTitle.setAttribute("content", t["projects-meta-title"]);
+  if (ogTitle && titleEl) {
+    ogTitle.setAttribute("content", titleEl.textContent.trim());
   }
 
   var ogDesc = document.querySelector('meta[property="og:description"]');

@@ -1,10 +1,10 @@
-.resume {
-  width: 90vh;
-  height: 82vh;
-}
+/* Resume page — sits on top of the shared layout in ../css/home.css */
 
-.div-resume {
-  align-items: center;
-  justify-content: center;
-  display: flex;
+.resume {
+  display: block;
+  width: 100%;
+  height: 80vh;
+  min-height: 480px;
+  border: 1px solid var(--border);
+  background: #0a0a0a;
 }

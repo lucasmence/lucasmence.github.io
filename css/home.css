@@ -1,0 +1,158 @@
+/* Home page style — minimal dark layout inspired by thorlon.com */
+
+/* 8bitoperator JVE — pixel font by GrandChaos9000 (Jayvee D. Enaguas), nipcen / FontStruct */
+@font-face {
+  font-family: "8bitoperator JVE";
+  src: url("../fonts/8bitoperator_jve.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #000000;
+  --text: #e8e8e8;
+  --muted: #8a8a8a;
+  --accent: #ffeb3b;
+  --border: #1f1f1f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+
+  font-family: "8bitoperator JVE", monospace;
+  font-size: 24px;
+  line-height: 1.65;
+  letter-spacing: 0.02em;
+
+  /* keep pixel edges sharp */
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+header {
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+
+.avatar {
+  width: 88px;
+  height: 88px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 48px;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  color: var(--muted);
+}
+
+.section {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.section-title {
+  margin-bottom: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section p {
+  margin-bottom: 14px;
+}
+
+.section p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+}
+
+.pages {
+  list-style: none;
+}
+
+.pages li {
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+}
+
+.pages li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.pages a {
+  font-weight: normal;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 20px;
+  }
+
+  header {
+    margin-top: 24px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,38 @@
+/* Projects page — sits on top of the shared layout in ../css/home.css */
+
+.project-title {
+  margin: 0 0 8px;
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+}
+
+.project-thumb {
+  display: block;
+  width: 280px;
+  max-width: 100%;
+  margin: 16px 0;
+  border: 1px solid var(--border);
+  line-height: 0;
+}
+
+.project-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-thumb:hover {
+  border-color: var(--muted);
+}
+
+.project-desc {
+  color: var(--muted);
+}
+
+@media (max-width: 480px) {
+  .project-title {
+    font-size: 24px;
+  }
+}
